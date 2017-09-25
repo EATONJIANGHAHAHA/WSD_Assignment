@@ -17,21 +17,34 @@ public class Booking implements Serializable {
     @XmlElement(name = "id")
     private Integer id;
 
-    @XmlElement(name = "student")
-    private Student student;
+    @XmlElement(name = "student_name")
+    private String studentName;
 
-    @XmlElement(name = "tutor")
-    private Tutor tutor;
+    @XmlElement(name = "student_email")
+    private String studentEmail;
+
+    @XmlElement(name = "tutor_name")
+    private String tutorName;
+
+    @XmlElement(name = "tutor_email")
+    private String tutorEmail;
+
+    @XmlElement(name = "subject")
+    private String subject;
 
     @XmlElement(name = "status")
     private String status;
 
     public Booking(){}
 
-    public Booking(Integer id, Student student, Tutor tutor, String status) {
+    public Booking(Integer id, String studentName, String studentEmail, String tutorName, String tutorEmail,
+                   String subject, String status) {
         this.id = id;
-        this.student = student;
-        this.tutor = tutor;
+        this.studentName = studentName;
+        this.studentEmail = studentEmail;
+        this.tutorName = tutorName;
+        this.tutorEmail = tutorEmail;
+        this.subject = subject;
         this.status = status;
     }
 
@@ -43,20 +56,44 @@ public class Booking implements Serializable {
         this.id = id;
     }
 
-    public Student getStudent() {
-        return student;
+    public String getStudentName() {
+        return studentName;
     }
 
-    public void setStudent(Student student) {
-        this.student = student;
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
-    public Tutor getTutor() {
-        return tutor;
+    public String getStudentEmail() {
+        return studentEmail;
     }
 
-    public void setTutor(Tutor tutor) {
-        this.tutor = tutor;
+    public void setStudentEmail(String studentEmail) {
+        this.studentEmail = studentEmail;
+    }
+
+    public String getTutorName() {
+        return tutorName;
+    }
+
+    public void setTutorName(String tutorName) {
+        this.tutorName = tutorName;
+    }
+
+    public String getTutorEmail() {
+        return tutorEmail;
+    }
+
+    public void setTutorEmail(String tutorEmail) {
+        this.tutorEmail = tutorEmail;
+    }
+
+    public String getSubject() {
+        return subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
     }
 
     public String getStatus() {
