@@ -10,14 +10,12 @@ import java.util.List;
 @XmlSeeAlso({Bookings.class, Student.class})
 public abstract class BaseJAXBList<T> implements Serializable{
 
-    @XmlElement(name = "item")
-    private List<T> list;
+
+    protected List<T> list;
 
     public abstract T findById(Integer id);
 
-    public List<T> getAll(){
-        return list;
-    }
+    public abstract List<T> getAll();
 
     public void set( List<T> list){
         this.list = list;

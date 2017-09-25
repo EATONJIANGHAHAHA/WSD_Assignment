@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" >
-    <xs:element name="items">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.uts.edu.au/31284/wsd-booking"
+    xmlns="http://www.uts.edu.au/31284/wsd-booking"
+    elementFormDefault="qualified">
+    <xs:element name="bookings">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="booking" maxOccurs="unbounded">
+                <xs:element name="booking" minOccurs="0" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="id" type="xs:integer"/>

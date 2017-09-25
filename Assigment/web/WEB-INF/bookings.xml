@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookings xmlns="http://www.uts.edu.au/31284/wsd-booking"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.uts.edu.au/31284/wsd-booking bookings.xsd">
+    <booking>
+        <id>1</id>
+        <student_name>yichen</student_name>
+        <student_email>123@gmail.com</student_email>
+        <tutor_name>Ryan</tutor_name>
+        <tutor_email>456@gmail.com</tutor_email>
+        <subject>WSD</subject>
+        <status>Active</status>
+    </booking>
+</bookings>

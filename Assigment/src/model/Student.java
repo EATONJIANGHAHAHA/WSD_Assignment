@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Date;
+
 /**
  * This class represents student in this online application.
  */
@@ -7,7 +9,7 @@ package model;
 public class Student extends User {
     public Student(){}
     public Student(Integer id, String email, String name, String password,
-                   String dataOfBirth){
+                   Date dataOfBirth){
         this.setId(id);
         this.setEmail(email);
         this.setName(name);

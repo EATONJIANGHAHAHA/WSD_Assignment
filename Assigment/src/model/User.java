@@ -3,6 +3,7 @@ package model;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * This class representing the user of this online service
@@ -24,7 +25,7 @@ public abstract class User implements Serializable {
     private String password;
 
     @XmlElement(name = "date_of_birth")
-    private String dateOfBirth;
+    private Date dateOfBirth;
 
 
     public String getEmail() {
@@ -51,11 +52,11 @@ public abstract class User implements Serializable {
         this.password = password;
     }
 
-    public String getDateOfBirth() {
+    public Date getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(String dateOfBirth) {
+    public void setDateOfBirth(Date dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 

@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.Date;
 
 /**
  * This class represents tutor in this online application.
@@ -27,7 +28,7 @@ public class Tutor extends User{
     boolean isAvailable;
 
     public Tutor(Integer id, String email, String name, String password,
-                 String dateOfBirth, String speciality, boolean isAvailable) {
+                 Date dateOfBirth, String speciality, boolean isAvailable) {
         this.setId(id);
         this.setEmail(email);
         this.setName(name);

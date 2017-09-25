@@ -2,9 +2,17 @@ package jaxblist;
 
 import model.Booking;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.List;
+
 /**
  * This class represents a list of bookings
  */
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement(name = "bookings")
 public class Bookings extends BaseJAXBList<Booking>{
 
     @Override
@@ -13,6 +21,12 @@ public class Bookings extends BaseJAXBList<Booking>{
             if(booking.getId() == id) return booking;
         }
         return null;
+    }
+
+    @Override
+    @XmlElement(name = "booking")
+    public List<Booking> getAll() {
+        return this.list;
     }
 
     /**

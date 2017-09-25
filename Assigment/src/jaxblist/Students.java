@@ -5,7 +5,9 @@ import util.DigestUtil;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "students")
@@ -17,6 +19,12 @@ public class Students extends BaseJAXBList<Student> implements Users{
             if(student.getId() == id) return student;
         }
         return null;
+    }
+
+    @Override
+    @XmlElement(name = "student")
+    public List<Student> getAll() {
+        return this.list;
     }
 
     @Override
