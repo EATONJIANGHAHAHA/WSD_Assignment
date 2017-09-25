@@ -3,7 +3,7 @@
     <xs:element name="items">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="flight" maxOccurs="unbounded">
+                <xs:element name="booking" maxOccurs="unbounded">
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="id" type="xs:integer"/>
