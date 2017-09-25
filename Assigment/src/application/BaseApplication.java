@@ -11,6 +11,8 @@ import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 
 public class BaseApplication<T> implements Serializable{
+
+
     private String filePath;
     private T items;
     private Class<T> clazz;
