@@ -27,6 +27,7 @@
         try {
             if (request.getParameter("type").equals(STUDENT)) {
                 String filePath = application.getRealPath(STUDENT_FILE_PATH);
+                out.print("<p>filepath = " + filePath+"</p>");
                 StudentApplication studentApp = new StudentApplication();
                 studentApp.setFilePath(filePath);
                 Student student = studentApp.getItems().login(email, password);

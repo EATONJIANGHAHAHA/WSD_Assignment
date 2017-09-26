@@ -2,36 +2,29 @@ package model;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.Date;
 
 /**
  * This class representing the user of this online service
  */
-
-@XmlSeeAlso({Student.class, Tutor.class})
+@XmlTransient
+//@XmlSeeAlso({Student.class, Tutor.class})
 public abstract class User implements Serializable {
 
     public static final String STUDENT = "student";
     public static final String TUTOR = "tutor";
     public static final String TYPE = "type";
 
-    @XmlElement(name = "id")
+
     private Integer id;
-
-    @XmlElement(name = "email")
     private String email;
-
-    @XmlElement(name ="name")
     private String name;
-
-    @XmlElement(name = "password")
     private String password;
-
-    @XmlElement(name = "date_of_birth")
     private Date dateOfBirth;
 
-
+    @XmlElement(name = "email")
     public String getEmail() {
         return email;
     }
@@ -40,6 +33,7 @@ public abstract class User implements Serializable {
         this.email = email;
     }
 
+    @XmlElement(name ="name")
     public String getName() {
         return name;
     }
@@ -48,6 +42,7 @@ public abstract class User implements Serializable {
         this.name = name;
     }
 
+    @XmlElement(name = "password")
     public String getPassword() {
         return password;
     }
@@ -56,6 +51,7 @@ public abstract class User implements Serializable {
         this.password = password;
     }
 
+    @XmlElement(name = "date_of_birth")
     public Date getDateOfBirth() {
         return dateOfBirth;
     }
@@ -65,7 +61,7 @@ public abstract class User implements Serializable {
     }
 
 
-
+    @XmlElement(name = "id")
     public Integer getId() {
         return id;
     }

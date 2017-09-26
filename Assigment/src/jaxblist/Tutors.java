@@ -9,7 +9,6 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
-@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "tutors")
 public class Tutors extends BaseJAXBList<Tutor> implements Users<Tutor>{
 

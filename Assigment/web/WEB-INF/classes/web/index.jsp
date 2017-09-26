@@ -8,9 +8,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <title>Start</title>
   </head>
   <body>
-  $END$
+     <h1>Start</h1>
+     <a href="login.jsp">Login</a>
+     <a>Register</a>
   </body>
 </html>

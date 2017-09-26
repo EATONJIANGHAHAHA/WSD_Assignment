@@ -2,17 +2,13 @@ package model;
 
 
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 import java.util.Date;
 
 /**
  * This class represents tutor in this online application.
  */
-@XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement
+@XmlRootElement(name = "tutor")
 public class Tutor extends User{
 
     public static final String WSD = "WSD";
@@ -22,10 +18,11 @@ public class Tutor extends User{
     public static final String MOBILE_APP = "MobileApp";
     public static final String[] SUBJECTS = { WSD, USP, SEP, APP_PROG, MOBILE_APP};
 
-    @XmlElement(name = "speciality")
-    String speciality;
-    @XmlElement(name = "status")
-    boolean isAvailable;
+
+    @XmlTransient
+    private String speciality;
+
+    private boolean isAvailable;
 
     public Tutor(Integer id, String email, String name, String password,
                  Date dateOfBirth, String speciality, boolean isAvailable) {
@@ -41,7 +38,8 @@ public class Tutor extends User{
     public Tutor(){}
 
 
-    public String getSpeciality() {
+    @XmlElement(name = "speciality")
+    public String getTutorSpeciality() {
         return speciality;
     }
 
@@ -49,6 +47,7 @@ public class Tutor extends User{
         this.speciality = speciality;
     }
 
+    @XmlElement(name = "status")
     public boolean isAvailable() {
         return isAvailable;
     }

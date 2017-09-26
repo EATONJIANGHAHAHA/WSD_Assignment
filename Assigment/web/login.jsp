@@ -24,9 +24,13 @@
             </tr>
             <tr>
                 <td>Login as:</td>
-                <td><input type="radio" name="gender" value="student"/>
-                <input type="radio" name="gender" value="tutor"/>
+                <td>
+                    <select name="type">
+                        <option>student</option>
+                        <option>tutor</option>
+                    </select>
                 </td>
+            </tr>
             <tr>
                 <td></td>
                 <td><input type="submit" value="Login"/></td>

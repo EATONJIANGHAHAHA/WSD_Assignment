@@ -15,7 +15,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
     <output url="file://$MODULE_DIR$/web/WEB-INF/classes" />
     <output-test url="file://$MODULE_DIR$/web/WEB-INF/classes" />
     <exclude-output />
@@ -54,5 +54,6 @@
         <jarDirectory url="file://$MODULE_DIR$/web/WEB-INF/lib" recursive="false" />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
   </component>
 </module>

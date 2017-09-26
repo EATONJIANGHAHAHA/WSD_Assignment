@@ -12,7 +12,6 @@ import java.util.List;
 /**
  * This class represents a list of bookings
  */
-@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "bookings")
 public class Bookings extends BaseJAXBList<Booking>{
 
