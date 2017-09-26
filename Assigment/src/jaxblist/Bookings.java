@@ -6,6 +6,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,6 +15,12 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "bookings")
 public class Bookings extends BaseJAXBList<Booking>{
+
+    public Bookings(){}
+
+    public Bookings(List<Booking> list){
+        super(list);
+    }
 
     @Override
     public Booking findById( Integer id) {
@@ -34,22 +41,37 @@ public class Bookings extends BaseJAXBList<Booking>{
      * @param email
      * @return
      */
-    public Booking findByStudentEmail( String email ){
+    public Bookings findByStudentEmail( String email ){
+        Bookings results = new Bookings(new ArrayList<Booking>());
         for(Booking booking: this.getAll()){
-            if(booking.getStudentEmail().equals(email)) return booking;
+            if(booking.getStudentEmail().equals(email)) results.add(booking);
         }
-        return null;
+        return results;
     }
 
     /**
-     * Find the booking record according to the tutor email.
-     * @param email
+     * Find the booking records according to the booking status.
+     * @param status
      * @return
      */
-    public Booking findByTutorId( String email ){
+    public Bookings findByStatus( String status ){
+        Bookings results = new Bookings(new ArrayList<Booking>());
         for(Booking booking: getAll()){
-            if(booking.getTutorEmail().equals(email)) return booking;
+            if(booking.getStatus().equals(status)) results.add(booking);
         }
-        return null;
+        return results;
+    }
+
+    /**
+     * Find the booking records that matches a specific subject.
+     * @param subject
+     * @return
+     */
+    public Bookings findBySubject(String subject){
+        Bookings results = new Bookings(new ArrayList<Booking>());
+        for(Booking booking: getAll()){
+            if(booking.getSubject().equals(subject)) results.add(booking);
+        }
+        return results;
     }
 }

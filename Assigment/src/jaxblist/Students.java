@@ -13,6 +13,11 @@ import java.util.List;
 @XmlRootElement(name = "students")
 public class Students extends BaseJAXBList<Student> implements Users{
 
+    public Students(){}
+    public Students(List<Student> list){
+        super(list);
+    }
+
     @Override
     public Student findById(Integer id) {
         for(Student student: getAll()){

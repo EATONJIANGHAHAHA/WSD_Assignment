@@ -1,5 +1,6 @@
 package jaxblist;
 
+import application.BaseApplication;
 import model.Student;
 
 import javax.xml.bind.annotation.XmlElement;
@@ -12,6 +13,12 @@ public abstract class BaseJAXBList<T> implements Serializable{
 
 
     protected List<T> list;
+
+    public BaseJAXBList(){}
+
+    public BaseJAXBList(List<T> list) {
+        this.list = list;
+    }
 
     public abstract T findById(Integer id);
 

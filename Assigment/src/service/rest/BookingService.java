@@ -33,8 +33,35 @@ public class BookingService {
     @Path("bookings")
     @GET
     @Produces(MediaType.APPLICATION_XML)
-    public Bookings getBookings() throws JAXBException, IOException{
+    public Bookings getAll() throws JAXBException, IOException{
         return getBookingApp().getItems();
     }
 
+    @Path("bookings/{email}")
+    @GET
+    @Produces(MediaType.APPLICATION_XML)
+    public Bookings getByStuEmail(@PathParam("email") String email) throws JAXBException, IOException {
+        return getAll().findByStudentEmail(email);
+    }
+
+    @Path("bookings/{status}")
+    @GET
+    @Produces(MediaType.APPLICATION_XML)
+    public Bookings getByStatus(@PathParam("status") String status) throws JAXBException, IOException {
+        return getAll().findByStatus(status);
+    }
+
+    @Path("bookings/{subject}")
+    @GET
+    @Produces(MediaType.APPLICATION_XML)
+    public Bookings getBySubject(@PathParam("subject") String subject) throws JAXBException, IOException {
+        return getAll().findBySubject(subject);
+    }
+
+    @Path("bookings/{id}")
+    @GET
+    @Produces(MediaType.APPLICATION_XML)
+    public Booking findById(@PathParam("id") Integer id) throws JAXBException, IOException {
+        return getAll().findById(id);
+    }
 }

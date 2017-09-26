@@ -12,6 +12,13 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "tutors")
 public class Tutors extends BaseJAXBList<Tutor> implements Users{
+
+    public Tutors(){}
+
+    public Tutors(List<Tutor> list){
+        super(list);
+    }
+
     @Override
     public Tutor findById(Integer id) {
         for(Tutor tutor: getAll()){
