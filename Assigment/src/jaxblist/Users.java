@@ -1,6 +1,6 @@
 package jaxblist;
 
-public interface Users{
+public interface Users<T>{
 
     /**
      * Check whether the user is registered or not.
@@ -9,6 +9,6 @@ public interface Users{
      */
     boolean isRegistered( String email );
 
-    boolean login(String email, String password);
+    T login(String email, String password);
 
 }

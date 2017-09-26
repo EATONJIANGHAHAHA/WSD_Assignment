@@ -12,6 +12,10 @@ import java.util.Date;
 @XmlSeeAlso({Student.class, Tutor.class})
 public abstract class User implements Serializable {
 
+    public static final String STUDENT = "student";
+    public static final String TUTOR = "tutor";
+    public static final String TYPE = "type";
+
     @XmlElement(name = "id")
     private Integer id;
 

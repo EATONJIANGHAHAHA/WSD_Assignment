@@ -11,7 +11,7 @@ import java.util.List;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement(name = "tutors")
-public class Tutors extends BaseJAXBList<Tutor> implements Users{
+public class Tutors extends BaseJAXBList<Tutor> implements Users<Tutor>{
 
     public Tutors(){}
 
@@ -42,11 +42,11 @@ public class Tutors extends BaseJAXBList<Tutor> implements Users{
     }
 
     @Override
-    public boolean login(String email, String password) {
+    public Tutor login(String email, String password) {
         for(Tutor tutor: getAll()){
             if(tutor.getEmail().equals(email) && tutor.getPassword().equals(DigestUtil
-                    .encryptPWD(password))) return true;
+                    .encryptPWD(password))) return tutor;
         }
-        return false;
+        return null;
     }
 }
