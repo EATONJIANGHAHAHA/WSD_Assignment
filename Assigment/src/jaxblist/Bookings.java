@@ -30,7 +30,7 @@ public class Bookings extends BaseJAXBList<Booking>{
     }
 
     @Override
-    @XmlElement(name = "booking")
+    @XmlElement
     public List<Booking> getAll() {
         return this.list;
     }

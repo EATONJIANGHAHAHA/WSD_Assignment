@@ -26,7 +26,7 @@ public class Students extends BaseJAXBList<Student> implements Users<Student>{
     }
 
     @Override
-    @XmlElement(name = "student")
+    @XmlElement
     public List<Student> getAll() {
         return this.list;
     }

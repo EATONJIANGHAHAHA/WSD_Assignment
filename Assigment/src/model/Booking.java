@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import java.io.Serializable;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlRootElement
+@XmlRootElement(name = "booking")
 public class Booking implements Serializable {
 
     public static final String CANCELLED = "cancelled";
