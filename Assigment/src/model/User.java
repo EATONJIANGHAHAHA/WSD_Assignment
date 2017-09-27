@@ -18,6 +18,11 @@ public abstract class User implements Serializable {
     public static final String STUDENT = "student";
     public static final String TUTOR = "tutor";
     public static final String TYPE = "type";
+    public static final String EMAIL = "email";
+    public static final String NAME = "name";
+    public static final String PASSWORD = "password";
+    public static final String DATE_OF_BIRTH = "dateOfBirth";
+
 
 
     private Integer id;

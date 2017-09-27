@@ -1,4 +1,6 @@
-<%@ page import="model.Tutor" %><%--
+<%@ page import="model.Tutor" %>
+<%@ page import="static model.User.*" %>
+<%@ page import="static model.Tutor.SPECIALITY" %><%--
   Created by IntelliJ IDEA.
   User: might
   Date: 27/09/2017
@@ -16,31 +18,31 @@
         <table>
             <tr>
                 <td>Name:</td>
-                <td><input type = "text" name = "name"/></td>
+                <td><input type="text" name="<%=NAME%>"/></td>
             </tr>
             <tr>
                 <td>Email:</td>
-                <td><input type = "email" name = "email"/></td>
+                <td><input type="email" name="<%=EMAIL%>"/></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type = "password" name = "password"/></td>
+                <td><input type="password" name="<%=PASSWORD%>"/></td>
             </tr>
             <tr>
                 <td>Date of Birth</td>
-                <td><input type="date" name="dob"/></td>
+                <td><input type="date" name="<%=DATE_OF_BIRTH%>"/></td>
             </tr>
             <tr>
                 <td>Usertype</td>
                 <td>
-                    <select name="type">
-                        <option>student</option>
-                        <option>tutor</option>
+                    <select name="<%=TYPE%>">
+                        <option><%=STUDENT%></option>
+                        <option><%=TUTOR%></option>
                     </select>
                 </td>
             <tr>
                 <td>Speciality: </td>
-                <td><select>
+                <td><select name="<%=SPECIALITY%>">
                     <%
                         for(String subject: Tutor.SUBJECTS){
                             out.print("<option>" + subject +"</option>");

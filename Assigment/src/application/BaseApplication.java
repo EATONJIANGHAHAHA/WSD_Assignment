@@ -1,5 +1,7 @@
 package application;
 
+import sun.rmi.runtime.Log;
+
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
@@ -25,11 +27,14 @@ public class BaseApplication<T> implements Serializable{
     }
 
     public BaseApplication(String filePath, T jaxbList) {
-        ParameterizedType type = (ParameterizedType) this.getClass()
-                .getGenericSuperclass();
-        clazz = (Class<T>) type.getActualTypeArguments()[0];
+        this();
         this.filePath = filePath;
         this.items = jaxbList;
+    }
+
+    public BaseApplication(String filePath) throws JAXBException, IOException {
+        this();
+        setFilePath(filePath);
     }
 
     public String getFilePath() {
@@ -53,6 +58,7 @@ public class BaseApplication<T> implements Serializable{
         FileOutputStream fout = new FileOutputStream(filePath);
         m.marshal(items, fout);
         fout.close();
+        System.out.print("saved");
     }
 
     public T getItems() {

@@ -17,6 +17,7 @@ public class Tutor extends User{
     public static final String APP_PROG = "AppProg";
     public static final String MOBILE_APP = "MobileApp";
     public static final String[] SUBJECTS = { WSD, USP, SEP, APP_PROG, MOBILE_APP};
+    public static final String SPECIALITY = "speciality";
 
 
     @XmlTransient
