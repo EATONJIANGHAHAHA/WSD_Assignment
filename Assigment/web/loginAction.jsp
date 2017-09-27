@@ -7,7 +7,9 @@
 <%@ page import="static application.TutorApplication.TUTOR_FILE_PATH" %>
 <%@ page import="model.Tutor" %>
 <%@ page import="static model.User.TUTOR" %>
-<%@ page import="static model.User.TYPE" %><%--
+<%@ page import="static model.User.TYPE" %>
+<%@ page import="jaxblist.BaseJAXBList" %>
+<%@ page import="application.BaseApplication" %><%--
   Created by IntelliJ IDEA.
   User: might
   Date: 26/09/2017
@@ -21,6 +23,7 @@
 </head>
 <body>
     <%
+        //login(new Student());
         boolean isSuccess = false;
         String password = request.getParameter("password");
         String email = request.getParameter("email");

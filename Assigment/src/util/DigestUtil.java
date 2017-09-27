@@ -7,7 +7,7 @@ public class DigestUtil {
 
     /**
      * Encrypt the password via MD5, with salt
-     * @param：password The password that is supposed to be encryted
+     * @param：password The password that is supposed to be encrypted
      */
     public static String encryptPWD(String password) {
         byte tempResult[] = new byte[16];

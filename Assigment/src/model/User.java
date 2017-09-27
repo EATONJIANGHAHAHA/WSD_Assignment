@@ -1,5 +1,7 @@
 package model;
 
+import util.DigestUtil;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlTransient;
@@ -48,7 +50,7 @@ public abstract class User implements Serializable {
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = DigestUtil.encryptPWD(password);
     }
 
     @XmlElement(name = "date_of_birth")
