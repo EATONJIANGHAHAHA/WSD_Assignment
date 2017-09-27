@@ -1,15 +1,14 @@
+
 package jaxblist;
 
 import model.Student;
 import util.DigestUtil;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 import java.util.List;
 
-@XmlRootElement(name = "students")
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement
 public class Students extends BaseJAXBList<Student> implements Users<Student>{
 
     public Students(){}
@@ -19,21 +18,27 @@ public class Students extends BaseJAXBList<Student> implements Users<Student>{
 
     @Override
     public Student findById(Integer id) {
-        for(Student student: getAll()){
+        for(Student student: getList()){
             if(student.getId() == id) return student;
         }
         return null;
     }
 
     @Override
-    @XmlElement
-    public List<Student> getAll() {
+    @XmlElement(name ="student")
+    public List<Student> getList() {
         return this.list;
     }
 
     @Override
+    public void setList(List<Student> list) {
+        this.list = list;
+    }
+
+
+    @Override
     public boolean isRegistered(String email) {
-        for(Student student: getAll()){
+        for(Student student: getList()){
             if(student.getEmail().equals(email)) return true;
         }
             return false;
@@ -42,7 +47,7 @@ public class Students extends BaseJAXBList<Student> implements Users<Student>{
 
     @Override
     public Student login(String email, String password) {
-        for(Student student: getAll()){
+        for(Student student: getList()){
             if(student.getEmail().equals(email) && student.getPassword().equals(DigestUtil
                     .encryptPWD(password))) return student;
         }

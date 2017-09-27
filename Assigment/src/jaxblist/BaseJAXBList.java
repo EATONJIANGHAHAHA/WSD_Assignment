@@ -8,7 +8,7 @@ import javax.xml.bind.annotation.XmlSeeAlso;
 import java.io.Serializable;
 import java.util.List;
 
-@XmlSeeAlso({Bookings.class, Student.class})
+@XmlSeeAlso({Bookings.class, Students.class, Tutors.class})
 public abstract class BaseJAXBList<T> implements Serializable{
 
 
@@ -22,11 +22,15 @@ public abstract class BaseJAXBList<T> implements Serializable{
 
     public abstract T findById(Integer id);
 
-    public abstract List<T> getAll();
+    public abstract List<T> getList();
 
-    public void set( List<T> list){
-        this.list = list;
-    }
+//
+//    @XmlElement(name = "item")
+//    public List<T> getList() {
+//        return list;
+//    }
+
+    public abstract void setList(List<T> list);//{this.list = list;}
 
     public void add( T item ){
         list.add( item );

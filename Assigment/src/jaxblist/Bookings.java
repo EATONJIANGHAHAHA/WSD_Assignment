@@ -2,8 +2,6 @@ package jaxblist;
 
 import model.Booking;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
@@ -23,7 +21,7 @@ public class Bookings extends BaseJAXBList<Booking>{
 
     @Override
     public Booking findById( Integer id) {
-        for(Booking booking: this.getAll()){
+        for(Booking booking: this.getList()){
             if(booking.getId() == id) return booking;
         }
         return null;
@@ -31,8 +29,13 @@ public class Bookings extends BaseJAXBList<Booking>{
 
     @Override
     @XmlElement
-    public List<Booking> getAll() {
+    public List<Booking> getList() {
         return this.list;
+    }
+
+    @Override
+    public void setList(List<Booking> list) {
+        this.list = list;
     }
 
     /**
@@ -42,7 +45,7 @@ public class Bookings extends BaseJAXBList<Booking>{
      */
     public Bookings findByStudentEmail( String email ){
         Bookings results = new Bookings(new ArrayList<Booking>());
-        for(Booking booking: this.getAll()){
+        for(Booking booking: this.getList()){
             if(booking.getStudentEmail().equals(email)) results.add(booking);
         }
         return results;
@@ -55,7 +58,7 @@ public class Bookings extends BaseJAXBList<Booking>{
      */
     public Bookings findByStatus( String status ){
         Bookings results = new Bookings(new ArrayList<Booking>());
-        for(Booking booking: getAll()){
+        for(Booking booking: getList()){
             if(booking.getStatus().equals(status)) results.add(booking);
         }
         return results;
@@ -68,7 +71,7 @@ public class Bookings extends BaseJAXBList<Booking>{
      */
     public Bookings findBySubject(String subject){
         Bookings results = new Bookings(new ArrayList<Booking>());
-        for(Booking booking: getAll()){
+        for(Booking booking: getList()){
             if(booking.getSubject().equals(subject)) results.add(booking);
         }
         return results;

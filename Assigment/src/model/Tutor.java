@@ -39,7 +39,7 @@ public class Tutor extends User{
 
 
     @XmlElement(name = "speciality")
-    public String getTutorSpeciality() {
+    public String getSpeciality() {
         return speciality;
     }
 

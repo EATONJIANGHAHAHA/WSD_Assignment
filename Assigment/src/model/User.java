@@ -9,8 +9,8 @@ import java.util.Date;
 /**
  * This class representing the user of this online service
  */
-@XmlTransient
-//@XmlSeeAlso({Student.class, Tutor.class})
+//@XmlTransient
+@XmlSeeAlso({Student.class, Tutor.class})
 public abstract class User implements Serializable {
 
     public static final String STUDENT = "student";
