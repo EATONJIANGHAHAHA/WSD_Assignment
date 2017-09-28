@@ -5,8 +5,12 @@ import util.DigestUtil;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * This class represents a list users, allows some basic operation of the users.
+ */
 @XmlRootElement(name = "users")
 public class Users extends BaseJAXBList<User>{
 
@@ -16,12 +20,56 @@ public class Users extends BaseJAXBList<User>{
         super(list);
     }
 
+    /**
+     * Return the user by id.
+     * @param id
+     * @return
+     */
     @Override
     public User findById(Integer id) {
-        for(User tutor: getList()){
-            if(tutor.getId() == id) return tutor;
+        for(User user: getList()){
+            if(user.getId() == id) return user;
         }
         return null;
+    }
+
+    /**
+     * Return the tutors by their status
+     * @param status
+     * @return
+     */
+    public Users findTutorByStatus(Boolean status){
+        Users tutors = new Users(new ArrayList<User>());
+        for(User tutor: getList()){
+            if(tutor.isAvailable() == status) tutors.add(tutor);
+        }
+        return tutors;
+    }
+
+    /**
+     * Return the tutors by their names
+     * @param name
+     * @return
+     */
+    public Users findTutorByName(String name){
+        Users tutors = new Users(new ArrayList<User>());
+        for(User tutor: getList()){
+            if(tutor.getName().equals(name)) tutors.add(tutor);
+        }
+        return tutors;
+    }
+
+    /**
+     * Return the tutors by their subjects
+     * @param subject
+     * @return
+     */
+    public Users findTutorBySubject(String subject){
+        Users tutors = new Users(new ArrayList<User>());
+        for(User tutor: getList()){
+            if(tutor.getSpeciality().equals(subject)) tutors.add(tutor);
+        }
+        return tutors;
     }
 
     @Override
@@ -36,6 +84,11 @@ public class Users extends BaseJAXBList<User>{
     }
 
 
+    /**
+     * Check whether the user is registered.
+     * @param email
+     * @return
+     */
     public boolean isRegistered(String email) {
         for(User user: getList()){
             if(user.getEmail().equals(email)) return true;
@@ -44,10 +97,16 @@ public class Users extends BaseJAXBList<User>{
     }
 
 
+    /**
+     * Return the user if there is a user stored in xml that matches the email and password.
+     * @param email
+     * @param password
+     * @return
+     */
     public User login(String email, String password) {
-        for(User tutor: getList()){
-            if(tutor.getEmail().equals(email) && tutor.getPassword().equals(DigestUtil
-                    .encryptPWD(password))) return tutor;
+        for(User user: getList()){
+            if(user.getEmail().equals(email) && user.getPassword().equals(DigestUtil
+                    .encryptPWD(password))) return user;
         }
         return null;
     }
