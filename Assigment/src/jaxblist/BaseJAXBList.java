@@ -1,14 +1,10 @@
 package jaxblist;
 
-import application.BaseApplication;
-import model.Student;
-
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import java.io.Serializable;
 import java.util.List;
 
-@XmlSeeAlso({Bookings.class, Students.class, Tutors.class})
+@XmlSeeAlso({Bookings.class, Users.class})
 public abstract class BaseJAXBList<T> implements Serializable{
 
 

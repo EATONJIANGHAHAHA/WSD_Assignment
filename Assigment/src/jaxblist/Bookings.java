@@ -28,7 +28,7 @@ public class Bookings extends BaseJAXBList<Booking>{
     }
 
     @Override
-    @XmlElement
+    @XmlElement(name = "booking")
     public List<Booking> getList() {
         return this.list;
     }

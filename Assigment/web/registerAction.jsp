@@ -1,10 +1,14 @@
 <%@ page import="static model.User.*" %>
-<%@ page import="application.TutorApplication" %>
-<%@ page import="static application.TutorApplication.TUTOR_FILE_PATH" %>
-<%@ page import="java.util.Date" %>
-<%@ page import="static model.Tutor.SPECIALITY" %>
-<%@ page import="model.Tutor" %>
-<%@ page import="util.DateUtil" %><%--
+<%@ page import="util.DateUtil" %>
+<%@ page import="util.DigestUtil" %>
+<%@ page import="application.BaseApplication" %>
+<%@ page import="javax.xml.bind.JAXBException" %>
+<%@ page import="java.io.IOException" %>
+<%@ page import="static application.UserApplication.WEB_INF_STUDENTS_XML" %>
+<%@ page import="static application.UserApplication.WEB_INF_TUTORS_XML" %>
+<%@ page import="application.UserApplication" %>
+<%@ page import="model.User" %>
+<%--
   Created by IntelliJ IDEA.
   User: might
   Date: 27/09/2017
@@ -17,39 +21,51 @@
         <title>RegisterAction</title>
     </head>
     <body>
+
     <%
         try{
             String type = request.getParameter(TYPE);
             String email = request.getParameter(EMAIL);
             String password = request.getParameter(PASSWORD);
             String name = request.getParameter(NAME);
-            String date = request.getParameter(DATE_OF_BIRTH);
-            String filePath;%>
-    <p><%=request.getParameter(DATE_OF_BIRTH)%></p>
-        <%
-            if(type.equals(TUTOR)){
-                filePath = application.getRealPath(TUTOR_FILE_PATH);
-                TutorApplication tutorApp = new TutorApplication(filePath);
-                if(tutorApp.getItems().isRegistered(email)){
+            String dateOfBirth = request.getParameter(DATE_OF_BIRTH);
+            String filePath;
+            User user;
 
-                }
-                else {
-                    //Date date = request.getParameter(DATE_OF_BIRTH);
-                    String speciality = request.getParameter(SPECIALITY);
-                    tutorApp.getItems().add(new Tutor(2, email, name, password, DateUtil.stringToDate(date), speciality, false));
-                    tutorApp.save();
-
-                }
+            if(type.equals(TUTOR)) {
+                String speciality = request.getParameter(SPECIALITY);
+                filePath = application.getRealPath(WEB_INF_TUTORS_XML);
+                user = new User(2, email, name, DigestUtil.encryptPWD(password),
+                        DateUtil.stringToDate(dateOfBirth), speciality, false);
             }
-            else{
-
+            else {
+                filePath = application.getRealPath(WEB_INF_STUDENTS_XML);
+                user = new User(2, email, name, DigestUtil.encryptPWD(password),
+                        DateUtil.stringToDate(dateOfBirth));
             }
+            UserApplication userApp = new UserApplication(filePath);
 
+            if(userApp.getItems().isRegistered(email)){
+    %>
+    <p>Register failed: The email address already exists.</p>
+    <%
+            }
+            else {
+                userApp.getItems().add(user);
+                session.setAttribute(USER, user);
+                userApp.save();
+    %>
+    <p>Succeed! You now login as <%=user.getName()%></p>
+    <%
+            }
         }
         catch (NullPointerException e){
             e.printStackTrace();
-
+    %>
+    <p>Register failed: Some of the entered information may be invalid.
+    <%
         }
+
     %>
 
 
