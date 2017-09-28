@@ -8,6 +8,7 @@
 <%@ page import="static application.UserApplication.WEB_INF_TUTORS_XML" %>
 <%@ page import="application.UserApplication" %>
 <%@ page import="model.User" %>
+<%@ page import="java.text.ParseException" %>
 <%--
   Created by IntelliJ IDEA.
   User: might
@@ -62,7 +63,12 @@
         catch (NullPointerException e){
             e.printStackTrace();
     %>
-    <p>Register failed: Some of the entered information may be invalid.
+    <p>Register failed: Some of the entered information may be invalid.</p>
+    <%
+        }
+        catch (ParseException e){
+    %>
+    <p>Register failed: please input a valid date.</p>
     <%
         }
 

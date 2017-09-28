@@ -3,6 +3,8 @@ package jaxblist;
 import model.User;
 import util.DigestUtil;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
@@ -12,6 +14,7 @@ import java.util.List;
  * This class represents a list users, allows some basic operation of the users.
  */
 @XmlRootElement(name = "users")
+@XmlAccessorType(XmlAccessType.PROPERTY)
 public class Users extends BaseJAXBList<User>{
 
     public Users(){}

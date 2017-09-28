@@ -19,6 +19,7 @@ public abstract class BaseJAXBList<T> implements Serializable{
 
     public abstract T findById(Integer id);
 
+    @XmlTransient
     public abstract List<T> getList();
 
     public abstract void setList(List<T> list);//{this.list = list;}
