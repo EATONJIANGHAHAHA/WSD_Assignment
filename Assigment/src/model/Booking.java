@@ -1,9 +1,12 @@
 package model;
 
+import adapter.IDAdapter;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.Serializable;
 
 @XmlAccessorType(XmlAccessType.FIELD)
@@ -15,7 +18,8 @@ public class Booking implements Serializable {
     public static final String COMPLETED = "completed";
 
     @XmlElement(name = "id")
-    private Integer id;
+    @XmlJavaTypeAdapter(IDAdapter.class)
+    private Integer id = 0;
 
     @XmlElement(name = "student_name")
     private String studentName;

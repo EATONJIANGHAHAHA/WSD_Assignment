@@ -1,4 +1,4 @@
-<%--
+<%@ page import="static model.User.*" %><%--
   Created by IntelliJ IDEA.
   User: might
   Date: 26/09/2017
@@ -16,18 +16,18 @@
         <table>
             <tr>
                 <td>Email:</td>
-                <td><input type="text" name="email"/></td>
+                <td><input type="text" name="<%=EMAIL%>"/></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type="password" name="password"/></td>
+                <td><input type="password" name="<%=PASSWORD%>"/></td>
             </tr>
             <tr>
                 <td>Login as:</td>
                 <td>
-                    <select name="type">
-                        <option>student</option>
-                        <option>tutor</option>
+                    <select name="<%=TYPE%>">
+                        <option><%=STUDENT%></option>
+                        <option><%=TUTOR%></option>
                     </select>
                 </td>
             </tr>

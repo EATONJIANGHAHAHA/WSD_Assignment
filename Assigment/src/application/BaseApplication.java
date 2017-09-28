@@ -1,5 +1,6 @@
 package application;
 
+import adapter.IDAdapter;
 import sun.rmi.runtime.Log;
 
 import javax.xml.bind.JAXBContext;
@@ -55,6 +56,7 @@ public class BaseApplication<T> implements Serializable{
         JAXBContext jc = JAXBContext.newInstance(clazz);
         Marshaller m = jc.createMarshaller();
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+        m.setAdapter(new IDAdapter());
         FileOutputStream fout = new FileOutputStream(filePath);
         m.marshal(items, fout);
         fout.close();

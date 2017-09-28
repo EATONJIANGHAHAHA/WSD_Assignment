@@ -1,6 +1,4 @@
-<%@ page import="model.Tutor" %>
-<%@ page import="static model.User.*" %>
-<%@ page import="static model.Tutor.SPECIALITY" %><%--
+<%@ page import="static model.User.*" %><%--
   Created by IntelliJ IDEA.
   User: might
   Date: 27/09/2017
@@ -44,7 +42,7 @@
                 <td>Speciality: </td>
                 <td><select name="<%=SPECIALITY%>">
                     <%
-                        for(String subject: Tutor.SUBJECTS){
+                        for(String subject: SUBJECTS){
                             out.print("<option>" + subject +"</option>");
                         }
                     %>

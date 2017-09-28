@@ -1,13 +1,14 @@
 package jaxblist;
 
 import javax.xml.bind.annotation.XmlSeeAlso;
+import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.List;
 
 @XmlSeeAlso({Bookings.class, Users.class})
 public abstract class BaseJAXBList<T> implements Serializable{
 
-
+    @XmlTransient
     protected List<T> list;
 
     public BaseJAXBList(){}
@@ -19,12 +20,6 @@ public abstract class BaseJAXBList<T> implements Serializable{
     public abstract T findById(Integer id);
 
     public abstract List<T> getList();
-
-//
-//    @XmlElement(name = "item")
-//    public List<T> getList() {
-//        return list;
-//    }
 
     public abstract void setList(List<T> list);//{this.list = list;}
 

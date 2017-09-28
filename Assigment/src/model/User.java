@@ -1,15 +1,17 @@
 package model;
 
 
+import adapter.IDAdapter;
 import util.DigestUtil;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.util.Date;
 
 /**
- * This class represents tutor in this online application.
+ * This class represents user in this online application.
  */
 @XmlRootElement(name = "user")
 public class User {
@@ -30,30 +32,74 @@ public class User {
     public static final String PASSWORD = "password";
     public static final String DATE_OF_BIRTH = "dateOfBirth";
 
-    private Integer id;
+    private Integer id = 0;
     private String email;
     private String name;
     private String password;
     private Date dateOfBirth;
     @XmlTransient
     private String speciality;
-    private boolean isAvailable;
+    private Boolean isAvailable;
 
+    /**
+     * Used to create a student within a id.
+     * @param id
+     * @param email
+     * @param name
+     * @param password
+     * @param dateOfBirth
+     */
     public User(Integer id, String email, String name, String password,
                 Date dateOfBirth) {
+        this(email, name, password, dateOfBirth);
         this.setId(id);
+    }
+
+    /**
+     * Used to create a student without an id
+     * @param email
+     * @param name
+     * @param password
+     * @param dateOfBirth
+     */
+    public User( String email, String name, String password,
+                Date dateOfBirth) {
         this.setEmail(email);
         this.setName(name);
         this.setPassword(password);
         this.setDateOfBirth(dateOfBirth);
     }
+
+    /**
+     * Used to generate a tutor without an id.
+     * @param email
+     * @param name
+     * @param password
+     * @param dateOfBirth
+     * @param speciality
+     * @param isAvailable
+     */
+    public User(String email, String name, String password,
+                Date dateOfBirth, String speciality, boolean isAvailable) {
+        this(email, name, password, dateOfBirth);
+        this.speciality = speciality;
+        this.isAvailable = isAvailable;
+    }
+
+
+    /**
+     * Used to create a tutor within id
+     * @param id
+     * @param email
+     * @param name
+     * @param password
+     * @param dateOfBirth
+     * @param speciality
+     * @param isAvailable
+     */
     public User(Integer id, String email, String name, String password,
                 Date dateOfBirth, String speciality, boolean isAvailable) {
-        this.setId(id);
-        this.setEmail(email);
-        this.setName(name);
-        this.setPassword(password);
-        this.setDateOfBirth(dateOfBirth);
+        this(id, email, name, password, dateOfBirth);
         this.speciality = speciality;
         this.isAvailable = isAvailable;
     }
@@ -102,6 +148,7 @@ public class User {
 
 
     @XmlElement(name = "id")
+    @XmlJavaTypeAdapter(IDAdapter.class)
     public Integer getId() {
         return id;
     }
@@ -111,7 +158,7 @@ public class User {
     }
 
 
-
+    public boolean isStudent(){ return speciality == null && isAvailable == null; }
 
     @XmlElement(name = "speciality")
     public String getSpeciality() {
@@ -123,11 +170,11 @@ public class User {
     }
 
     @XmlElement(name = "status")
-    public boolean isAvailable() {
+    public Boolean isAvailable() {
         return isAvailable;
     }
 
-    public void setAvailable(boolean available) {
+    public void setAvailable(Boolean available) {
         isAvailable = available;
     }
 }

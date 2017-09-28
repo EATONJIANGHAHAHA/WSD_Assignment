@@ -35,12 +35,12 @@
             if(type.equals(TUTOR)) {
                 String speciality = request.getParameter(SPECIALITY);
                 filePath = application.getRealPath(WEB_INF_TUTORS_XML);
-                user = new User(2, email, name, DigestUtil.encryptPWD(password),
+                user = new User(email, name, DigestUtil.encryptPWD(password),
                         DateUtil.stringToDate(dateOfBirth), speciality, false);
             }
             else {
                 filePath = application.getRealPath(WEB_INF_STUDENTS_XML);
-                user = new User(2, email, name, DigestUtil.encryptPWD(password),
+                user = new User(email, name, DigestUtil.encryptPWD(password),
                         DateUtil.stringToDate(dateOfBirth));
             }
             UserApplication userApp = new UserApplication(filePath);

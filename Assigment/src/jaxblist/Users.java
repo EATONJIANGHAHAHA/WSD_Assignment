@@ -37,8 +37,8 @@ public class Users extends BaseJAXBList<User>{
 
 
     public boolean isRegistered(String email) {
-        for(User tutor: getList()){
-            if(tutor.getEmail().equals(email)) return true;
+        for(User user: getList()){
+            if(user.getEmail().equals(email)) return true;
         }
         return false;
     }
