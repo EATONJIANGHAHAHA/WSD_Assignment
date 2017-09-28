@@ -9,41 +9,28 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 import java.io.Serializable;
 
-@XmlAccessorType(XmlAccessType.FIELD)
+@XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlRootElement(name = "booking")
-public class Booking implements Serializable {
+public class Booking extends BaseModel{
 
     public static final String CANCELLED = "cancelled";
     public static final String ACTIVE = "active";
     public static final String COMPLETED = "completed";
 
-    @XmlElement(name = "id")
-    @XmlJavaTypeAdapter(IDAdapter.class)
-    private Integer id = 0;
 
-    @XmlElement(name = "student_name")
+
     private String studentName;
-
-    @XmlElement(name = "student_email")
     private String studentEmail;
-
-    @XmlElement(name = "tutor_name")
     private String tutorName;
-
-    @XmlElement(name = "tutor_email")
     private String tutorEmail;
-
-    @XmlElement(name = "subject")
     private String subject;
-
-    @XmlElement(name = "status")
     private String status;
 
     public Booking(){}
 
     public Booking(Integer id, String studentName, String studentEmail, String tutorName, String tutorEmail,
                    String subject, String status) {
-        this.id = id;
+        this.setId(id);
         this.studentName = studentName;
         this.studentEmail = studentEmail;
         this.tutorName = tutorName;
@@ -52,14 +39,7 @@ public class Booking implements Serializable {
         this.status = status;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
+    @XmlElement(name = "student_name")
     public String getStudentName() {
         return studentName;
     }
@@ -68,6 +48,7 @@ public class Booking implements Serializable {
         this.studentName = studentName;
     }
 
+    @XmlElement(name = "student_email")
     public String getStudentEmail() {
         return studentEmail;
     }
@@ -80,6 +61,7 @@ public class Booking implements Serializable {
         return tutorName;
     }
 
+    @XmlElement(name = "tutor_name")
     public void setTutorName(String tutorName) {
         this.tutorName = tutorName;
     }
@@ -88,10 +70,12 @@ public class Booking implements Serializable {
         return tutorEmail;
     }
 
+    @XmlElement(name = "tutor_email")
     public void setTutorEmail(String tutorEmail) {
         this.tutorEmail = tutorEmail;
     }
 
+    @XmlElement(name = "subject")
     public String getSubject() {
         return subject;
     }
@@ -100,6 +84,7 @@ public class Booking implements Serializable {
         this.subject = subject;
     }
 
+    @XmlElement(name = "status")
     public String getStatus() {
         return status;
     }

@@ -20,22 +20,14 @@ public class Bookings extends BaseJAXBList<Booking>{
     }
 
     @Override
-    public Booking findById( Integer id) {
-        for(Booking booking: this.getList()){
-            if(booking.getId() == id) return booking;
-        }
-        return null;
-    }
-
-    @Override
     @XmlElement(name = "booking")
     public List<Booking> getList() {
-        return this.list;
+        return super.getList();
     }
 
     @Override
     public void setList(List<Booking> list) {
-        this.list = list;
+        super.getList();
     }
 
     /**

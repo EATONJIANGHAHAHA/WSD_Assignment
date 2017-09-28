@@ -24,19 +24,6 @@ public class Users extends BaseJAXBList<User>{
     }
 
     /**
-     * Return the user by id.
-     * @param id
-     * @return
-     */
-    @Override
-    public User findById(Integer id) {
-        for(User user: getList()){
-            if(user.getId() == id) return user;
-        }
-        return null;
-    }
-
-    /**
      * Return the tutors by their status
      * @param status
      * @return
@@ -78,12 +65,12 @@ public class Users extends BaseJAXBList<User>{
     @Override
     @XmlElement(name = "user")
     public List<User> getList() {
-        return this.list;
+        return super.getList();
     }
 
     @Override
     public void setList(List<User> list) {
-        this.list = list;
+        super.setList(list);
     }
 
 

@@ -1,15 +1,20 @@
 package jaxblist;
 
+import model.BaseModel;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlSeeAlso;
 import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.List;
 
 @XmlSeeAlso({Bookings.class, Users.class})
-public abstract class BaseJAXBList<T> implements Serializable{
+@XmlAccessorType(XmlAccessType.PROPERTY)
+public abstract class BaseJAXBList<T extends BaseModel> implements Serializable{
 
     @XmlTransient
-    protected List<T> list;
+    private List<T> list;
 
     public BaseJAXBList(){}
 
@@ -17,12 +22,26 @@ public abstract class BaseJAXBList<T> implements Serializable{
         this.list = list;
     }
 
-    public abstract T findById(Integer id);
+    /**
+     * Find the object by its id.
+     * @param id
+     * @return
+     */
+    public T  findById(Integer id){
+        for(T t: list){
+            if(t.getId() == id) return t;
+        }
+        return null;
+    }
 
     @XmlTransient
-    public abstract List<T> getList();
+    public List<T> getList(){
+        return this.list;
+    }
 
-    public abstract void setList(List<T> list);//{this.list = list;}
+    public  void setList(List<T> list){
+        this.list = list;
+    }
 
     public void add( T item ){
         list.add( item );
@@ -30,5 +49,9 @@ public abstract class BaseJAXBList<T> implements Serializable{
 
     public void remove(T item){
         list.remove(item);
+    }
+
+    public void removeLast(){
+        list.remove(list.get(list.size()-1));
     }
 }

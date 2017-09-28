@@ -1,23 +1,23 @@
 package application;
 
 import adapter.IDAdapter;
+import jaxblist.BaseJAXBList;
+import org.xml.sax.SAXException;
 import sun.rmi.runtime.Log;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
+import javax.xml.XMLConstants;
+import javax.xml.bind.*;
 import javax.xml.parsers.DocumentBuilderFactory;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.Serializable;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
+import java.io.*;
 import java.lang.reflect.ParameterizedType;
 
-public class BaseApplication<T> implements Serializable{
+public class BaseApplication<T extends BaseJAXBList> implements Serializable{
 
 
     private String filePath;
+    private String schemaPath;
     private T items;
     private Class<T> clazz;
 
@@ -27,14 +27,16 @@ public class BaseApplication<T> implements Serializable{
         clazz = (Class<T>) type.getActualTypeArguments()[0];
     }
 
-    public BaseApplication(String filePath, T jaxbList) {
+    public BaseApplication(String filePath, String schemaPath, T jaxbList) {
         this();
         this.filePath = filePath;
+        this.schemaPath = schemaPath;
         this.items = jaxbList;
     }
 
-    public BaseApplication(String filePath) throws JAXBException, IOException {
+    public BaseApplication(String filePath, String schemaPath) throws JAXBException, IOException {
         this();
+        setSchemaPath(schemaPath);
         setFilePath(filePath);
     }
 
@@ -52,13 +54,33 @@ public class BaseApplication<T> implements Serializable{
         fin.close();
     }
 
-    public void save() throws IOException, JAXBException{
+    public void save() throws IOException, JAXBException, SAXException {
+
+        SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
+        Schema schema = sf.newSchema(new File(schemaPath));
+
         JAXBContext jc = JAXBContext.newInstance(clazz);
+
         Marshaller m = jc.createMarshaller();
         m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
         m.setAdapter(new IDAdapter());
+        m.setSchema(schema);
+        m.setEventHandler( new ValidationEventHandler() {
+            @Override
+            public boolean handleEvent(ValidationEvent event) {
+                return false;
+            }
+        });
+
         FileOutputStream fout = new FileOutputStream(filePath);
-        m.marshal(items, fout);
+        try{
+            m.marshal(items, fout);}
+        catch (MarshalException e){
+            items.removeLast();
+            m.setAdapter(new IDAdapter());
+            m.marshal(items, fout);
+            throw new ValidationException(e);
+        }
         fout.close();
         System.out.print("saved");
     }
@@ -69,5 +91,13 @@ public class BaseApplication<T> implements Serializable{
 
     public void setItems(T items) {
         this.items = items;
+    }
+
+    public String getSchemaPath() {
+        return schemaPath;
+    }
+
+    public void setSchemaPath(String schemaPath) {
+        this.schemaPath = schemaPath;
     }
 }

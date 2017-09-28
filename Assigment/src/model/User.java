@@ -1,20 +1,19 @@
 package model;
 
 
-import adapter.IDAdapter;
 import util.DigestUtil;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.util.Date;
+import javax.xml.bind.annotation.XmlType;
 
 /**
  * This class represents user in this online application.
  */
 @XmlRootElement(name = "user")
-public class User {
+@XmlType(propOrder = {"name", "email", "password","dateOfBirth", "speciality", "availability"})
+public class User extends BaseModel {
 
     public static final String WSD = "WSD";
     public static final String USP = "USP";
@@ -31,15 +30,16 @@ public class User {
     public static final String NAME = "name";
     public static final String PASSWORD = "password";
     public static final String DATE_OF_BIRTH = "dateOfBirth";
+    public static final String AVAILABLE = "available";
+    public static final String UNAVAILABLE = "unavailable";
 
-    private Integer id = 0;
     private String email;
     private String name;
     private String password;
-    private Date dateOfBirth;
+    private String dateOfBirth;
     @XmlTransient
     private String speciality;
-    private Boolean isAvailable;
+    private String availability;
 
     /**
      * Used to create a student within a id.
@@ -50,7 +50,7 @@ public class User {
      * @param dateOfBirth
      */
     public User(Integer id, String email, String name, String password,
-                Date dateOfBirth) {
+                String dateOfBirth) {
         this(email, name, password, dateOfBirth);
         this.setId(id);
     }
@@ -62,8 +62,8 @@ public class User {
      * @param password
      * @param dateOfBirth
      */
-    public User( String email, String name, String password,
-                Date dateOfBirth) {
+    public User(String email, String name, String password,
+                String dateOfBirth) {
         this.setEmail(email);
         this.setName(name);
         this.setPassword(password);
@@ -77,13 +77,13 @@ public class User {
      * @param password
      * @param dateOfBirth
      * @param speciality
-     * @param isAvailable
+     * @param availability
      */
     public User(String email, String name, String password,
-                Date dateOfBirth, String speciality, boolean isAvailable) {
+                String dateOfBirth, String speciality, String availability) {
         this(email, name, password, dateOfBirth);
         this.speciality = speciality;
-        this.isAvailable = isAvailable;
+        this.availability = availability;
     }
 
 
@@ -95,25 +95,17 @@ public class User {
      * @param password
      * @param dateOfBirth
      * @param speciality
-     * @param isAvailable
+     * @param availability
      */
     public User(Integer id, String email, String name, String password,
-                Date dateOfBirth, String speciality, boolean isAvailable) {
+                String dateOfBirth, String speciality, String availability) {
         this(id, email, name, password, dateOfBirth);
         this.speciality = speciality;
-        this.isAvailable = isAvailable;
+        this.availability = availability;
     }
 
     public User(){}
 
-    @XmlElement(name = "email")
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     @XmlElement(name ="name")
     public String getName() {
@@ -122,6 +114,15 @@ public class User {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @XmlElement(name = "email")
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @XmlElement(name = "password")
@@ -138,27 +139,18 @@ public class User {
     }
 
     @XmlElement(name = "date_of_birth")
-    public Date getDateOfBirth() {
+    public String getDateOfBirth() {
         return dateOfBirth;
     }
 
-    public void setDateOfBirth(Date dateOfBirth) {
+    public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
 
-    @XmlElement(name = "id")
-    @XmlJavaTypeAdapter(IDAdapter.class)
-    public Integer getId() {
-        return id;
-    }
+    public boolean isStudent(){ return speciality == null && availability == null; }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-
-    public boolean isStudent(){ return speciality == null && isAvailable == null; }
+    public boolean isAvailable(){ return availability.equals(AVAILABLE); }
 
     @XmlElement(name = "speciality")
     public String getSpeciality() {
@@ -170,11 +162,11 @@ public class User {
     }
 
     @XmlElement(name = "status")
-    public Boolean isAvailable() {
-        return isAvailable;
+    public String getAvailability() {
+        return availability;
     }
 
-    public void setAvailable(Boolean available) {
-        isAvailable = available;
+    public void setAvailability(String availability) {
+        this.availability = availability;
     }
 }

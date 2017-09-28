@@ -1,14 +1,13 @@
 <%@ page import="static model.User.*" %>
-<%@ page import="util.DateUtil" %>
 <%@ page import="util.DigestUtil" %>
-<%@ page import="application.BaseApplication" %>
-<%@ page import="javax.xml.bind.JAXBException" %>
-<%@ page import="java.io.IOException" %>
 <%@ page import="static application.UserApplication.WEB_INF_STUDENTS_XML" %>
 <%@ page import="static application.UserApplication.WEB_INF_TUTORS_XML" %>
 <%@ page import="application.UserApplication" %>
 <%@ page import="model.User" %>
 <%@ page import="java.text.ParseException" %>
+<%@ page import="static application.UserApplication.WEB_INF_USERS_XSD" %>
+<%@ page import="javax.xml.bind.MarshalException" %>
+<%@ page import="javax.xml.bind.ValidationException" %>
 <%--
   Created by IntelliJ IDEA.
   User: might
@@ -30,6 +29,7 @@
             String password = request.getParameter(PASSWORD);
             String name = request.getParameter(NAME);
             String dateOfBirth = request.getParameter(DATE_OF_BIRTH);
+            String schemaPath = application.getRealPath(WEB_INF_USERS_XSD);
             String filePath;
             User user;
 
@@ -37,14 +37,14 @@
                 String speciality = request.getParameter(SPECIALITY);
                 filePath = application.getRealPath(WEB_INF_TUTORS_XML);
                 user = new User(email, name, DigestUtil.encryptPWD(password),
-                        DateUtil.stringToDate(dateOfBirth), speciality, false);
+                        dateOfBirth, speciality, AVAILABLE);
             }
             else {
                 filePath = application.getRealPath(WEB_INF_STUDENTS_XML);
                 user = new User(email, name, DigestUtil.encryptPWD(password),
-                        DateUtil.stringToDate(dateOfBirth));
+                        dateOfBirth);
             }
-            UserApplication userApp = new UserApplication(filePath);
+            UserApplication userApp = new UserApplication(filePath, schemaPath);
 
             if(userApp.getItems().isRegistered(email)){
     %>
@@ -63,15 +63,16 @@
         catch (NullPointerException e){
             e.printStackTrace();
     %>
-    <p>Register failed: Some of the entered information may be invalid.</p>
+    <p>Register failed: Some of the entered information may be incomplete.</p>
     <%
         }
-        catch (ParseException e){
-    %>
-    <p>Register failed: please input a valid date.</p>
-    <%
-        }
+        catch (ValidationException e){
+            e.printStackTrace();
 
+    %>
+    <p>Register failed: you may entered invalid name, password or empty date.</p>
+    <%
+        }
     %>
 
 

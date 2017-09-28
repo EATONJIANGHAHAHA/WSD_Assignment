@@ -23,6 +23,16 @@
         <xs:pattern value="\S+"/>
     </xs:restriction>
     </xs:simpleType>
+    <xs:simpleType name="availability">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="available|unavailable"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="date">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="\d{1,4}-\d{1,2}-\d{1,2}"/>
+        </xs:restriction>
+    </xs:simpleType>
 
     <xs:element name="users">
         <xs:complexType>
@@ -34,9 +44,9 @@
                             <xs:element name="name" type="name"/>
                             <xs:element name="email" type="email"/>
                             <xs:element name="password" type="password"/>
-                            <xs:element name="date_of_birth" type="xs:date"/>
-                            <xs:element minOccurs="0" name="status" type="xs:boolean"/>
+                            <xs:element name="date_of_birth" type="date"/>
                             <xs:element minOccurs="0" name="speciality" type="speciality"/>
+                            <xs:element minOccurs="0" name="status" type="availability"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>

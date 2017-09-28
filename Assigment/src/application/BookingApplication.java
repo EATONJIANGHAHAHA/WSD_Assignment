@@ -13,11 +13,11 @@ public class BookingApplication extends BaseApplication<Bookings> {
         super();
     }
 
-    public BookingApplication(String filePath) throws JAXBException, IOException {
-        super(filePath);
+    public BookingApplication(String filePath, String schemaPath) throws JAXBException, IOException {
+        super(filePath, schemaPath);
     }
 
-    public BookingApplication(String filePath, Bookings bookings){
-        super(filePath, bookings);
+    public BookingApplication(String filePath, String schemaPath, Bookings bookings){
+        super(filePath, schemaPath, bookings);
     }
 }
