@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.uts.edu.au/31284/wsd"
+           xmlns="http://www.uts.edu.au/31284/wsd"
+           elementFormDefault="qualified">
+    <xs:simpleType name="name">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-z]+(\s[A-Z][a-z]+)*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="email">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9\._]+@[a-zA-Z.-]+\.[a-zA-Z]{2,4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="speciality">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="WSD|progApp|USP|SEP|MobileApp"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="password">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="\S+"/>
+    </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="users">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" minOccurs="0" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="id" type="xs:positiveInteger"/>
+                            <xs:element name="name" type="name"/>
+                            <xs:element name="email" type="email"/>
+                            <xs:element name="password" type="password"/>
+                            <xs:element name="date_of_birth" type="xs:date"/>
+                            <xs:element minOccurs="0" name="status" type="xs:boolean"/>
+                            <xs:element minOccurs="0" name="speciality" type="speciality"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
