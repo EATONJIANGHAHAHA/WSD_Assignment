@@ -4,9 +4,7 @@
 <%@ page import="static application.UserApplication.WEB_INF_TUTORS_XML" %>
 <%@ page import="application.UserApplication" %>
 <%@ page import="model.User" %>
-<%@ page import="java.text.ParseException" %>
 <%@ page import="static application.UserApplication.WEB_INF_USERS_XSD" %>
-<%@ page import="javax.xml.bind.MarshalException" %>
 <%@ page import="javax.xml.bind.ValidationException" %>
 <%--
   Created by IntelliJ IDEA.

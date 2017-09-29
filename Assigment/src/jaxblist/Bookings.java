@@ -2,6 +2,8 @@ package jaxblist;
 
 import model.Booking;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
@@ -11,6 +13,7 @@ import java.util.List;
  * This class represents a list of bookings
  */
 @XmlRootElement(name = "bookings")
+@XmlAccessorType(XmlAccessType.PROPERTY)
 public class Bookings extends BaseJAXBList<Booking>{
 
     public Bookings(){}
@@ -27,7 +30,7 @@ public class Bookings extends BaseJAXBList<Booking>{
 
     @Override
     public void setList(List<Booking> list) {
-        super.getList();
+        super.setList(list);
     }
 
     /**

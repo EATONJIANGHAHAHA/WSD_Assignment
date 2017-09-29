@@ -7,6 +7,7 @@ import sun.rmi.runtime.Log;
 
 import javax.xml.XMLConstants;
 import javax.xml.bind.*;
+import javax.xml.bind.annotation.adapters.XmlAdapter;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
@@ -44,6 +45,12 @@ public class BaseApplication<T extends BaseJAXBList> implements Serializable{
         return filePath;
     }
 
+    /**
+     * Initialize the items while setting the file path.
+     * @param filePath
+     * @throws JAXBException
+     * @throws IOException
+     */
     public void setFilePath(String filePath) throws JAXBException, IOException {
         JAXBContext jc = JAXBContext.newInstance( clazz );
         Unmarshaller u = jc.createUnmarshaller();
@@ -54,6 +61,12 @@ public class BaseApplication<T extends BaseJAXBList> implements Serializable{
         fin.close();
     }
 
+    /**
+     * Update the xml file.
+     * @throws IOException
+     * @throws JAXBException
+     * @throws SAXException
+     */
     public void save() throws IOException, JAXBException, SAXException {
 
         SchemaFactory sf = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
@@ -66,6 +79,11 @@ public class BaseApplication<T extends BaseJAXBList> implements Serializable{
         m.setAdapter(new IDAdapter());
         m.setSchema(schema);
         m.setEventHandler( new ValidationEventHandler() {
+            /**
+             * To stop the marshal when some of the values are invalid.
+             * @param event
+             * @return
+             */
             @Override
             public boolean handleEvent(ValidationEvent event) {
                 return false;
@@ -100,4 +118,5 @@ public class BaseApplication<T extends BaseJAXBList> implements Serializable{
     public void setSchemaPath(String schemaPath) {
         this.schemaPath = schemaPath;
     }
+
 }

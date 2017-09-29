@@ -23,7 +23,7 @@ public class BookingService {
                     application.getAttribute(BOOKING_APP);
             if(bookingApp == null){
                 bookingApp = new BookingApplication();
-                bookingApp.setFilePath(BOOKING_FILE_PATH);
+                bookingApp.setFilePath(WEB_INF_BOOKINGS_XML);
                 application.setAttribute(BOOKING_APP, bookingApp);
             }
             return bookingApp;
