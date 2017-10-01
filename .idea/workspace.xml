@@ -7,9 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764c25b3-1921-4df9-8430-2e24bc6ad6d3" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Java_EE_6_Java_EE_6.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/Assigment.iml" afterPath="$PROJECT_DIR$/Assigment/Assigment.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/src/model/Booking.java" afterPath="$PROJECT_DIR$/Assigment/src/model/Booking.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/web/style.xsl" afterPath="$PROJECT_DIR$/Assigment/web/style.xsl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/web/WEB-INF/classes/Assigment.iml" afterPath="$PROJECT_DIR$/Assigment/web/WEB-INF/classes/Assigment.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assigment_war_exploded/WEB-INF/classes/Assigment.iml" afterPath="$PROJECT_DIR$/out/artifacts/Assigment_war_exploded/WEB-INF/classes/Assigment.iml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +29,7 @@
       <file leaf-file-name="BaseJAXBList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/BaseJAXBList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="666">
+            <state relative-caret-position="648">
               <caret line="54" column="45" lean-forward="false" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
               <folding>
                 <element signature="e#1134#1135#0" expanded="true" />
@@ -39,7 +42,7 @@
       <file leaf-file-name="Bookings.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/Bookings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
+            <state relative-caret-position="216">
               <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#645#646#0" expanded="true" />
@@ -59,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Booking.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Booking.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assigment/src/model/Booking.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="108">
+              <caret line="6" column="76" lean-forward="false" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -79,11 +82,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.xsl" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.xsl" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assigment/web/style.xsl">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="443">
               <caret line="37" column="52" lean-forward="false" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookingService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assigment/src/service/rest/BookingService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assigment/src/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="31" column="61" lean-forward="false" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -132,6 +157,7 @@
       <find>availability</find>
       <find>name</find>
       <find>Jamiroquai</find>
+      <find>subject</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -193,8 +219,8 @@
         <option value="$PROJECT_DIR$/Assigment/web/test.jsp" />
         <option value="$PROJECT_DIR$/Assigment/src/jaxblist/Bookings.java" />
         <option value="$PROJECT_DIR$/Assigment/web/booking.jsp" />
-        <option value="$PROJECT_DIR$/Assigment/src/model/Booking.java" />
         <option value="$PROJECT_DIR$/Assigment/web/style.xsl" />
+        <option value="$PROJECT_DIR$/Assigment/src/model/Booking.java" />
       </list>
     </option>
   </component>
@@ -232,8 +258,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -255,7 +282,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -267,7 +293,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
-    <property name="SearchEverywhereHistoryKey" value="booking.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/booking.jsp&#10;re&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/registerAction.jsp&#10;reg&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/registerAction.jsp&#10;login&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/loginAction.jsp&#10;regis&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/registerAction.jsp&#10;use&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/jaxblist/Users.java&#10;service&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/service/rest/BookingService.java&#10;pom.&#9;FILE&#9;jar://C:/Users/might/Desktop/UTS/current/31284 Web service development/jersey-bundle-1.17.jar!/META-INF/maven/com.sun.jersey/jersey-bundle/pom.xml&#10;web.xm&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/WEB-INF/web.xml&#10;pom.xml&#9;FILE&#9;jar://C:/Users/might/Desktop/UTS/current/31284 Web service development/jersey-bundle-1.17.jar!/META-INF/maven/com.sun.jersey/jersey-bundle/pom.xml&#10;register&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/registerAction.jsp&#10;registerac&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/registerAction.jsp&#10;index&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/index.jsp&#10;bo&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/application/BookingApplication.java&#10;regi&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/register.jsp&#10;DocumentBuilderFactory&#9;PSI&#9;JAVA://javax.xml.parsers.DocumentBuilderFactory&#10;ObjectFac&#9;PSI&#9;JAVA://com.oracle.xmlns.internal.webservices.jaxws_databinding.ObjectFactory&#10;getAll&#9;PSI&#9;JAVA://jaxblist.BaseJAXBList#getAll&#10;context &#9;ACTION&#9;ContextHelp&#10;tut&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/model/Tutor.java" />
+    <property name="SearchEverywhereHistoryKey" value="booking.java&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/model/Booking.java&#10;user&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/model/User.java&#10;booking.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/booking.jsp&#10;re&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/registerAction.jsp&#10;reg&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/registerAction.jsp&#10;login&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/loginAction.jsp&#10;regis&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/registerAction.jsp&#10;use&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/jaxblist/Users.java&#10;service&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/service/rest/BookingService.java&#10;pom.&#9;FILE&#9;jar://C:/Users/might/Desktop/UTS/current/31284 Web service development/jersey-bundle-1.17.jar!/META-INF/maven/com.sun.jersey/jersey-bundle/pom.xml&#10;web.xm&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/WEB-INF/web.xml&#10;pom.xml&#9;FILE&#9;jar://C:/Users/might/Desktop/UTS/current/31284 Web service development/jersey-bundle-1.17.jar!/META-INF/maven/com.sun.jersey/jersey-bundle/pom.xml&#10;register&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/registerAction.jsp&#10;registerac&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/registerAction.jsp&#10;index&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/index.jsp&#10;bo&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/application/BookingApplication.java&#10;regi&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/register.jsp&#10;DocumentBuilderFactory&#9;PSI&#9;JAVA://javax.xml.parsers.DocumentBuilderFactory&#10;ObjectFac&#9;PSI&#9;JAVA://com.oracle.xmlns.internal.webservices.jaxws_databinding.ObjectFactory&#10;getAll&#9;PSI&#9;JAVA://jaxblist.BaseJAXBList#getAll&#10;context &#9;ACTION&#9;ContextHelp&#10;tut&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/model/Tutor.java" />
     <property name="last.edited.regexp" value="" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -340,6 +366,46 @@
       <envs />
       <patterns />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
     <configuration default="true" type="GlassfishConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment />
@@ -401,46 +467,6 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-    </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
     </configuration>
     <configuration default="true" type="GlassfishConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -791,6 +817,7 @@
       <workItem from="1506632717756" duration="8016000" />
       <workItem from="1506646468722" duration="1313000" />
       <workItem from="1506654730949" duration="5693000" />
+      <workItem from="1506819575049" duration="340000" />
     </task>
     <task id="LOCAL-00001" summary="Created models">
       <created>1506325251894</created>
@@ -915,7 +942,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="85097000" />
+    <option name="totallyTimeSpent" value="85437000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -932,7 +959,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3305921" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3305509" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -940,20 +967,20 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.70888156" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3223684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75328946" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7055921" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75328946" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30704224" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31267604" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7312187" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1160,14 +1187,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/service/rest/BookingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="22" column="45" lean-forward="false" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_144/src.zip!/javax/xml/bind/ValidationEventHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -1179,9 +1198,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
           <caret line="378" column="51" lean-forward="false" selection-start-line="378" selection-start-column="51" selection-end-line="378" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1222,7 +1238,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="38" column="17" lean-forward="false" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1230,10 +1245,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="20" column="65" lean-forward="false" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
-          <folding>
-            <element signature="e#675#676#0" expanded="false" />
-            <element signature="e#726#727#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1252,22 +1263,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/web/test.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="50" lean-forward="false" selection-start-line="1" selection-start-column="50" selection-end-line="1" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/web/test.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/web/test.jsp" />
+    <entry file="file://$PROJECT_DIR$/Assigment/web/test.xsl" />
     <entry file="file://$PROJECT_DIR$/Assigment/src/application/BookingApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -1278,7 +1275,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/BaseJAXBList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
+        <state relative-caret-position="648">
           <caret line="54" column="45" lean-forward="false" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
           <folding>
             <element signature="e#1134#1135#0" expanded="true" />
@@ -1289,7 +1286,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/Bookings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
+        <state relative-caret-position="216">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#645#646#0" expanded="true" />
@@ -1330,22 +1327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/model/Booking.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assigment/src/model/BaseModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -1358,6 +1339,32 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
           <caret line="37" column="52" lean-forward="false" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/src/service/rest/BookingService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/src/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="31" column="61" lean-forward="false" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/src/model/Booking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="76" lean-forward="false" selection-start-line="6" selection-start-column="76" selection-end-line="6" selection-end-column="76" />
           <folding />
         </state>
       </provider>

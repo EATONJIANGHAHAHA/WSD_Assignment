@@ -4,7 +4,7 @@ import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlRootElement(name = "booking")
-@XmlType(propOrder = {"studentName", "studentEmail", "tutorName","subject", "subject", "status"})
+@XmlType(propOrder = {"studentName", "studentEmail", "tutorName","tutorEmail", "subject", "status"})
 public class Booking extends BaseModel{
 
     public static final String CANCELLED = "cancelled";
