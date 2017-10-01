@@ -1,23 +1,15 @@
 package model;
 
-import adapter.IDAdapter;
-
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
-import java.io.Serializable;
+import javax.xml.bind.annotation.*;
 
 @XmlAccessorType(XmlAccessType.PROPERTY)
 @XmlRootElement(name = "booking")
+@XmlType(propOrder = {"studentName", "studentEmail", "tutorName","subject", "subject", "status"})
 public class Booking extends BaseModel{
 
     public static final String CANCELLED = "cancelled";
     public static final String ACTIVE = "active";
     public static final String COMPLETED = "completed";
-
-
 
     private String studentName;
     private String studentEmail;

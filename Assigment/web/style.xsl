@@ -10,6 +10,7 @@
             </body>
         </html>
     </xsl:template>
+
     <xsl:template match="bookinglist">
         <table>
             <thead>
@@ -31,6 +32,10 @@
             <td><xsl:value-of select="subject"/></td>
             <td><xsl:value-of select="status"/></td>
         </tr>
+    </xsl:template>
+
+    <xsl:template match="navigation">
+        <a href=""><xsl:value-of select="link"/></a>
     </xsl:template>
 
 
