@@ -28,6 +28,11 @@ public class BaseApplication<T extends BaseJAXBList> implements Serializable{
         clazz = (Class<T>) type.getActualTypeArguments()[0];
     }
 
+    public BaseApplication(String filePath) throws JAXBException, IOException {
+        this();
+        setFilePath(filePath);
+    }
+
     public BaseApplication(String filePath, String schemaPath, T jaxbList) {
         this();
         this.filePath = filePath;

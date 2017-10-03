@@ -3,13 +3,23 @@
 
     <xsl:template match="page">
         <html>
+            <head>
+                <link rel="stylesheet" type="text/css" href="page.css"/>
+            </head>
             <title><xsl:value-of select="@title"/></title>
             <body>
-                <h1><xsl:value-of select="@title"/></h1>
+                <div>
+                    <!--                    <img src="image/UTSLogo.png"></img>-->
+                    <p1>
+                        <xsl:value-of select="@title"/>
+                    </p1>
+                </div>
                 <xsl:apply-templates/>
             </body>
         </html>
     </xsl:template>
+
+
 
     <xsl:template match="bookinglist">
         <table>
@@ -34,9 +44,24 @@
         </tr>
     </xsl:template>
 
-    <xsl:template match="navigation">
-        <a href=""><xsl:value-of select="link"/></a>
+    <xsl:template match="result">
+        <xsl:if test="@type = error">
+            <div class="error">
+                <p>
+                    <xsl:value-of select="content"/>
+                </p>
+                <p>Click here <a href = "login.jsp">here</a>to try again.</p>
+                <p>Click <a href="register.jsp">here</a> to register.</p>
+            </div>
+        </xsl:if>
+        <xsl:if test="@type = success">
+            <div>
+                <p>
+                    Success, you now login as <bold><xsl:value-of select="content"/></bold>.
+                </p>
+                <p>Click here <a href = "main.jsp">here</a>to the main page</p>
+            </div>
+        </xsl:if>
+
     </xsl:template>
-
-
 </xsl:stylesheet>

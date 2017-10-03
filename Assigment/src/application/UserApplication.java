@@ -14,6 +14,10 @@ public class UserApplication extends BaseApplication<Users> {
         super();
     }
 
+    public UserApplication(String filePath) throws JAXBException, IOException {
+        super(filePath);
+    }
+
     public UserApplication(String filePath, String schemaPath) throws JAXBException, IOException {
         super(filePath, schemaPath);
     }

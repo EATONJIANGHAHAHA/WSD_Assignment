@@ -1,0 +1,77 @@
+html, body{
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background:#FFFFFF;
+}
+p1{
+    font-family: Impact;
+    font-size: 40px;
+}
+div{
+    background: #f7f7f7;
+    width: auto;
+}
+
+img{
+    padding-right: 60px;
+}
+
+table{
+    padding-top: 20px;
+    margin: auto;
+    text-align: center;
+    width: 1000px;
+}
+table tr{
+    font-family: verdana,arial,sans-serif;
+    font-size:16px;
+    color:#333333;
+    border-width: 1px;
+    border-color: #666666;
+    border-collapse: collapse;
+}
+table th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #dedede;
+}
+table td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    border-color: #666666;
+    background-color: #ffffff;
+}
+
+.menu {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: #f7f7f7;
+    float: right;
+    margin-top: 20px;
+    margin-right: 250px;
+}
+
+
+.menu a:link, .menu a:visited ,.menu p2{
+    color: #7d7d7d;
+    background-color: #f7f7f7;
+    border-bottom: solid 2px #e6e6e6;
+    text-decoration: none;
+    padding: 10px 16px 10px 16px;
+}
+
+.menu a:hover, .menu a:active {
+    background-color: #646464;
+    border-bottom: solid 2px #2e2e2e;
+    color: #fff;}
+
+.error{
+    color: #880000;
+}
+
+
