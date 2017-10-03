@@ -1,27 +1,28 @@
+<%@ page contentType="text/xml;charset=UTF-8" language="java" %>
 <%@ page import="model.User" %>
 <%@ page import="static model.User.*" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    User user = (User) session.getAttribute(USER);
     String url = request.getQueryString();
+    if(session != null){
+    User user = (User) session.getAttribute(USER);
 %>
-<div class="menu">
+<navigation>
     <%
         if(user != null){
     %>
-    <p>You now logged in as <bold>user.getName()</bold>.</p>
-    <a href="main.jsp">Main</a>
-    <a href="account.jsp">Account</a>
-    <a href="booking.jsp">Booking</a>
+    <status name="<%=user.getName()%>">login</status>
     <%
         }
         else {
     %>
-    Register <a href="login.jsp?<%=STUDENT%>"> as student</a>
-    <a href="login.jsp?<%=TUTOR%>"> as tutor</a>
-    Login <a href="login.jsp?<%=STUDENT%>">Register as student</a>
-    <a href="login.jsp?<%=TUTOR%>"> as tutor</a>
-</div>
+    <status>logout</status>
 <%
         }
+    }
+    else {
 %>
+    <status>logout</status>
+    <%
+        }
+    %>
+</navigation>

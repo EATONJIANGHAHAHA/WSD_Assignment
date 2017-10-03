@@ -6,7 +6,16 @@
         <id>1</id>
         <name>Jiang Yichen</name>
         <email>123@gmail.com</email>
-        <password>12345</password>
+        <password>776370680E3B2E04701503401D330545</password>
+        <!--111-->
         <date_of_birth>1998-05-04</date_of_birth>
+    </user>
+    <user>
+        <id>2</id>
+        <name>Password Aaa</name>
+        <email>student1@gmail.com</email>
+        <password>327A4E1D2C55063211084632295C6E5A</password>
+        <!--password is Aaa-->
+        <date_of_birth>2017-10-04</date_of_birth>
     </user>
 </users>

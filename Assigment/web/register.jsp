@@ -1,61 +1,91 @@
-<%@ page import="static model.User.*" %><%--
-  Created by IntelliJ IDEA.
-  User: might
-  Date: 27/09/2017
-  Time: 5:05 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Register</title>
-</head>
-<body>
-    <h1>Register</h1>
-    <form action = "registerAction.jsp" method = "post">
-        <table>
-            <tr>
-                <td>Name:</td>
-                <td><input type="text" name="<%=NAME%>"/></td>
-            </tr>
-            <tr>
-                <td>Email:</td>
-                <td><input type="email" name="<%=EMAIL%>"/></td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td><input type="password" name="<%=PASSWORD%>"/></td>
-            </tr>
-            <tr>
-                <td>Date of Birth</td>
-                <td><input type="date" name="<%=DATE_OF_BIRTH%>"/></td>
-            </tr>
-            <tr>
-                <td>Usertype</td>
-                <td>
-                    <select name="<%=TYPE%>">
-                        <option><%=STUDENT%></option>
-                        <option><%=TUTOR%></option>
-                    </select>
-                </td>
-            <tr>
-                <td>Speciality: </td>
-                <td><select name="<%=SPECIALITY%>">
-                    <%
-                        for(String subject: SUBJECTS){
-                            out.print("<option>" + subject +"</option>");
-                        }
-                    %>
-                    </select>
-                </td>
+<%@ page contentType="text/xml;charset=UTF-8" language="java" %><%--
+--%><?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<%@ page import="static application.UserApplication.WEB_INF_USERS_XSD" %>
+<%@ page import="static application.UserApplication.WEB_INF_TUTORS_XML" %>
+<%@ page import="util.DigestUtil" %>
+<%@ page import="application.UserApplication" %>
+<%@ page import="static application.UserApplication.WEB_INF_STUDENTS_XML" %>
+<%@ page import="javax.xml.bind.ValidationException" %>
 
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type = "submit" value = "Register"/></td>
-            </tr>
-        </table>
-    </form>
+<page title="Register">
+    <%@ include file="navigation.jsp"%>
+    <%
+        String progress = request.getParameter("progress");
 
-</body>
-</html>
+        if(progress == null || progress.equals("")){
+    %>
+    <form_table user_type="<%=url%>">
+        <category>register</category>>
+    </form_table>
+    <%
+        }
+        else {
+            try{
+                String email = request.getParameter(EMAIL);
+                String password = request.getParameter(PASSWORD);
+                String name = request.getParameter(NAME);
+                String dateOfBirth = request.getParameter(DATE_OF_BIRTH);
+                String schemaPath = application.getRealPath(WEB_INF_USERS_XSD);
+                String filePath;
+                User user;
+
+                if(url.equals(TUTOR)) {
+                    String speciality = request.getParameter(SPECIALITY);
+                    filePath = application.getRealPath(WEB_INF_TUTORS_XML);
+                    user = new User(email, name, DigestUtil.encryptPWD(password),
+                            dateOfBirth, speciality, AVAILABLE);
+                }
+                else {
+                    filePath = application.getRealPath(WEB_INF_STUDENTS_XML);
+                    user = new User(email, name, DigestUtil.encryptPWD(password),
+                            dateOfBirth);
+                }
+                UserApplication userApp = new UserApplication(filePath, schemaPath);
+
+                if(userApp.getItems().isRegistered(email)){
+
+    %>
+    <result type="error">
+        <content>
+            Register failed: The email address already exists.
+        </content>
+    </result>
+    <%
+                }
+                else {
+                    userApp.getItems().add(user);
+                    userApp.save();
+                    session.setAttribute(USER, user);
+
+    %>
+    <result type="success">
+        <content><%=user.getName()%></content>
+    </result>
+    <%
+                }
+            }
+            catch (NullPointerException e){
+                e.printStackTrace();
+    %>
+    <result type="error">
+        <content>
+            Register failed: The information you entered may be incomplete.
+        </content>
+    </result>
+    <%
+        }
+        catch (ValidationException e){
+    %>
+    <result type="error">
+        <content>
+            Register failed: you may entered invalid name, password or empty date.
+        </content>
+    </result>
+    <%
+        }
+        }
+    %>
+
+</page>
+

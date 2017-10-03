@@ -6,40 +6,26 @@
 <%@ page import="static model.User.*" %>
 <%@ page import="static application.UserApplication.WEB_INF_TUTORS_XML" %>
 <%@ page import="static application.UserApplication.WEB_INF_STUDENTS_XML" %>
-<%!
-    public boolean isEmpty(String s) {
-        return s == null || s.equals("");
-    }
-%>
+
+
 <page title="Login">
+    <%@ include file="navigation.jsp"%>
     <%
-        String userType = request.getQueryString();
-        String password = request.getParameter(PASSWORD);
-        String email = request.getParameter(EMAIL);
-        if (isEmpty(email) && isEmpty(password)) {
+        String progress = request.getParameter("progress");
+
+        if (progress == null || progress.equals("")) {
     %>
-    <form action="login.jsp?<%=userType%>" method="post">
-        <table>
-            <tr>
-                <td>Email:</td>
-                <td><input type="text" name="<%=EMAIL%>"/></td>
-            </tr>
-            <tr>
-                <td>Password:</td>
-                <td><input type="password" name="<%=PASSWORD%>"/></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="Login"/></td>
-            </tr>
-        </table>
-    </form>
+    <form_table user_type="<%=url%>">
+        <category>login</category>>
+    </form_table>
     <%
     }
     else {
+        String password = request.getParameter(PASSWORD);
+        String email = request.getParameter(EMAIL);
         String filePath;
         try {
-            if (request.getParameter(TYPE).equals(STUDENT)) {
+            if (url.equals(STUDENT)) {
                 filePath = application.getRealPath(WEB_INF_STUDENTS_XML);
             }
             else {

@@ -1,16 +1,12 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: might
-  Date: 28/09/2017
-  Time: 5:24 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<%@ page contentType="text/xml;charset=UTF-8" language="java" %><%--
+--%><?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<page title="Logout">
+    <%
+        session.invalidate();
+    %>
+    <%@include file="navigation.jsp" %>
+    <result type="simple">
+        <content>You logged out successfully.</content>
+    </result>
+</page>

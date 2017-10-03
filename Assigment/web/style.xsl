@@ -38,23 +38,78 @@
 
     <xsl:template match="booking">
         <tr>
-            <td><xsl:value-of select="id"/></td>
+            <td>#<xsl:value-of select="id"/></td>
             <td><xsl:value-of select="subject"/></td>
             <td><xsl:value-of select="status"/></td>
         </tr>
     </xsl:template>
 
+    <xsl:template match="form_table">
+        <div>
+            <form method="post">
+            <xsl:attribute name="action"><xsl:value-of select="category"/>.jsp?<xsl:value-of select="@user_type"/></xsl:attribute>
+            <table>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" name="email"/></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input type="password" name="password"/></td>
+                </tr>
+                <xsl:if test="category != 'login' ">
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name"/></td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth</td>
+                        <td><input type="date" name="dateOfBirth"/></td>
+                    </tr>
+                    <xsl:choose>
+                        <xsl:when test="@user_type = 'tutor'">
+                        <tr>
+                            <td>Speciality: </td>
+                            <td>
+                                <select name="speciality">
+                                    <option>WSD</option>
+                                    <option>SEP</option>
+                                    <option>AppProg</option>
+                                    <option>USP</option>
+                                    <option>MobileApp</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </xsl:when>
+                    </xsl:choose>
+                </xsl:if>
+                <tr>
+                    <td><input type="hidden" name="progress" value="validate"/></td>
+                    <td>
+                        <input type="submit">
+                            <xsl:attribute name="value">
+                                <xsl:value-of select="category"/>
+                            </xsl:attribute>
+                        </input>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </div>
+    </xsl:template>
+
+
     <xsl:template match="result">
-        <xsl:if test="@type = error">
+        <div>
+        <xsl:if test="@type = 'error'">
             <div class="error">
                 <p>
                     <xsl:value-of select="content"/>
                 </p>
-                <p>Click here <a href = "login.jsp">here</a>to try again.</p>
-                <p>Click <a href="register.jsp">here</a> to register.</p>
+                <p>Please try again</p>
             </div>
         </xsl:if>
-        <xsl:if test="@type = success">
+        <xsl:if test="@type = 'success'">
             <div>
                 <p>
                     Success, you now login as <bold><xsl:value-of select="content"/></bold>.
@@ -62,6 +117,29 @@
                 <p>Click here <a href = "main.jsp">here</a>to the main page</p>
             </div>
         </xsl:if>
-
+        <xsl:if test="@type = 'simple' ">
+            <p><xsl:value-of select="content"/></p>
+        </xsl:if>
+        </div>
     </xsl:template>
+
+
+    <xsl:template match="navigation">
+        <div class="menu">
+        <xsl:if test="status = 'login'">
+            <p>You now logged in as <bold><xsl:value-of select="@name"/></bold>.</p>
+            <a href="main.jsp">Main</a>
+            <a href="account.jsp">Account</a>
+            <a href="booking.jsp">Booking</a>
+            <a href="logoutAction.jsp">Logout</a>
+        </xsl:if>
+        <xsl:if test="status = 'logout'">
+            Register <a href="register.jsp?student">as student</a>
+            <a href="register.jsp?tutor">as tutor</a>
+            Login <a href="login.jsp?student"> as student</a>
+            <a href="login.jsp?tutor"> as tutor</a>
+        </xsl:if>
+        </div>
+    </xsl:template>
+
 </xsl:stylesheet>
