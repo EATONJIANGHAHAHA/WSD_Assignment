@@ -36,12 +36,74 @@
         </table>
     </xsl:template>
 
+    <xsl:template match="tutorlist">
+        <table>
+            <thead>
+                <tr>
+                    <th>Tutor</th>
+                    <th>Subject</th>
+                    <th>Email</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <xsl:apply-templates/>
+            </tbody>
+        </table>
+    </xsl:template>
+
+    <xsl:template match="tutor">
+        <tr>
+            <td>
+            <xsl:if test="status = 'unavailable' ">
+                <xsl:value-of select="name"/>
+            </xsl:if>
+            <xsl:if test="status ='available'">
+                <a>
+                    <xsl:attribute name="href">booking.jsp?tutorId=<xsl:value-of select="@id"/></xsl:attribute>
+                    <xsl:value-of select="name"/>
+                </a>
+            </xsl:if>
+            </td>
+            <td><xsl:value-of select="subject"/></td>
+            <td><xsl:value-of select="email"/></td>
+            <td><xsl:value-of select="status"/></td>
+        </tr>
+    </xsl:template>
+
     <xsl:template match="booking">
         <tr>
             <td>#<xsl:value-of select="id"/></td>
             <td><xsl:value-of select="subject"/></td>
             <td><xsl:value-of select="status"/></td>
         </tr>
+    </xsl:template>
+
+    <xsl:template match="search_form">
+        <div>
+            <form action="main.jsp" method="post">
+                <table>
+                    <tr>
+                        <td>Search by</td>
+                        <td>
+                            <select name="searchType">
+                                <option>Tutor name</option>
+                                <option>Subject</option>
+                                <option>Tutor status</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Please type in the full key word:</td>
+                        <td><input type="search" name="keyWord"/></td>
+                    </tr>
+                    <tr>
+                        <td><input type="hidden" name="progress" value="progress"/></td>
+                        <td><input type="submit" value="Search"/></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
     </xsl:template>
 
     <xsl:template match="form_table">
@@ -112,9 +174,9 @@
         <xsl:if test="@type = 'success'">
             <div>
                 <p>
-                    Success, you now login as <bold><xsl:value-of select="content"/></bold>.
+                    Success, you now login as <b><xsl:value-of select="content"/></b>.
                 </p>
-                <p>Click here <a href = "main.jsp">here</a>to the main page</p>
+                <p>Click <a href = "main.jsp">here</a>to the main page</p>
             </div>
         </xsl:if>
         <xsl:if test="@type = 'simple' ">
@@ -127,7 +189,7 @@
     <xsl:template match="navigation">
         <div class="menu">
         <xsl:if test="status = 'login'">
-            <p>You now logged in as <bold><xsl:value-of select="@name"/></bold>.</p>
+            <p>You now logged in as <xsl:value-of select="user_name"/>.</p>
             <a href="main.jsp">Main</a>
             <a href="account.jsp">Account</a>
             <a href="booking.jsp">Booking</a>

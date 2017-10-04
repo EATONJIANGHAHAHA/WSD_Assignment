@@ -1,16 +1,19 @@
 <%@ page contentType="text/xml;charset=UTF-8" language="java" %>
 <%@ page import="model.User" %>
 <%@ page import="static model.User.*" %>
+<navigation>
 <%
     String url = request.getQueryString();
-    if(session != null){
-    User user = (User) session.getAttribute(USER);
+    User user = null;
+    HttpSession httpSession = request.getSession(false);
+    if(httpSession != null){
+     user = (User) httpSession.getAttribute(USER);
 %>
-<navigation>
     <%
         if(user != null){
     %>
-    <status name="<%=user.getName()%>">login</status>
+    <status>login</status>
+    <user_name><%=user.getName()%></user_name>
     <%
         }
         else {

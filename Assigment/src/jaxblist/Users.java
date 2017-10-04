@@ -17,6 +17,7 @@ import java.util.List;
 @XmlAccessorType(XmlAccessType.PROPERTY)
 public class Users extends BaseJAXBList<User>{
 
+
     public Users(){}
 
     public Users(List<User> list){
@@ -24,7 +25,7 @@ public class Users extends BaseJAXBList<User>{
     }
 
     /**
-     * Return the tutors by their status
+     * Return the tutors by whether they are available
      * @param status
      * @return
      */
@@ -37,6 +38,19 @@ public class Users extends BaseJAXBList<User>{
     }
 
     /**
+     * Return the tutors by their availability.
+     * @param availability
+     * @return
+     */
+    public Users findTutorByStatus(String availability){
+        Users tutors = new Users(new ArrayList<User>());
+        for(User tutor: getList()){
+            if((tutor.getAvailability().toLowerCase()).equals(availability.toLowerCase())) tutors.add(tutor);
+        }
+        return tutors;
+    }
+
+    /**
      * Return the tutors by their names
      * @param name
      * @return
@@ -44,7 +58,7 @@ public class Users extends BaseJAXBList<User>{
     public Users findTutorByName(String name){
         Users tutors = new Users(new ArrayList<User>());
         for(User tutor: getList()){
-            if(tutor.getName().equals(name)) tutors.add(tutor);
+            if((tutor.getName().toLowerCase()).equals(name.toLowerCase())) tutors.add(tutor);
         }
         return tutors;
     }
@@ -57,7 +71,7 @@ public class Users extends BaseJAXBList<User>{
     public Users findTutorBySubject(String subject){
         Users tutors = new Users(new ArrayList<User>());
         for(User tutor: getList()){
-            if(tutor.getSpeciality().equals(subject)) tutors.add(tutor);
+            if((tutor.getSpeciality().toLowerCase()).equals(subject.toLowerCase())) tutors.add(tutor);
         }
         return tutors;
     }

@@ -6,9 +6,19 @@
         <id>1</id>
         <name>Ryan</name>
         <email>234@gmail.com</email>
-        <password>12345</password>
+        <password>776370680E3B2E04701503401D330545</password>
         <date_of_birth>1958-05-09</date_of_birth>
         <speciality>WSD</speciality>
+        <status>available</status>
+    </user>
+    <user>
+        <id>2</id>
+        <name>Tutor Test</name>
+        <email>443@gmail.com</email>
+        <password>776370680E3B2E04701503401D330545</password>
+        <!--111-->
+        <date_of_birth>2017-10-05</date_of_birth>
+        <speciality>USP</speciality>
         <status>available</status>
     </user>
 </users>

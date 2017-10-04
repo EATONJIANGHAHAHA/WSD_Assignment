@@ -28,7 +28,6 @@
                 String dateOfBirth = request.getParameter(DATE_OF_BIRTH);
                 String schemaPath = application.getRealPath(WEB_INF_USERS_XSD);
                 String filePath;
-                User user;
 
                 if(url.equals(TUTOR)) {
                     String speciality = request.getParameter(SPECIALITY);

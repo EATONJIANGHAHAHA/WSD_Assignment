@@ -32,7 +32,7 @@
                 filePath = application.getRealPath(WEB_INF_TUTORS_XML);
             }
             UserApplication userApp = new UserApplication(filePath);
-            User user = userApp.getItems().login(email, password);
+            user = userApp.getItems().login(email, password);
             if (user != null) {
                 session.setAttribute(USER, user);
     %>
