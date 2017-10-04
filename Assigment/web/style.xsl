@@ -31,7 +31,7 @@
                     <th>Tutor email</th>
                     <th>Subject</th>
                     <th>Status</th>
-                    <th/>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -211,7 +211,7 @@
                 <p>
                     Success, you now login as <b><xsl:value-of select="content"/></b>.
                 </p>
-                <p>Click <a href = "main.jsp">here</a>to the main page</p>
+                <p>Click <a href = "main.jsp">here</a> to the main page</p>
             </div>
         </xsl:if>
         <xsl:if test="@type = 'simple' ">
@@ -237,6 +237,33 @@
             <a href="login.jsp?tutor"> as tutor</a>
         </xsl:if>
         </div>
+    </xsl:template>
+
+    <xsl:template match="account_info">
+        <table>
+            <tr>
+                <td>name</td>
+                <td><xsl:value-of select="name"/></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><xsl:value-of select="email"/></td>
+            </tr>
+            <tr>
+                <td>Date of birth</td>
+                <td><xsl:value-of select="date_of_birth"/></td>
+            </tr>
+            <xsl:if test="user_type = 'tutor'">
+                <tr>
+                    <td>Speciality</td>
+                    <td><xsl:value-of select="speciality"/></td>
+                </tr>
+            </xsl:if>
+            <tr>
+                <td><input type="submit" name="button" value="Edit account"/></td>
+                <td><input type="submit" name="button" value="Cancel account"/></td>
+            </tr>
+        </table>
     </xsl:template>
 
 </xsl:stylesheet>

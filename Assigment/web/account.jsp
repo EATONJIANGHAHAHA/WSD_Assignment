@@ -1,17 +1,31 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: might
-  Date: 28/09/2017
-  Time: 5:04 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Account</title>
-</head>
-<body>
-    <h1>Main</h1>
-
-</body>
-</html>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<%@ page contentType="text/xml;charset=UTF-8" language="java" %>
+<page title="Account">
+<%@include file="navigation.jsp"%>
+    <%
+        if(user == null){
+    %>
+    <result type="simple">
+        <content>Please log in first</content>
+    </result>
+    <%
+        }
+        else {
+    %>
+    <account_info user_tyoe="<%=user.getType()%>">
+        <name><%=user.getName()%></name>
+        <email><%=user.getEmail()%></email>
+        <date_of_birth><%=user.getDateOfBirth()%></date_of_birth>
+        <%
+            if(!user.isStudent()){
+        %>
+        <speciality><%=user.getSpeciality()%></speciality>
+        <%
+            }
+        %>
+    </account_info>
+    <%
+        }
+    %>
+</page>
