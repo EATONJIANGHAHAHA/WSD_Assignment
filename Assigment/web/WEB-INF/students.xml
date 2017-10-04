@@ -18,4 +18,28 @@
         <!--password is Aaa-->
         <date_of_birth>2017-10-04</date_of_birth>
     </user>
+    <user>
+        <id>3</id>
+        <name>Jiang Jianshun</name>
+        <email>mamaipi@gmail.com</email>
+        <password>4B5B51297061640A1B022E20440D584F</password>
+        <!--sb-->
+        <date_of_birth>2017-03-08</date_of_birth>
+    </user>
+    <user>
+        <id>4</id>
+        <name>Wocao Jianshun</name>
+        <email>KengDie@gmail.com</email>
+        <password>527546032C7C755D037E61014D0C7C3D</password>
+        <!--olo-->
+        <date_of_birth>2017-10-06</date_of_birth>
+    </user>
+    <user>
+        <id>5</id>
+        <name>Olo Jiang</name>
+        <email>Oh@gmail.com</email>
+        <password>776370680E3B2E04701503401D330545</password>
+        <!--111-->
+        <date_of_birth>2017-10-11</date_of_birth>
+    </user>
 </users>

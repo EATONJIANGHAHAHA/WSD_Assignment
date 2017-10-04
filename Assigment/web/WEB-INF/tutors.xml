@@ -9,7 +9,7 @@
         <password>776370680E3B2E04701503401D330545</password>
         <date_of_birth>1958-05-09</date_of_birth>
         <speciality>WSD</speciality>
-        <status>available</status>
+        <status>unavailable</status>
     </user>
     <user>
         <id>2</id>
@@ -19,6 +19,24 @@
         <!--111-->
         <date_of_birth>2017-10-05</date_of_birth>
         <speciality>USP</speciality>
+        <status>available</status>
+    </user>
+    <user>
+        <id>3</id>
+        <name>Ac Dc</name>
+        <email>acdc@gmail.com</email>
+        <password>776370680E3B2E04701503401D330545</password>
+        <date_of_birth>2017-10-04</date_of_birth>
+        <speciality>SEP</speciality>
+        <status>available</status>
+    </user>
+    <user>
+        <id>4</id>
+        <name>Gao Shiqing</name>
+        <email>tuochuqu@jiangjianshun.com</email>
+        <password>776370680E3B2E04701503401D330545</password>
+        <date_of_birth>2017-10-11</date_of_birth>
+        <speciality>MobileApp</speciality>
         <status>available</status>
     </user>
 </users>
