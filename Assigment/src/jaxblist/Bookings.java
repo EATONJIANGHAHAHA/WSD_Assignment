@@ -47,6 +47,19 @@ public class Bookings extends BaseJAXBList<Booking>{
     }
 
     /**
+     * Find the booking record according to the tutor email
+     * @param email
+     * @return
+     */
+    public Bookings findByTutorEmail( String email ){
+        Bookings results = new Bookings(new ArrayList<Booking>());
+        for(Booking booking: this.getList()){
+            if(booking.getTutorEmail().equals(email)) results.add(booking);
+        }
+        return results;
+    }
+
+    /**
      * Find the booking records according to the booking status.
      * @param status
      * @return

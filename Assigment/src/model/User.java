@@ -169,4 +169,10 @@ public class User extends BaseModel {
     public void setAvailability(String availability) {
         this.availability = availability;
     }
+
+    @XmlTransient
+    public String getType(){
+        if(isStudent()) return STUDENT;
+        else return TUTOR;
+    }
 }

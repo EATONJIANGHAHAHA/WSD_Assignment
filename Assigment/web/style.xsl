@@ -25,9 +25,13 @@
         <table>
             <thead>
                 <tr>
-                    <th>Id</th>
+                    <th>Student</th>
+                    <th>Student email</th>
+                    <th>Tutor</th>
+                    <th>Tutor email</th>
                     <th>Subject</th>
                     <th>Status</th>
+                    <th/>
                 </tr>
             </thead>
             <tbody>
@@ -73,9 +77,40 @@
 
     <xsl:template match="booking">
         <tr>
-            <td>#<xsl:value-of select="id"/></td>
+            <td><xsl:value-of select="student"/></td>
+            <td><xsl:value-of select="student_email"/></td>
+            <td><xsl:value-of select="tutor"/></td>
+            <td><xsl:value-of select="tutor_email"/></td>
             <td><xsl:value-of select="subject"/></td>
+            <xsl:if test="user_type = 'student' ">
             <td><xsl:value-of select="status"/></td>
+            <td>
+                <form method="post">
+                    <xsl:attribute name="action">booking.jsp?bookingId=<xsl:value-of select="@id"/></xsl:attribute>
+                    <input type="submit" value="cancel" name="button"/>
+                </form>
+            </td>
+            </xsl:if>
+            <xsl:if test="user_type = 'tutor' ">
+                <xsl:if test=" status = 'active' ">
+                    <form method="post">
+                        <xsl:attribute name="action">booking.jsp?bookingId=<xsl:value-of select="@id"/></xsl:attribute>
+                    <td>
+                        <select name="status">
+                            <option>active</option>
+                            <option>complete</option>
+                            <option>cancel</option>
+                        </select>
+                    </td>
+                        <td>
+                            <input type="submit" value="Change" name="button"/>
+                        </td>
+                </form>
+                </xsl:if>
+                <xsl:if test="status != 'active'">
+                    <td><xsl:value-of select="status"/></td>
+                </xsl:if>
+            </xsl:if>
         </tr>
     </xsl:template>
 
