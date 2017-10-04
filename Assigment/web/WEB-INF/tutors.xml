@@ -39,4 +39,13 @@
         <speciality>MobileApp</speciality>
         <status>available</status>
     </user>
+    <user>
+        <id>5</id>
+        <name>Momo Da</name>
+        <email>biantai@gmail.com</email>
+        <password>776370680E3B2E04701503401D330545</password>
+        <date_of_birth>2017-10-04</date_of_birth>
+        <speciality>AppProg</speciality>
+        <status>available</status>
+    </user>
 </users>

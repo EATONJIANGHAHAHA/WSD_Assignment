@@ -15,7 +15,7 @@
     </xs:simpleType>
     <xs:simpleType name="speciality">
         <xs:restriction base="xs:string">
-            <xs:pattern value="WSD|progApp|USP|SEP|MobileApp"/>
+            <xs:pattern value="WSD|AppProg|USP|SEP|MobileApp"/>
         </xs:restriction>
     </xs:simpleType>
     <xs:simpleType name="password">
