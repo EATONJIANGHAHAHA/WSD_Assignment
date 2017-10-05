@@ -2,7 +2,9 @@ package application;
 
 import adapter.IDAdapter;
 import jaxblist.BaseJAXBList;
+import model.BaseModel;
 import org.xml.sax.SAXException;
+import org.xml.sax.SAXParseException;
 import sun.rmi.runtime.Log;
 
 import javax.xml.XMLConstants;
@@ -13,6 +15,8 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import java.io.*;
 import java.lang.reflect.ParameterizedType;
+import java.util.ArrayList;
+import java.util.List;
 
 public class BaseApplication<T extends BaseJAXBList> implements Serializable{
 
@@ -95,18 +99,25 @@ public class BaseApplication<T extends BaseJAXBList> implements Serializable{
             }
         });
 
-        FileOutputStream fout = new FileOutputStream(filePath);
+        FileOutputStream fout;
         try{
-            m.marshal(items, fout);}
+            fout = new FileOutputStream(filePath);
+            m.marshal(items, fout);
+            items.setOldItem(null);
+        }
         catch (MarshalException e){
-            items.removeLast();
+            fout = new FileOutputStream(filePath);
+            e.printStackTrace();
+            items.recoverList();
             m.setAdapter(new IDAdapter());
             m.marshal(items, fout);
-            throw new ValidationException(e);
+            throw new MarshalException(e.getLinkedException().getMessage());
         }
         fout.close();
         System.out.print("saved");
     }
+
+
 
     public T getItems() {
         return items;

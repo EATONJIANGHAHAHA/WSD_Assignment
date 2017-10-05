@@ -239,6 +239,63 @@
         </div>
     </xsl:template>
 
+    <xsl:template match="edit_account">
+        <div>
+            <form method="post" action="account.jsp">
+                <table>
+                    <tr>
+                        <td>Email:</td>
+                        <td><xsl:value-of select="email"/></td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" name="password">
+                            <xsl:attribute name="value">
+                            <xsl:value-of select="password"/>
+                            </xsl:attribute>
+                        </input></td>
+                    </tr>
+                    <tr>
+                        <td>Name:</td>
+                        <td><input type="text" name="name">
+                            <xsl:attribute name="value"><xsl:value-of select="name"/>
+                            </xsl:attribute>
+                        </input></td>
+                    </tr>
+                    <tr>
+                        <td>Date of birth:</td>
+                        <td><input type="date" name="dateOfBirth">
+                            <xsl:attribute name="value">
+                            <xsl:value-of select="date_of_birth"/>
+                            </xsl:attribute>
+                        </input></td>
+                    </tr>
+                    <xsl:if test="@user_type = 'tutor' ">
+                        <tr>
+                            <td>Speciality: </td>
+                            <td>
+                                <select name="speciality">
+                                    <option>WSD</option>
+                                    <option>SEP</option>
+                                    <option>AppProg</option>
+                                    <option>USP</option>
+                                    <option>MobileApp</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </xsl:if>
+                    <tr>
+                        <td><input type="submit" name="button" value="cancel"/></td>
+                        <td>
+                            <input type="submit" name="button" value="confirm"/>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+    </xsl:template>
+
     <xsl:template match="account_info">
         <table>
             <tr>
@@ -260,8 +317,10 @@
                 </tr>
             </xsl:if>
             <tr>
+                <form action="account.jsp" method="post">
                 <td><input type="submit" name="button" value="Edit account"/></td>
                 <td><input type="submit" name="button" value="Cancel account"/></td>
+                </form>
             </tr>
         </table>
     </xsl:template>

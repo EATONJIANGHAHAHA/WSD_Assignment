@@ -47,6 +47,18 @@ public class Bookings extends BaseJAXBList<Booking>{
     }
 
     /**
+     * Update the list from other bookings
+     * @param bookings
+     */
+    public void updateList(Bookings bookings){
+        for(Booking newBooking: bookings.getList()){
+            for(Booking oldBooking: this.getList()){
+                if(newBooking.getId() == oldBooking.getId()) oldBooking = newBooking;
+            }
+        }
+    }
+
+    /**
      * Find the booking record according to the tutor email
      * @param email
      * @return

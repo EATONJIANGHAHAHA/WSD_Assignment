@@ -7,6 +7,8 @@
 <%@ page import="application.UserApplication" %>
 <%@ page import="static application.UserApplication.WEB_INF_STUDENTS_XML" %>
 <%@ page import="javax.xml.bind.ValidationException" %>
+<%@ page import="javax.xml.bind.MarshalException" %>
+<%@ page import="util.StringUtil" %>
 
 <page title="Register">
     <%@ include file="navigation.jsp"%>
@@ -74,11 +76,12 @@
     </result>
     <%
         }
-        catch (ValidationException e){
+        catch (MarshalException e){
+                e.printStackTrace();
     %>
     <result type="error">
         <content>
-            Register failed: you may entered invalid name, password or empty date.
+            Register failed: you may entered invalid <%=StringUtil.readExceptionCause(e.getMessage())%>.
         </content>
     </result>
     <%

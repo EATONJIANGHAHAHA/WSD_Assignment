@@ -15,6 +15,8 @@ public abstract class BaseJAXBList<T extends BaseModel> implements Serializable{
 
     @XmlTransient
     private List<T> list;
+    @XmlTransient
+    private T oldItem = null;
 
     public BaseJAXBList(){}
 
@@ -53,5 +55,18 @@ public abstract class BaseJAXBList<T extends BaseModel> implements Serializable{
 
     public void removeLast(){
         list.remove(list.get(list.size()-1));
+    }
+
+    public void setOldItem(T oldItem) {
+        this.oldItem = oldItem;
+    }
+
+    public void recoverList(){
+        if (oldItem == null)
+            removeLast();
+        else {
+            list.set(oldItem.getId()-1, oldItem);
+            oldItem = null;
+        }
     }
 }
