@@ -55,6 +55,16 @@ public class User extends BaseModel {
         this.setId(id);
     }
 
+    public User(Integer id, String email, String name, String password,
+                String dateOfBirth, boolean isStudent, String speciality) {
+        this(email, name, password, dateOfBirth);
+        this.setId(id);
+        if(!isStudent) {
+            this.setSpeciality(speciality);
+            this.setSpeciality(AVAILABLE);
+        }
+    }
+
     /**
      * Used to create a student without an id
      * @param email
@@ -132,10 +142,6 @@ public class User extends BaseModel {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public void setEncrypPassword(String password){
-        setPassword(DigestUtil.encryptPWD(password));
     }
 
     @XmlElement(name = "date_of_birth")

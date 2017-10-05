@@ -87,12 +87,11 @@
             String name = request.getParameter(NAME);
             String password = request.getParameter(PASSWORD);
             String dateOfBith = request.getParameter(DATE_OF_BIRTH);
+            String speciality = request.getParameter(SPECIALITY);
             try{
-                User changeUser = userDAO.searchById(user.getId());
-                changeUser.setName(name);
-                changeUser.setDateOfBirth(dateOfBith);
-                if(!changeUser.getPassword().equals(password)) changeUser.setPassword(DigestUtil.encryptPWD(password));
-                if(!changeUser.isStudent()) changeUser.setSpeciality(request.getParameter(SPECIALITY));
+                if(!user.getPassword().equals(password)) password = DigestUtil.encryptPWD(password);
+                User changeUser = new User(user.getId(), user.getEmail(), name, password, dateOfBith, user.isStudent(),
+                        speciality);
                 userDAO.update(user, changeUser);
                 session.setAttribute("user", changeUser);
     %>

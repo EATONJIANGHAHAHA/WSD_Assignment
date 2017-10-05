@@ -32,7 +32,7 @@ public class UserDAOImpl extends BaseDAO_Impl<Users, User> implements UserDAO {
 
     @Override
     public boolean isRegistered(String email) {
-        return getItems().isRegistered(email);
+        return read().isRegistered(email);
     }
 
 }
