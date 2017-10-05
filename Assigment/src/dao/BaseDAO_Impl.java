@@ -17,7 +17,7 @@ import java.lang.reflect.ParameterizedType;
  * Read the date stored in the xml, and restored the new data.
  * @param <T>
  */
-public class BaseDAO_Impl<T extends BaseJAXBList<V>, V extends BaseModel> implements Serializable, BaseDAO<T, V >{
+public abstract class BaseDAO_Impl<T extends BaseJAXBList<V>, V extends BaseModel> implements Serializable, BaseDAO<T, V >{
 
 
     private String filePath;
