@@ -32,9 +32,9 @@
                 filePath = application.getRealPath(WEB_INF_TUTORS_XML);
             }
             UserDAOImpl userApp = new UserDAOImpl(filePath);
-            user = userApp.getItems().login(email, password);
-            if (user != null) {
-                session.setAttribute(USER, user);
+            User result = userApp.getItems().login(email, password);
+            if (result != null) {
+                session.setAttribute(USER, result);
     %>
     <%@ include file="navigation.jsp"%>
     <result type="success">
