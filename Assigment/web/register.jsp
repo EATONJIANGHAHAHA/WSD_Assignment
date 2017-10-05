@@ -11,12 +11,12 @@
 <%@ page import="util.StringUtil" %>
 
 <page title="Register">
-    <%@ include file="navigation.jsp"%>
     <%
         String progress = request.getParameter("progress");
 
         if(progress == null || progress.equals("")){
     %>
+    <%@ include file="navigation.jsp"%>
     <form_table user_type="<%=url%>">
         <category>register</category>>
     </form_table>
@@ -30,16 +30,17 @@
                 String dateOfBirth = request.getParameter(DATE_OF_BIRTH);
                 String schemaPath = application.getRealPath(WEB_INF_USERS_XSD);
                 String filePath;
+                User newUser;
 
-                if(url.equals(TUTOR)) {
+                if(request.getQueryString().equals(TUTOR)) {
                     String speciality = request.getParameter(SPECIALITY);
                     filePath = application.getRealPath(WEB_INF_TUTORS_XML);
-                    user = new User(email, name, DigestUtil.encryptPWD(password),
+                    newUser = new User(email, name, DigestUtil.encryptPWD(password),
                             dateOfBirth, speciality, AVAILABLE);
                 }
                 else {
                     filePath = application.getRealPath(WEB_INF_STUDENTS_XML);
-                    user = new User(email, name, DigestUtil.encryptPWD(password),
+                    newUser = new User(email, name, DigestUtil.encryptPWD(password),
                             dateOfBirth);
                 }
                 UserApplication userApp = new UserApplication(filePath, schemaPath);
@@ -47,6 +48,7 @@
                 if(userApp.getItems().isRegistered(email)){
 
     %>
+    <%@ include file="navigation.jsp"%>
     <result type="error">
         <content>
             Register failed: The email address already exists.
@@ -55,11 +57,12 @@
     <%
                 }
                 else {
-                    userApp.getItems().add(user);
+                    userApp.getItems().add(newUser);
                     userApp.save();
-                    session.setAttribute(USER, user);
+                    session.setAttribute(USER, newUser);
 
     %>
+    <%@ include file="navigation.jsp"%>
     <result type="success">
         <content><%=user.getName()%></content>
     </result>
@@ -69,6 +72,7 @@
             catch (NullPointerException e){
                 e.printStackTrace();
     %>
+    <%@ include file="navigation.jsp"%>
     <result type="error">
         <content>
             Register failed: The information you entered may be incomplete.
@@ -79,6 +83,7 @@
         catch (MarshalException e){
                 e.printStackTrace();
     %>
+    <%@ include file="navigation.jsp"%>
     <result type="error">
         <content>
             Register failed: you may entered invalid <%=StringUtil.readExceptionCause(e.getMessage())%>.
