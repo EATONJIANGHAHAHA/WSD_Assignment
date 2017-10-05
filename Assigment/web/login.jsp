@@ -9,12 +9,12 @@
 
 
 <page title="Login">
-    <%@ include file="navigation.jsp"%>
     <%
         String progress = request.getParameter("progress");
 
         if (progress == null || progress.equals("")) {
     %>
+    <%@ include file="navigation.jsp"%>
     <form_table user_type="<%=url%>">
         <category>login</category>>
     </form_table>
@@ -25,7 +25,7 @@
         String email = request.getParameter(EMAIL);
         String filePath;
         try {
-            if (url.equals(STUDENT)) {
+            if (request.getQueryString().equals(STUDENT)) {
                 filePath = application.getRealPath(WEB_INF_STUDENTS_XML);
             }
             else {
@@ -36,6 +36,7 @@
             if (user != null) {
                 session.setAttribute(USER, user);
     %>
+    <%@ include file="navigation.jsp"%>
     <result type="success">
         <content><%=user.getName() %></content>
     </result>
@@ -43,6 +44,7 @@
     }
     else{
     %>
+    <%@ include file="navigation.jsp"%>
     <result type="error">
         <content>Wrong email or password</content>
     </result>
@@ -52,6 +54,7 @@
     catch(NullPointerException e){
         e.printStackTrace();
     %>
+    <%@ include file="navigation.jsp"%>
     <result type="error">
         <content>The information that you entered is incomplete.</content>
     </result>
