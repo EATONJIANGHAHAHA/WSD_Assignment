@@ -228,7 +228,7 @@
             <a href="main.jsp">Main</a>
             <a href="account.jsp">Account</a>
             <a href="booking.jsp">Booking</a>
-            <a href="logoutAction.jsp">Logout</a>
+            <a href="logout.jsp">Logout</a>
         </xsl:if>
         <xsl:if test="status = 'logout'">
             Register <a href="register.jsp?student">as student</a>
