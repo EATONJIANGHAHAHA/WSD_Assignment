@@ -1,14 +1,13 @@
 package service.rest;
 
-import application.BookingApplication;
-import static application.BookingApplication.*;
+import dao.BookingDAOImpl;
+import static dao.BookingDAOImpl.*;
 import jaxblist.Bookings;
 import model.Booking;
 import javax.servlet.ServletContext;
 import javax.ws.rs.*;
 import javax.ws.rs.core.*;
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.JAXBElement;
 import java.io.IOException;
 
 
@@ -21,17 +20,17 @@ public class BookingService {
     private ServletContext application;
 
     /**
-     * Get booking application.
+     * Get booking dao.
      * @return
      * @throws IOException
      * @throws JAXBException
      */
-    private BookingApplication getBookingApp() throws IOException, JAXBException{
+    private BookingDAOImpl getBookingApp() throws IOException, JAXBException{
         synchronized (application){
-            BookingApplication bookingApp = (BookingApplication)
+            BookingDAOImpl bookingApp = (BookingDAOImpl)
                     application.getAttribute(BOOKING_SERVICE);
             if(bookingApp == null){
-                bookingApp = new BookingApplication(application.getRealPath(WEB_INF_BOOKINGS_XML));
+                bookingApp = new BookingDAOImpl(application.getRealPath(WEB_INF_BOOKINGS_XML));
                 application.setAttribute(BOOKING_SERVICE, bookingApp);
             }
             return bookingApp;

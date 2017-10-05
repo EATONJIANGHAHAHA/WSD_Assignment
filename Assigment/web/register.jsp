@@ -1,14 +1,15 @@
 <%@ page contentType="text/xml;charset=UTF-8" language="java" %><%--
 --%><?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
-<%@ page import="static application.UserApplication.WEB_INF_USERS_XSD" %>
-<%@ page import="static application.UserApplication.WEB_INF_TUTORS_XML" %>
+<%@ page import="static dao.UserDAOImpl.WEB_INF_USERS_XSD" %>
+<%@ page import="static dao.UserDAOImpl.WEB_INF_TUTORS_XML" %>
 <%@ page import="util.DigestUtil" %>
-<%@ page import="application.UserApplication" %>
-<%@ page import="static application.UserApplication.WEB_INF_STUDENTS_XML" %>
+<%@ page import="dao.UserDAOImpl" %>
+<%@ page import="static dao.UserDAOImpl.WEB_INF_STUDENTS_XML" %>
 <%@ page import="javax.xml.bind.ValidationException" %>
 <%@ page import="javax.xml.bind.MarshalException" %>
 <%@ page import="util.StringUtil" %>
+<%@ page import="dao.UserDAO" %>
 
 <page title="Register">
     <%
@@ -43,9 +44,9 @@
                     newUser = new User(email, name, DigestUtil.encryptPWD(password),
                             dateOfBirth);
                 }
-                UserApplication userApp = new UserApplication(filePath, schemaPath);
+                UserDAO userDao = new UserDAOImpl(filePath, schemaPath);
 
-                if(userApp.getItems().isRegistered(email)){
+                if(userDao.isRegistered(email)){
 
     %>
     <%@ include file="navigation.jsp"%>
@@ -57,8 +58,7 @@
     <%
                 }
                 else {
-                    userApp.getItems().add(newUser);
-                    userApp.save();
+                    userDao.create(newUser);
                     session.setAttribute(USER, newUser);
 
     %>

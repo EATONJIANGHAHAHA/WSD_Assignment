@@ -11,23 +11,23 @@ import java.util.List;
 
 /**
  * Represents a list of jaxb objects, allowing a series of operations of the object list.
- * @param <T>
+ * @param <V>
  */
 @XmlSeeAlso({Bookings.class, Users.class})
 @XmlAccessorType(XmlAccessType.PROPERTY)
-public abstract class BaseJAXBList<T extends BaseModel> implements Serializable{
+public abstract class BaseJAXBList<V extends BaseModel> implements Serializable{
 
     @XmlTransient
-    private List<T> list;
+    private List<V> list;
     @XmlTransient
     /**
      * To preserve the old data when edit a current existing item.
      */
-    private T oldItem = null;
+    private V oldItem = null;
 
     public BaseJAXBList(){}
 
-    public BaseJAXBList(List<T> list) {
+    public BaseJAXBList(List<V> list) {
         this.list = list;
     }
 
@@ -36,27 +36,31 @@ public abstract class BaseJAXBList<T extends BaseModel> implements Serializable{
      * @param id
      * @return
      */
-    public T  findById(Integer id){
-        for(T t: list){
-            if(t.getId() == id) return t;
+    public V findById(Integer id){
+        for(V v : list){
+            if(v.getId() == id) return v;
         }
         return null;
     }
 
     @XmlTransient
-    public List<T> getList(){
+    public List<V> getList(){
         return this.list;
     }
 
-    public  void setList(List<T> list){
+    public  void setList(List<V> list){
         this.list = list;
     }
 
-    public void add( T item ){
+    public void add( V item ){
         list.add( item );
     }
 
-    public void remove(T item){
+    public void update(V newItem){
+        list.set(newItem.getId()-1, newItem);
+    }
+
+    public void remove(V item){
         list.remove(item);
     }
 
@@ -64,7 +68,7 @@ public abstract class BaseJAXBList<T extends BaseModel> implements Serializable{
         list.remove(list.get(list.size()-1));
     }
 
-    public void setOldItem(T oldItem) {
+    public void setOldItem(V oldItem) {
         this.oldItem = oldItem;
     }
 

@@ -1,8 +1,8 @@
 <%@ page contentType="text/xml;charset=UTF-8" language="java" %><%--
 --%><?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
-<%@ page import="application.UserApplication" %>
-<%@ page import="static application.UserApplication.WEB_INF_TUTORS_XML" %>
+<%@ page import="dao.UserDAOImpl" %>
+<%@ page import="static dao.UserDAOImpl.WEB_INF_TUTORS_XML" %>
 <%@ page import="jaxblist.Users" %>
 <page title = "Main">
 <%@ include file="navigation.jsp"%>
@@ -23,7 +23,7 @@
         if(progress != null){
             try
             {
-                UserApplication tutorApp = new UserApplication(application.getRealPath(WEB_INF_TUTORS_XML));
+                UserDAOImpl tutorApp = new UserDAOImpl(application.getRealPath(WEB_INF_TUTORS_XML));
                 String searchType = request.getParameter("searchType");
                 String keyWord = request.getParameter("keyWord");
                 Users tutors = null;

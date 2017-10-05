@@ -7,9 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="764c25b3-1921-4df9-8430-2e24bc6ad6d3" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/logout.jsp" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assigment/src/dao/BaseDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assigment/src/dao/BookingDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assigment/src/dao/UserDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assigment/src/exception/DataValidationException.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Assigment/src/application/BaseApplication.java" afterPath="$PROJECT_DIR$/Assigment/src/dao/BaseDAO_Impl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Assigment/src/application/BookingApplication.java" afterPath="$PROJECT_DIR$/Assigment/src/dao/BookingDAOImpl.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Assigment/src/application/UserApplication.java" afterPath="$PROJECT_DIR$/Assigment/src/dao/UserDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/src/jaxblist/BaseJAXBList.java" afterPath="$PROJECT_DIR$/Assigment/src/jaxblist/BaseJAXBList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/src/model/User.java" afterPath="$PROJECT_DIR$/Assigment/src/model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/src/service/rest/BookingService.java" afterPath="$PROJECT_DIR$/Assigment/src/service/rest/BookingService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/web/WEB-INF/classes/web/index.jsp" afterPath="$PROJECT_DIR$/Assigment/web/WEB-INF/classes/web/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/web/account.jsp" afterPath="$PROJECT_DIR$/Assigment/web/account.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/web/booking.jsp" afterPath="$PROJECT_DIR$/Assigment/web/booking.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/web/login.jsp" afterPath="$PROJECT_DIR$/Assigment/web/login.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/web/main.jsp" afterPath="$PROJECT_DIR$/Assigment/web/main.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/web/register.jsp" afterPath="$PROJECT_DIR$/Assigment/web/register.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assigment/web/style.xsl" afterPath="$PROJECT_DIR$/Assigment/web/style.xsl" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Assigment_war_exploded/WEB-INF/classes/web/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/Assigment_war_exploded/WEB-INF/classes/web/index.jsp" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,32 +39,109 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="tutors.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assigment/web/WEB-INF/tutors.xml">
+      <file leaf-file-name="BookingDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assigment/src/dao/BookingDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="49" column="11" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+            <state relative-caret-position="108">
+              <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BookingDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assigment/src/dao/BookingDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="24" column="61" lean-forward="false" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+              <folding>
+                <element signature="e#604#605#0" expanded="true" />
+                <element signature="e#635#636#0" expanded="true" />
+                <element signature="e#699#700#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assigment/src/dao/UserDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDAOImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assigment/src/dao/UserDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding>
+                <element signature="e#985#986#0" expanded="true" />
+                <element signature="e#1038#1039#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="account.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assigment/web/account.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="103" column="38" lean-forward="false" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assigment/web/register.jsp">
+      <file leaf-file-name="BaseDAO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assigment/src/dao/BaseDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state relative-caret-position="90">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bookings.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/Bookings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="194">
+              <caret line="61" column="16" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="users.xsd" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assigment/web/WEB-INF/users.xsd">
+      <file leaf-file-name="BaseDAO_Impl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assigment/src/dao/BaseDAO_Impl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="39" />
+            <state relative-caret-position="90">
+              <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataValidationException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assigment/src/exception/DataValidationException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="38" lean-forward="false" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+              <folding>
+                <element signature="e#174#175#0" expanded="true" />
+                <element signature="e#204#205#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,68 +152,6 @@
             <state relative-caret-position="108">
               <caret line="6" column="70" lean-forward="false" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="booking.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assigment/web/booking.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseJAXBList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/BaseJAXBList.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="12" column="89" lean-forward="false" selection-start-line="12" selection-start-column="89" selection-end-line="12" selection-end-column="89" />
-              <folding>
-                <element signature="e#1470#1471#0" expanded="true" />
-                <element signature="e#1508#1509#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Bookings.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/Bookings.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Users.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/Users.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="53" column="39" lean-forward="false" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.xsl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assigment/web/style.xsl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-              <folding>
-                <element signature="n#xsl:template#0;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-                <element signature="n#xsl:template#1;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-                <element signature="n#xsl:template#2;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-                <element signature="n#xsl:template#3;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-                <element signature="n#xsl:template#4;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-                <element signature="n#xsl:template#5;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-                <element signature="n#xsl:if#0;n#table#0;n#form#0;n#div#0;n#xsl:template#6;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-                <element signature="n#select#0;n#td#1;n#tr#0;n#xsl:when#0;n#xsl:choose#0;n#xsl:if#0;n#table#0;n#form#0;n#div#0;n#xsl:template#6;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -142,11 +172,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>availability</find>
-      <find>name</find>
-      <find>Jamiroquai</find>
-      <find>subject</find>
-      <find>register</find>
       <find>dateofbirth</find>
       <find>DATE_OF</find>
       <find>re</find>
@@ -166,12 +191,17 @@
       <find>booking</find>
       <find>edit_</find>
       <find>save()</find>
-      <find>save</find>
       <find>SAXParseException</find>
       <find>edit</find>
       <find>unmar</find>
       <find>logout</find>
       <find>url</find>
+      <find>SELECT</find>
+      <find>setfile</find>
+      <find>app</find>
+      <find>userDAO</find>
+      <find>bookapp</find>
+      <find>save</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -185,14 +215,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assigment/web/WEB-INF/bookings.xsd" />
-        <option value="$PROJECT_DIR$/Assigment/src/jaxblist/package-info.java" />
-        <option value="$PROJECT_DIR$/Assigment/src/model/Student.java" />
-        <option value="$PROJECT_DIR$/Assigment/src/jaxblist/Students.java" />
-        <option value="$PROJECT_DIR$/Assigment/src/jaxblist/Tutors.java" />
-        <option value="$PROJECT_DIR$/Assigment/web/WEB-INF/students.xsd" />
-        <option value="$PROJECT_DIR$/Assigment/src/util/ValidateUtil.java" />
-        <option value="$PROJECT_DIR$/Assigment/src/model/Tutor.java" />
         <option value="$PROJECT_DIR$/Assigment/src/application/TutorApplication.java" />
         <option value="$PROJECT_DIR$/Assigment/web/WEB-INF/tutors.xsd" />
         <option value="$PROJECT_DIR$/Assigment/src/application/StudentApplication.java" />
@@ -221,21 +243,29 @@
         <option value="$PROJECT_DIR$/Assigment/web/WEB-INF/students.xml" />
         <option value="$PROJECT_DIR$/Assigment/web/WEB-INF/users.xsd" />
         <option value="$PROJECT_DIR$/Assigment/web/WEB-INF/tutors.xml" />
-        <option value="$PROJECT_DIR$/Assigment/web/account.jsp" />
         <option value="$PROJECT_DIR$/Assigment/src/util/StringUtil.java" />
         <option value="$PROJECT_DIR$/Assigment/src/util/DigestUtil.java" />
         <option value="$PROJECT_DIR$/Assigment/src/service/rest/BookingService.java" />
         <option value="$PROJECT_DIR$/Assigment/src/application/BaseApplication.java" />
-        <option value="$PROJECT_DIR$/Assigment/src/jaxblist/BaseJAXBList.java" />
         <option value="$PROJECT_DIR$/Assigment/src/jaxblist/Bookings.java" />
         <option value="$PROJECT_DIR$/Assigment/src/jaxblist/Users.java" />
         <option value="$PROJECT_DIR$/Assigment/src/application/BookingApplication.java" />
         <option value="$PROJECT_DIR$/Assigment/src/application/UserApplication.java" />
         <option value="$PROJECT_DIR$/Assigment/src/adapter/IDAdapter.java" />
-        <option value="$PROJECT_DIR$/Assigment/web/booking.jsp" />
-        <option value="$PROJECT_DIR$/Assigment/web/style.xsl" />
         <option value="$PROJECT_DIR$/Assigment/web/index.jsp" />
+        <option value="$PROJECT_DIR$/Assigment/web/style.xsl" />
+        <option value="$PROJECT_DIR$/Assigment/src/dao/BaseApplication.java" />
+        <option value="$PROJECT_DIR$/Assigment/src/jaxblist/BaseJAXBList.java" />
+        <option value="$PROJECT_DIR$/Assigment/src/dao/UserDAOImpl.java" />
+        <option value="$PROJECT_DIR$/Assigment/src/dao/UserDAO.java" />
         <option value="$PROJECT_DIR$/Assigment/web/register.jsp" />
+        <option value="$PROJECT_DIR$/Assigment/src/dao/BookingDAO.java" />
+        <option value="$PROJECT_DIR$/Assigment/web/booking.jsp" />
+        <option value="$PROJECT_DIR$/Assigment/web/account.jsp" />
+        <option value="$PROJECT_DIR$/Assigment/src/dao/BaseDAO.java" />
+        <option value="$PROJECT_DIR$/Assigment/src/dao/BookingDAOImpl.java" />
+        <option value="$PROJECT_DIR$/Assigment/src/exception/DataValidationException.java" />
+        <option value="$PROJECT_DIR$/Assigment/src/dao/BaseDAO_Impl.java" />
       </list>
     </option>
   </component>
@@ -253,9 +283,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="771" />
+    <option name="x" value="676" />
+    <option name="width" value="697" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -290,6 +319,12 @@
             <path>
               <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
               <item name="Assigment" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Assigment" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -314,7 +349,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="SearchEverywhereHistoryKey" value="xsd&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/users.xsd&#10;regis&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/register.jsp&#10;ind&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/index.jsp&#10;logout&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/logout.jsp&#10;tuto&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/tutors.xml&#10;booking.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/booking.jsp&#10;student&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/students.xml&#10;removelast&#9;PSI&#9;JAVA://jaxblist.BaseJAXBList#removeLast&#10;user.java&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/model/User.java&#10;jax&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/jaxblist/BaseJAXBList.java&#10;String&#9;PSI&#9;JAVA://util.StringUtil&#10;re&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/register.jsp&#10;login.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/login.jsp&#10;jaxb&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/jaxblist/BaseJAXBList.java&#10;sty&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/style.xsl&#10;account.j&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/account.jsp&#10;users.x&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/users.xsd&#10;students.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/students.xml&#10;bookings.xml&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/bookings.xml&#10;user&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/model/User.java&#10;booking.java&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/model/Booking.java&#10;bookings.java&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/jaxblist/Bookings.java&#10;users.java&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/jaxblist/Users.java&#10;navigation&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/navigation.jsp&#10;tutors.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/tutors.xml&#10;Users&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/jaxblist/Users.java&#10;main.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/main.jsp&#10;tutor.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/tutors.xml&#10;regist&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/register.jsp&#10;log&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/logoutAction.jsp&#10;base&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/application/BaseApplication.java&#10;.x&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/style.xsl&#10;register&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/registerAction.jsp&#10;xsl&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/style.xsl&#10;User.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/model/User.java&#10;nav&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/navigation.jsp&#10;index&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/index.jsp&#10;page.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/page.css&#10;web.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/WEB-INF/web.xml&#10;web.x&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/WEB-INF/web.xml&#10;reg&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/registerAction.jsp&#10;login&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/loginAction.jsp&#10;use&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/jaxblist/Users.java&#10;service&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/service/rest/BookingService.java&#10;pom.&#9;FILE&#9;jar://C:/Users/might/Desktop/UTS/current/31284 Web service development/jersey-bundle-1.17.jar!/META-INF/maven/com.sun.jersey/jersey-bundle/pom.xml&#10;web.xm&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/WEB-INF/web.xml&#10;pom.xml&#9;FILE&#9;jar://C:/Users/might/Desktop/UTS/current/31284 Web service development/jersey-bundle-1.17.jar!/META-INF/maven/com.sun.jersey/jersey-bundle/pom.xml&#10;registerac&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/registerAction.jsp&#10;bo&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/application/BookingApplication.java&#10;regi&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/register.jsp" />
+    <property name="SearchEverywhereHistoryKey" value="base&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BaseDAO_Impl.java&#10;baseda&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BaseDAO_Impl.java&#10;based&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BaseDAO.java&#10;bookingd&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BookingDAO.java&#10;account.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/account.jsp&#10;booking.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/booking.jsp&#10;user&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/UserDAOImpl.java&#10;userdao&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/UserDAOImpl.java&#10;basedao&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BaseDAO_Impl.java&#10;navi&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/navigation.jsp&#10;xsd&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/users.xsd&#10;regis&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/register.jsp&#10;ind&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/index.jsp&#10;logout&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/logout.jsp&#10;tuto&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/tutors.xml&#10;student&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/students.xml&#10;removelast&#9;PSI&#9;JAVA://jaxblist.BaseJAXBList#removeLast&#10;user.java&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/model/User.java&#10;jax&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/jaxblist/BaseJAXBList.java&#10;String&#9;PSI&#9;JAVA://util.StringUtil&#10;re&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/register.jsp&#10;login.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/login.jsp&#10;jaxb&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/jaxblist/BaseJAXBList.java&#10;sty&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/style.xsl&#10;account.j&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/account.jsp&#10;users.x&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/users.xsd&#10;students.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/students.xml&#10;bookings.xml&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/bookings.xml&#10;booking.java&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/model/Booking.java&#10;bookings.java&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/jaxblist/Bookings.java&#10;users.java&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/jaxblist/Users.java&#10;navigation&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/navigation.jsp&#10;tutors.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/tutors.xml&#10;Users&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/jaxblist/Users.java&#10;main.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/main.jsp&#10;tutor.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/tutors.xml&#10;regist&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/register.jsp&#10;log&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/logoutAction.jsp&#10;.x&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/style.xsl&#10;register&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/registerAction.jsp&#10;xsl&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/style.xsl&#10;User.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/model/User.java&#10;nav&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/navigation.jsp&#10;index&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/index.jsp&#10;page.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/page.css&#10;web.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/WEB-INF/web.xml&#10;web.x&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/WEB-INF/web.xml&#10;reg&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/registerAction.jsp&#10;login&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/web/loginAction.jsp&#10;use&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/Assigment/src/jaxblist/Users.java" />
     <property name="last.edited.regexp" value="" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -326,16 +361,17 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="wsd_assignment" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\Assigment\web\WEB-INF" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\Assigment\web" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dao" />
       <recent name="application" />
       <recent name="jaxblist" />
       <recent name="model" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\Assigment\web" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\Assigment\web\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1413,7 +1449,7 @@
       <workItem from="1507158813228" duration="3146000" />
       <workItem from="1507167486909" duration="7053000" />
       <workItem from="1507176446756" duration="5991000" />
-      <workItem from="1507186635916" duration="106000" />
+      <workItem from="1507186635916" duration="6085000" />
     </task>
     <task id="LOCAL-00001" summary="Created models">
       <created>1506325251894</created>
@@ -1611,11 +1647,18 @@
       <option name="project" value="LOCAL" />
       <updated>1507185102660</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Update register">
+      <created>1507186776580</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1507186776580</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135694000" />
+    <option name="totallyTimeSpent" value="141673000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1628,39 +1671,40 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.70888156" sideWeight="0.5030257" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3223684" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75164473" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6940789" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4440242" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67269737" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75164473" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6940789" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.9213313" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44572368" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.67269737" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32889584" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44572368" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1701,36 +1745,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/Tutors.java" />
-    <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/application/TutorApplication.java" />
-    <entry file="file://$PROJECT_DIR$/Assigment/src/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="41" column="34" lean-forward="false" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/Assigment.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Desktop/UTS/current/31284 Web service development/jersey-bundle-1.17.jar!/META-INF/maven/com.sun.jersey/jersey-bundle/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="266" column="18" lean-forward="false" selection-start-line="266" selection-start-column="18" selection-end-line="266" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/学习/104-backup/104-backup/src/main/java/com/foodproject/base/BaseAction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2647">
@@ -1831,6 +1845,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1854,6 +1869,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2304">
           <caret line="151" column="0" lean-forward="false" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1861,6 +1877,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
           <caret line="50" column="11" lean-forward="false" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+          <folding>
+            <element signature="e#1077#1078#0" expanded="false" />
+            <element signature="e#1120#1121#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1879,18 +1899,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/web/account.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="118" column="109" lean-forward="false" selection-start-line="118" selection-start-column="109" selection-end-line="118" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assigment/src/util/StringUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
           <caret line="3" column="47" lean-forward="false" selection-start-line="3" selection-start-column="47" selection-end-line="3" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1898,6 +1911,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="29" column="46" lean-forward="false" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1905,31 +1919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1314">
           <caret line="82" column="47" lean-forward="false" selection-start-line="82" selection-start-column="47" selection-end-line="82" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/application/BaseApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="105" column="61" lean-forward="false" selection-start-line="105" selection-start-column="61" selection-end-line="105" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/BaseJAXBList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="89" lean-forward="false" selection-start-line="12" selection-start-column="89" selection-end-line="12" selection-end-column="89" />
-          <folding>
-            <element signature="e#1470#1471#0" expanded="true" />
-            <element signature="e#1508#1509#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/Bookings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="36" column="38" lean-forward="false" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1949,82 +1938,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/application/UserApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="62" lean-forward="false" selection-start-line="8" selection-start-column="62" selection-end-line="8" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/application/BookingApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="55" lean-forward="false" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/web/booking.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="38" lean-forward="false" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/web/navigation.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="53" column="39" lean-forward="false" selection-start-line="53" selection-start-column="39" selection-end-line="53" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="70" lean-forward="false" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/web/register.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assigment/web/WEB-INF/users.xsd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="12" column="39" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="39" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/web/style.xsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="222" column="0" lean-forward="false" selection-start-line="222" selection-start-column="0" selection-end-line="222" selection-end-column="0" />
-          <folding>
-            <element signature="n#xsl:template#0;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-            <element signature="n#xsl:template#1;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-            <element signature="n#xsl:template#2;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-            <element signature="n#xsl:template#3;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-            <element signature="n#xsl:template#4;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-            <element signature="n#xsl:template#5;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-            <element signature="n#xsl:if#0;n#table#0;n#form#0;n#div#0;n#xsl:template#6;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-            <element signature="n#select#0;n#td#1;n#tr#0;n#xsl:when#0;n#xsl:choose#0;n#xsl:if#0;n#table#0;n#form#0;n#div#0;n#xsl:template#6;n#xsl:stylesheet#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2040,6 +1958,179 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="434">
           <caret line="49" column="11" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/web/navigation.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="22" column="9" lean-forward="true" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/web/style.xsl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="356" column="50" lean-forward="false" selection-start-line="356" selection-start-column="50" selection-end-line="356" selection-end-column="50" />
+          <folding>
+            <element signature="n#xsl:template#0;n#xsl:stylesheet#0;n#!!top" expanded="false" />
+            <element signature="n#xsl:template#1;n#xsl:stylesheet#0;n#!!top" expanded="false" />
+            <element signature="n#xsl:template#2;n#xsl:stylesheet#0;n#!!top" expanded="false" />
+            <element signature="n#xsl:template#3;n#xsl:stylesheet#0;n#!!top" expanded="false" />
+            <element signature="n#xsl:template#4;n#xsl:stylesheet#0;n#!!top" expanded="false" />
+            <element signature="n#xsl:template#5;n#xsl:stylesheet#0;n#!!top" expanded="false" />
+            <element signature="n#xsl:if#0;n#table#0;n#form#0;n#div#0;n#xsl:template#6;n#xsl:stylesheet#0;n#!!top" expanded="false" />
+            <element signature="n#select#0;n#td#1;n#tr#0;n#xsl:when#0;n#xsl:choose#0;n#xsl:if#0;n#table#0;n#form#0;n#div#0;n#xsl:template#6;n#xsl:stylesheet#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/BaseJAXBList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="59" column="45" lean-forward="false" selection-start-line="59" selection-start-column="45" selection-end-line="59" selection-end-column="45" />
+          <folding>
+            <element signature="e#1316#1317#0" expanded="true" />
+            <element signature="e#1368#1369#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="70" lean-forward="false" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/学习/104-backup/104-backup/src/main/java/com/foodproject/dao/CardDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Documents/学习/104-backup/104-backup/src/main/java/com/foodproject/dao/impl/ActivityReleateDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/web/register.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="31" column="39" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/src/jaxblist/Bookings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="61" column="16" lean-forward="false" selection-start-line="61" selection-start-column="16" selection-end-line="61" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/src/dao/BookingDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/web/booking.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="23" column="10" lean-forward="true" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/src/dao/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#985#986#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/web/account.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="103" column="38" lean-forward="false" selection-start-line="103" selection-start-column="15" selection-end-line="103" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/src/dao/BaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/src/exception/DataValidationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="38" lean-forward="false" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+          <folding>
+            <element signature="e#174#175#0" expanded="true" />
+            <element signature="e#204#205#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/src/dao/BookingDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="24" column="61" lean-forward="false" selection-start-line="24" selection-start-column="61" selection-end-line="24" selection-end-column="61" />
+          <folding>
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#699#700#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/src/dao/UserDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assigment/src/dao/BaseDAO_Impl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="23" lean-forward="true" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
           <folding />
         </state>
       </provider>

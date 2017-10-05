@@ -2,10 +2,10 @@
 --%><?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 <%@page import="model.User"%>
-<%@page import="application.UserApplication"%>
+<%@page import="dao.UserDAOImpl"%>
 <%@ page import="static model.User.*" %>
-<%@ page import="static application.UserApplication.WEB_INF_TUTORS_XML" %>
-<%@ page import="static application.UserApplication.WEB_INF_STUDENTS_XML" %>
+<%@ page import="static dao.UserDAOImpl.WEB_INF_TUTORS_XML" %>
+<%@ page import="static dao.UserDAOImpl.WEB_INF_STUDENTS_XML" %>
 
 
 <page title="Login">
@@ -31,7 +31,7 @@
             else {
                 filePath = application.getRealPath(WEB_INF_TUTORS_XML);
             }
-            UserApplication userApp = new UserApplication(filePath);
+            UserDAOImpl userApp = new UserDAOImpl(filePath);
             user = userApp.getItems().login(email, password);
             if (user != null) {
                 session.setAttribute(USER, user);

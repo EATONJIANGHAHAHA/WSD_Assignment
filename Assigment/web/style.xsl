@@ -325,4 +325,46 @@
         </table>
     </xsl:template>
 
+    <xsl:template match="booking_template">
+        <form method="POST" action="booking.jsp">
+            <table>
+            <tr>
+               <td>Tutor name: </td>
+                <td><input type="text" name="tutor_name">
+                    <xsl:attribute name="value">
+                        <xsl:value-of select="tutor_name"/>
+                    </xsl:attribute>
+                </input>
+                </td>
+            </tr>
+            <tr>
+                <td>Tutor email: </td>
+                <td><input type="text" name="tutor_email">
+                    <xsl:attribute name="value">
+                        <xsl:value-of select="tutor_name"/>
+                    </xsl:attribute>
+                </input></td>
+            </tr>
+            <tr>
+                <td>Subject: </td>
+                <xsl:if test="subject = '' ">
+                <td>
+                    <select name="subject">
+                        <option>WSD</option>
+                        <option>SEP</option>
+                        <option>AppProg</option>
+                        <option>USP</option>
+                        <option>MobileApp</option>
+                </select>
+                </td>
+                </xsl:if>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" name="button" value="create"/></td>
+            </tr>
+            </table>
+        </form>
+    </xsl:template>
+
 </xsl:stylesheet>

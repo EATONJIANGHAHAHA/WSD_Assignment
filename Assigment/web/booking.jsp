@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 <%@ page contentType="text/xml;charset=UTF-8" language="java" %>
-<%@ page import="static application.BookingApplication.*" %>
+<%@ page import="static dao.BookingDAOImpl.*" %>
 <%@ page import="model.Booking" %>
 <%@ page import="jaxblist.Bookings" %>
 <%
     String filePath = application.getRealPath(WEB_INF_BOOKINGS_XML);
     String schemaPath = application.getRealPath(WEB_IF_BOOKINGS_XSD);
 %>
-<jsp:useBean id="bookingApp" class="application.BookingApplication" scope="page">
-    <jsp:setProperty name="bookingApp" property="filePath" value="<%=filePath%>"/>
-    <jsp:setProperty name="bookingApp" property="schemaPath" value="<%=schemaPath%>"/>
+<jsp:useBean id="bookingDAO" class="dao.BookingDAOImpl" scope="page">
+    <jsp:setProperty name="bookingDAO" property="filePath" value="<%=filePath%>"/>
+    <jsp:setProperty name="bookingDAO" property="schemaPath" value="<%=schemaPath%>"/>
 </jsp:useBean>
 <page title="Booking">
     <%@include file="navigation.jsp"%>
 
         <%
-            Bookings bookings;
-            if(user.isStudent()) bookings = bookingApp.getItems().findByStudentEmail(user.getEmail());
-            else bookings = bookingApp.getItems().findByTutorEmail(user.getEmail());
+            Bookings bookings = bookingDAO.searchByEmail(user.getEmail(), user.isStudent());
+
             if(bookings != null && bookings.getList() != null && bookings.getList().size() != 0){
                 for(Booking booking: bookings.getList()){
 

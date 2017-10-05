@@ -1,17 +1,20 @@
 <%@ page contentType="text/xml;charset=UTF-8" language="java" %><%--
 --%><?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
-<%@ page import="application.BookingApplication" %>
+<%@ page import="dao.BookingDAOImpl" %>
 <%@ page import="jaxblist.Bookings" %>
 <%@ page import="model.Booking" %>
-<%@ page import="static application.BookingApplication.*" %>
-<%@ page import="application.UserApplication" %>
-<%@ page import="static application.UserApplication.*" %>
+<%@ page import="static dao.BookingDAOImpl.*" %>
+<%@ page import="dao.UserDAOImpl" %>
+<%@ page import="static dao.UserDAOImpl.*" %>
 <%@ page import="util.DigestUtil" %>
 <%@ page import="javax.xml.bind.ValidationException" %>
 <%@ page import="javax.xml.bind.MarshalException" %>
 <%@ page import="util.StringUtil" %>
 <%@ page import="jaxblist.Users" %>
+<%@ page import="dao.UserDAO" %>
+<%@ page import="dao.BookingDAO" %>
+<%@ page import="exception.DataValidationException" %>
 <page title="Account">
 <%@include file="navigation.jsp"%>
     <%
@@ -23,11 +26,14 @@
     <%
         }
         else {
-            UserApplication userApp;
-            if(user.isStudent()) userApp = new UserApplication(application.getRealPath(WEB_INF_STUDENTS_XML),
+            UserDAO userDAO;
+            if(user.isStudent()) userDAO = new UserDAOImpl(application.getRealPath(WEB_INF_STUDENTS_XML),
                     application.getRealPath(WEB_INF_USERS_XSD));
-            else userApp = new UserApplication(application.getRealPath(WEB_INF_TUTORS_XML), application.getRealPath(
+            else userDAO = new UserDAOImpl(application.getRealPath(WEB_INF_TUTORS_XML), application.getRealPath(
                     WEB_INF_USERS_XSD));
+            BookingDAO bookingDAO = new BookingDAOImpl(application.getRealPath(WEB_INF_BOOKINGS_XML),
+                    application.getRealPath(WEB_IF_BOOKINGS_XSD));
+            Bookings bookings = bookingDAO.searchByEmail(user.getEmail(), user.isStudent());
             String action = request.getParameter("button");
             if(action == null || action.equals("") || action.equals("cancel")){
     %>
@@ -61,20 +67,14 @@
     <%
         }
         else if(action.equals("Cancel account")){
-            BookingApplication bookApp = new BookingApplication(application.getRealPath(WEB_INF_BOOKINGS_XML),
-                    application.getRealPath(WEB_IF_BOOKINGS_XSD));
-            Bookings bookings;
             //Find the corresponding bookings.
-            if(user.isStudent()) bookings = bookApp.getItems().findByStudentEmail(user.getEmail());
-            else bookings = bookApp.getItems().findByTutorEmail(user.getEmail());
             for(Booking booking: bookings.getList()) {
                 if(booking.getStatus().equals(Booking.ACTIVE)) booking.setStatus(Booking.CANCELLED);
             };
-            bookApp.getItems().updateList(bookings);
-            bookApp.save();
+//            bookingDAO.read().updateList(bookings);
+            bookingDAO.save();
             //Cancel account.
-            userApp.getItems().remove(userApp.getItems().findById(user.getId()));
-            userApp.save();
+            userDAO.delete(userDAO.searchById(user.getId()));
             session.invalidate();
 
     %>
@@ -88,20 +88,20 @@
             String password = request.getParameter(PASSWORD);
             String dateOfBith = request.getParameter(DATE_OF_BIRTH);
             try{
-                userApp.getItems().setOldItem(user);
-                User oldUser = userApp.getItems().findById(user.getId());
-                oldUser.setName(name);
-                oldUser.setDateOfBirth(dateOfBith);
-                if(!oldUser.getPassword().equals(password)) oldUser.setPassword(DigestUtil.encryptPWD(password));
-                if(!oldUser.isStudent()) oldUser.setSpeciality(request.getParameter(SPECIALITY));
-                userApp.save();
-                session.setAttribute("user", oldUser);
+                User changeUser = userDAO.searchById(user.getId());
+                changeUser.setName(name);
+                changeUser.setDateOfBirth(dateOfBith);
+                if(!changeUser.getPassword().equals(password)) changeUser.setPassword(DigestUtil.encryptPWD(password));
+                if(!changeUser.isStudent()) changeUser.setSpeciality(request.getParameter(SPECIALITY));
+                userDAO.update(user, changeUser);
+                session.setAttribute("user", changeUser);
     %>
     <result type="simple">
         <content>New information is stored.</content>
     </result>
     <%
-        }        catch (MarshalException e){
+        }
+        catch (DataValidationException e){
             e.printStackTrace();
     %>
 

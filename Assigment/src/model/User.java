@@ -9,7 +9,7 @@ import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
 /**
- * This class represents user in this online application.
+ * This class represents user in this online dao.
  */
 @XmlRootElement(name = "user")
 @XmlType(propOrder = {"name", "email", "password","dateOfBirth", "speciality", "availability"})
