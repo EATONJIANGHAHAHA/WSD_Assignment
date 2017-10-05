@@ -9,6 +9,10 @@ import javax.xml.bind.annotation.XmlTransient;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * Represents a list of jaxb objects, allowing a series of operations of the object list.
+ * @param <T>
+ */
 @XmlSeeAlso({Bookings.class, Users.class})
 @XmlAccessorType(XmlAccessType.PROPERTY)
 public abstract class BaseJAXBList<T extends BaseModel> implements Serializable{
@@ -16,6 +20,9 @@ public abstract class BaseJAXBList<T extends BaseModel> implements Serializable{
     @XmlTransient
     private List<T> list;
     @XmlTransient
+    /**
+     * To preserve the old data when edit a current existing item.
+     */
     private T oldItem = null;
 
     public BaseJAXBList(){}
@@ -61,6 +68,9 @@ public abstract class BaseJAXBList<T extends BaseModel> implements Serializable{
         this.oldItem = oldItem;
     }
 
+    /**
+     * Reset the changed item into old ones to ensure the marshal of xml.
+     */
     public void recoverList(){
         if (oldItem == null)
             removeLast();

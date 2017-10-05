@@ -22,12 +22,21 @@ public class Bookings extends BaseJAXBList<Booking>{
         super(list);
     }
 
+    /**
+     * Return the booking list.
+     * Is inherited to give a specific name of the object in the list in xml.
+     * @return
+     */
     @Override
     @XmlElement(name = "booking")
     public List<Booking> getList() {
         return super.getList();
     }
 
+    /**
+     * To ensure the correct unmarshall.
+     * @param list
+     */
     @Override
     public void setList(List<Booking> list) {
         super.setList(list);

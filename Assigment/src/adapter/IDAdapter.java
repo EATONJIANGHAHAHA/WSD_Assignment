@@ -1,8 +1,10 @@
 package adapter;
 
-import javax.persistence.criteria.CriteriaBuilder;
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
+/**
+ * To assign an auto increment id for the xml records.
+ */
 public class IDAdapter extends XmlAdapter<Integer, Integer> {
 
     private int counter = 1;

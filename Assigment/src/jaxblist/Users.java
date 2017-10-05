@@ -76,12 +76,20 @@ public class Users extends BaseJAXBList<User>{
         return tutors;
     }
 
+    /**
+     * Inherited from the super class to assign a specific tag for user in xml.
+     * @return
+     */
     @Override
     @XmlElement(name = "user")
     public List<User> getList() {
         return super.getList();
     }
 
+    /**
+     * Inherited to ensure the correct unmarshal.
+     * @param list
+     */
     @Override
     public void setList(List<User> list) {
         super.setList(list);

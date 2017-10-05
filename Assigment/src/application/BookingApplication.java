@@ -5,6 +5,9 @@ import jaxblist.Bookings;
 import javax.xml.bind.JAXBException;
 import java.io.IOException;
 
+/**
+ * Allows some data base operations of booking records.
+ */
 public class BookingApplication extends BaseApplication<Bookings> {
     public static final String WEB_INF_BOOKINGS_XML = "/WEB-INF/bookings.xml";
     public static final String BOOKING_SERVICE = "bookingService";

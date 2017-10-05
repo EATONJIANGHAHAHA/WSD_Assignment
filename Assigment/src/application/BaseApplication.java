@@ -2,23 +2,20 @@ package application;
 
 import adapter.IDAdapter;
 import jaxblist.BaseJAXBList;
-import model.BaseModel;
 import org.xml.sax.SAXException;
-import org.xml.sax.SAXParseException;
-import sun.rmi.runtime.Log;
 
 import javax.xml.XMLConstants;
 import javax.xml.bind.*;
-import javax.xml.bind.annotation.adapters.XmlAdapter;
-import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import java.io.*;
 import java.lang.reflect.ParameterizedType;
-import java.util.ArrayList;
-import java.util.List;
 
-public class BaseApplication<T extends BaseJAXBList> implements Serializable{
+/**
+ * Read the date stored in the xml, and restored the new data.
+ * @param <T>
+ */
+public abstract class BaseApplication<T extends BaseJAXBList> implements Serializable{
 
 
     private String filePath;
@@ -106,6 +103,7 @@ public class BaseApplication<T extends BaseJAXBList> implements Serializable{
             items.setOldItem(null);
         }
         catch (MarshalException e){
+            //Recover the list, recover the old xml document.
             fout = new FileOutputStream(filePath);
             e.printStackTrace();
             items.recoverList();
