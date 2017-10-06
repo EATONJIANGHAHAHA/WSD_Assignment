@@ -15,9 +15,13 @@
         if (progress == null || progress.equals("")) {
     %>
     <%@ include file="navigation.jsp"%>
-    <form_table user_type="<%=url%>">
-        <category>login</category>>
-    </form_table>
+    <display>
+        <form link="login.jsp?<%=url%>">
+            <input_row id="<%=EMAIL%>" name="Email" type="text"/>
+            <input_row id="<%=PASSWORD%>" name="Password" type="password"/>
+            <input_row id="progress" type="submit" value="Confirm"/>
+        </form>
+    </display>
     <%
     }
     else {

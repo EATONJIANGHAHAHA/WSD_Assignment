@@ -5,4 +5,5 @@ import model.User;
 
 public interface UserDAO extends BaseDAO<Users, User>{
     boolean isRegistered(String email);
+    User searchByEmail(String email);
 }

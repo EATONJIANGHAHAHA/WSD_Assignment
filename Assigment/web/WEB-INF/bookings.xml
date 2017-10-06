@@ -11,4 +11,13 @@
         <subject>WSD</subject>
         <status>active</status>
     </booking>
+    <booking>
+        <id>2</id>
+        <student_name>Jiang Yichen</student_name>
+        <student_email>123@gmail.com</student_email>
+        <tutor_name>Gao Shiqing</tutor_name>
+        <tutor_email>tuochuqu@jiangjianshun.com</tutor_email>
+        <subject>MobileApp</subject>
+        <status>cancelled</status>
+    </booking>
 </bookings>

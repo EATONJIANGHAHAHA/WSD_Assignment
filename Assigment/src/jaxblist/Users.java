@@ -102,12 +102,20 @@ public class Users extends BaseJAXBList<User>{
      * @return
      */
     public boolean isRegistered(String email) {
-        for(User user: getList()){
-            if(user.getEmail().equals(email)) return true;
-        }
-        return false;
+        return findByEmail(email) != null;
     }
 
+    /**
+     * Find the user by the email address.
+     * @param email
+     * @return
+     */
+    public User findByEmail(String email){
+        for(User user: getList()){
+            if(user.getEmail().equals(email)) return user;
+        }
+        return null;
+    }
 
     /**
      * Return the user if there is a user stored in xml that matches the email and password.

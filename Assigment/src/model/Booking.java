@@ -31,6 +31,16 @@ public class Booking extends BaseModel{
         this.status = status;
     }
 
+    public Booking(String studentName, String studentEmail, String tutorName, String tutorEmail,
+                   String subject) {
+        this.studentName = studentName;
+        this.studentEmail = studentEmail;
+        this.tutorName = tutorName;
+        this.tutorEmail = tutorEmail;
+        this.subject = subject;
+        this.status = ACTIVE;
+    }
+
     @XmlElement(name = "student_name")
     public String getStudentName() {
         return studentName;

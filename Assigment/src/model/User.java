@@ -61,7 +61,7 @@ public class User extends BaseModel {
         this.setId(id);
         if(!isStudent) {
             this.setSpeciality(speciality);
-            this.setSpeciality(AVAILABLE);
+            this.setAvailability(AVAILABLE);
         }
     }
 

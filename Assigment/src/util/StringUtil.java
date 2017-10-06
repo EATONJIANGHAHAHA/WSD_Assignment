@@ -15,4 +15,9 @@ public class StringUtil {
        String[] s2 = s1[s1.length-1].split("\'");
        return s2[1];
     }
+
+    public static String readQueryString(String url){
+        String[] s = url.split("=");
+        return s[s.length-1];
+    }
 }

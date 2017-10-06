@@ -171,6 +171,12 @@ public abstract class BaseDAO_Impl<T extends BaseJAXBList<V>, V extends BaseMode
         return items.findById(id);
     }
 
+    /**
+     * Update information for an existing item.
+     * @param oldItem
+     * @param newItem
+     * @throws DataValidationException
+     */
     @Override
     public void update(V oldItem, V newItem) throws DataValidationException {
         items.setOldItem(oldItem);
@@ -178,6 +184,11 @@ public abstract class BaseDAO_Impl<T extends BaseJAXBList<V>, V extends BaseMode
         save();
     }
 
+    /**
+     * Create new item.
+     * @param item
+     * @throws DataValidationException
+     */
     @Override
     public void create(V item) throws DataValidationException {
         items.add(item);
@@ -185,6 +196,11 @@ public abstract class BaseDAO_Impl<T extends BaseJAXBList<V>, V extends BaseMode
 
     }
 
+    /**
+     * Delete an existing item from data base.
+     * @param item
+     * @throws DataValidationException
+     */
     @Override
     public void delete(V item) throws DataValidationException {
         items.remove(item);

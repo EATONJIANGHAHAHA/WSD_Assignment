@@ -35,4 +35,9 @@ public class UserDAOImpl extends BaseDAO_Impl<Users, User> implements UserDAO {
         return read().isRegistered(email);
     }
 
+    @Override
+    public User searchByEmail(String email) {
+        return read().findByEmail(email);
+    }
+
 }

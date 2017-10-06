@@ -8,10 +8,7 @@
 <%@ page import="dao.UserDAOImpl" %>
 <%@ page import="static dao.UserDAOImpl.*" %>
 <%@ page import="util.DigestUtil" %>
-<%@ page import="javax.xml.bind.ValidationException" %>
-<%@ page import="javax.xml.bind.MarshalException" %>
 <%@ page import="util.StringUtil" %>
-<%@ page import="jaxblist.Users" %>
 <%@ page import="dao.UserDAO" %>
 <%@ page import="dao.BookingDAO" %>
 <%@ page import="exception.DataValidationException" %>
@@ -35,35 +32,48 @@
                     application.getRealPath(WEB_IF_BOOKINGS_XSD));
             Bookings bookings = bookingDAO.searchByEmail(user.getEmail(), user.isStudent());
             String action = request.getParameter("button");
-            if(action == null || action.equals("") || action.equals("cancel")){
+            if(action == null || action.equals("") || action.equals("Cancel")){
     %>
-    <account_info user_tyoe="<%=user.getType()%>">
-        <name><%=user.getName()%></name>
-        <email><%=user.getEmail()%></email>
-        <date_of_birth><%=user.getDateOfBirth()%></date_of_birth>
-        <%
-            if(!user.isStudent()){
-        %>
-        <speciality><%=user.getSpeciality()%></speciality>
-        <%
-            }
-        %>
-    </account_info>
+    <display>
+            <output_row name="Name" value="<%=user.getName()%>"/>
+            <output_row name="Email" value="<%=user.getEmail()%>"/>
+            <output_row name="Password" value="****************"/>
+            <output_row name="Date of birth" value="<%=user.getDateOfBirth()%>"/>
+            <%
+                if(!user.isStudent()){
+            %>
+            <output_row name="Speciality" value="<%=user.getSpeciality()%>"/>
+            <%
+                }
+            %>
+            <output_row>
+                <form link="account.jsp">
+                    <input type="submit" name="button" value="Edit account"/>
+                    <input type="submit" name="button" value="Cancel account"/>
+                </form>
+            </output_row>
+    </display>
     <%
             }
             else if(action.equals("Edit account")){
     %>
-    <edit_account user_type="<%=user.getType()%>">
-        <email><%=user.getEmail()%></email>
-        <password><%=user.getPassword()%></password>
-        <name><%=user.getName()%></name>
-        <date_of_birth><%=user.getDateOfBirth()%></date_of_birth>
+    <display>
+            <form link="account.jsp">
+                <output_row name="Email" value="<%=user.getEmail()%>"/>
+                <input_row id="<%=PASSWORD%>" name="Password" type="password" value="<%=user.getPassword()%>"/>
+                <input_row id="<%=NAME%>" name="Name" type="text" value="<%=user.getName()%>"/>
+                <input_row id="<%=DATE_OF_BIRTH%>" name="Date of birth" type="date" value="<%=user.getDateOfBirth()%>"/>
         <% if(!user.isStudent()) {%>
-        <speciality><%=user.getSpeciality()%></speciality>
+                <input_row id="<%=SPECIALITY%>" name="Speciality" type="select" value="<%=user.getSpeciality()%>"/>
         <%
             }
         %>
-    </edit_account>
+                <output_row>
+                    <input name="button" type="submit" value="Cancel"/>
+                    <input name="button" type="submit" value="Confirm"/>
+                </output_row>
+            </form>
+    </display>
     <%
         }
         else if(action.equals("Cancel account")){
@@ -83,14 +93,14 @@
     </result>
     <%
         }
-        else if(action.equals("confirm")){
+        else if(action.equals("Confirm")){
             String name = request.getParameter(NAME);
             String password = request.getParameter(PASSWORD);
-            String dateOfBith = request.getParameter(DATE_OF_BIRTH);
+            String dateOfBirth = request.getParameter(DATE_OF_BIRTH);
             String speciality = request.getParameter(SPECIALITY);
             try{
                 if(!user.getPassword().equals(password)) password = DigestUtil.encryptPWD(password);
-                User changeUser = new User(user.getId(), user.getEmail(), name, password, dateOfBith, user.isStudent(),
+                User changeUser = new User(user.getId(), user.getEmail(), name, password, dateOfBirth, user.isStudent(),
                         speciality);
                 userDAO.update(user, changeUser);
                 session.setAttribute("user", changeUser);
@@ -105,7 +115,7 @@
     %>
 
     <result type="simple">
-        <content>Edition failed: you may have entered invalid <%=StringUtil.readExceptionCause(e.getMessage())%>.
+        <content>Edition failed: you may have entered invalid <%=StringUtil.readExceptionCause(e.getMessage())%>: <%=request.getParameter("speciality")%>.
              Please check your input and try again.
         </content>
     </result>

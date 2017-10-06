@@ -1,77 +1,97 @@
 <%@ page contentType="text/xml;charset=UTF-8" language="java" %><%--
---%><?xml version="1.0" encoding="UTF-8"?>
+--%>
+<?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 <%@ page import="dao.UserDAOImpl" %>
 <%@ page import="static dao.UserDAOImpl.WEB_INF_TUTORS_XML" %>
 <%@ page import="jaxblist.Users" %>
-<page title = "Main">
-<%@ include file="navigation.jsp"%>
+<page title="Main">
+    <%@ include file="navigation.jsp" %>
     <%
-        if(user == null){
+        if (user == null) {
     %>
     <result type="simple">
         <content>Please log in first.</content>
     </result>
     <%
-        }
-        else if( user.isStudent() ) {
+    } else if (user.isStudent()) {
 
     %>
-    <search_form/>
+    <display>
+        <form link="main.jsp">
+            <input_row id="searchType" name="Search by" type="select"/>
+            <input_row id="keyWord" name="Key word" type="search"/>
+            <input_row id="progress" value="Search" type="submit"/>
+        </form>
+    </display>
     <%
         String progress = request.getParameter("progress");
-        if(progress != null){
-            try
-            {
+        if (progress != null) {
+            try {
                 UserDAOImpl tutorApp = new UserDAOImpl(application.getRealPath(WEB_INF_TUTORS_XML));
                 String searchType = request.getParameter("searchType");
                 String keyWord = request.getParameter("keyWord");
                 Users tutors = null;
-                if(searchType.equals("Tutor name")){
+                if (searchType.equals("Tutor name")) {
                     tutors = tutorApp.getItems().findTutorByName(keyWord);
-                }
-                else if(searchType.equals("Subject")){
+                } else if (searchType.equals("Subject")) {
                     tutors = tutorApp.getItems().findTutorBySubject(keyWord);
-                }
-                else {
+                } else {
                     tutors = tutorApp.getItems().findTutorByStatus(keyWord);
                 }
-                if(tutors == null || tutors.getList() == null || tutors.getList().size() == 0){
+                if (tutors == null || tutors.getList() == null || tutors.getList().size() == 0) {
 
-                %>
+    %>
     <result type="simple">
         <content>No such result, please change your keyword and try again.</content>
     </result>
+    <%
+    } else {
+    %>
+    <display>
+        <header>
+            <head value="Tutor"/>
+            <head value="Email"/>
+            <head value="Subject"/>
+            <head value="Status"/>
+        </header>
+        <body>
+            <%
+                for (User tutor : tutors.getList()) {
+            %>
+            <output_row>
                 <%
-                }
-                else {
+                    if (tutor.isAvailable()) {
                 %>
-    <tutorlist>
-        <%
-            for(User tutor: tutors.getList()){
-        %>
-        <tutor id="<%=tutor.getId()%>">
-            <name><%=tutor.getName()%></name>
-            <subject><%=tutor.getSpeciality()%></subject>
-            <email><%=tutor.getEmail()%></email>
-            <status><%=tutor.getAvailability()%></status>
-        </tutor>
-        <%
-            }
-        %>
-    </tutorlist>
+                <output type="link" value="<%=tutor.getName()%>" link="booking.jsp?tutorId<%=tutor.getId()%>"/>
+                <%
+                } else {
+                %>
+                <output type="text" value="<%=tutor.getName()%>"/>
+                <%
+                    }
+                %>
+                <output type="text" value="<%=tutor.getEmail()%>"/>
+                <output type="text" value="<%=tutor.getSpeciality()%>"/>
+                <output type="text" value="<%=tutor.getAvailability()%>"/>
+            </output_row>
+            <%
+                }
+            %>
+        </body>
+    </display>
 
     <%
-            }}
-            catch (NullPointerException e){
-                e.printStackTrace();
+        }
+    } catch (NullPointerException e) {
+        e.printStackTrace();
     %>
     <result type="simple">
         <content>Please enter correct information.</content>
     </result>
     <%
-        }
-        }
+                }
+            }
         }
 
     %>
