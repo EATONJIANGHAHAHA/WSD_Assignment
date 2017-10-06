@@ -17,7 +17,7 @@
     <%
         if(user == null){
     %>
-    <result type="simple">
+    <result type="error">
         <content>Please log in first</content>
     </result>
     <%
@@ -88,7 +88,7 @@
             session.invalidate();
 
     %>
-    <result type="simple">
+    <result type="success">
         <content>Your account has been successfully cancelled.</content>
     </result>
     <%
@@ -105,7 +105,7 @@
                 userDAO.update(user, changeUser);
                 session.setAttribute("user", changeUser);
     %>
-    <result type="simple">
+    <result type="success">
         <content>New information is stored.</content>
     </result>
     <%
@@ -114,9 +114,9 @@
             e.printStackTrace();
     %>
 
-    <result type="simple">
-        <content>Edition failed: you may have entered invalid <%=StringUtil.readExceptionCause(e.getMessage())%>: <%=request.getParameter("speciality")%>.
-             Please check your input and try again.
+    <result type="error">
+        <content>you may have entered invalid <%=StringUtil.readExceptionCause(e.getMessage())%>: <%=request.getParameter("speciality")%>.
+            Please check your input and try again.
         </content>
     </result>
     <%
@@ -124,8 +124,8 @@
         catch (NullPointerException e){
             e.printStackTrace();
         %>
-    <result type="simple">
-        <content>Edition failed: there might be something wrong with the system, please log out and try again.</content>
+    <result type="error">
+        <content>there might be something wrong with the system. Please log out and try again.</content>
     </result>
         <%
         }

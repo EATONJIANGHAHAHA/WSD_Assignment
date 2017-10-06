@@ -10,7 +10,7 @@
     <%
         if (user == null) {
     %>
-    <result type="simple">
+    <result type="error">
         <content>Please log in first.</content>
     </result>
     <%
@@ -42,8 +42,8 @@
                 if (tutors == null || tutors.getList() == null || tutors.getList().size() == 0) {
 
     %>
-    <result type="simple">
-        <content>No such result, please change your keyword and try again.</content>
+    <result type="error">
+        <content>No such result, please change your keyword.</content>
     </result>
     <%
     } else {
@@ -63,7 +63,7 @@
                 <%
                     if (tutor.isAvailable()) {
                 %>
-                <output type="link" value="<%=tutor.getName()%>" link="booking.jsp?tutorId<%=tutor.getId()%>"/>
+                <output type="link" value="<%=tutor.getName()%>" link="booking.jsp?tutorEmail<%=tutor.getEmail()%>"/>
                 <%
                 } else {
                 %>
@@ -86,7 +86,7 @@
     } catch (NullPointerException e) {
         e.printStackTrace();
     %>
-    <result type="simple">
+    <result type="error">
         <content>Please enter correct information.</content>
     </result>
     <%

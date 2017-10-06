@@ -63,7 +63,7 @@
     <%@ include file="navigation.jsp" %>
     <result type="error">
         <content>
-            Register failed: The email address already exists.
+            The email address already exists.
         </content>
     </result>
     <%
@@ -74,7 +74,7 @@
     %>
     <%@ include file="navigation.jsp" %>
     <result type="success">
-        <content><%=user.getName()%></content>
+        <content>you now log in as <%=user.getName()%>.</content>
     </result>
     <%
         }
@@ -84,7 +84,7 @@
     <%@ include file="navigation.jsp" %>
     <result type="error">
         <content>
-            Register failed: The information you entered may be incomplete.
+            The information you entered may be incomplete. Please check your input and try again.
         </content>
     </result>
     <%
@@ -94,7 +94,7 @@
     <%@ include file="navigation.jsp" %>
     <result type="error">
         <content>
-            Register failed: you may entered invalid <%=StringUtil.readExceptionCause(e.getMessage())%>.
+            You may entered invalid <%=StringUtil.readExceptionCause(e.getMessage())%>. Please check your input and try again.
         </content>
     </result>
     <%

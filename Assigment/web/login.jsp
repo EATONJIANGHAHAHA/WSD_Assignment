@@ -42,7 +42,7 @@
     %>
     <%@ include file="navigation.jsp"%>
     <result type="success">
-        <content><%=user.getName() %></content>
+        <content>You now login as <%=user.getName() %>.</content>
     </result>
     <%
     }
@@ -50,7 +50,7 @@
     %>
     <%@ include file="navigation.jsp"%>
     <result type="error">
-        <content>Wrong email or password</content>
+        <content>Wrong email or password.</content>
     </result>
     <%
         }

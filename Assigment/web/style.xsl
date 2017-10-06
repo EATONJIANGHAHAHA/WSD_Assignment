@@ -6,7 +6,9 @@
             <head>
                 <link rel="stylesheet" type="text/css" href="page.css"/>
             </head>
-            <title><xsl:value-of select="@title"/></title>
+            <title>
+                <xsl:value-of select="@title"/>
+            </title>
             <body>
                 <div>
                     <!--                    <img src="image/UTSLogo.png"></img>-->
@@ -35,9 +37,13 @@
     <xsl:template match="output_row">
         <tr>
             <xsl:choose>
-               <xsl:when test="@name!=''">
-                    <td><xsl:value-of select="@name"/></td>
-                    <td><xsl:value-of select="@value"/></td>
+                <xsl:when test="@name!=''">
+                    <td>
+                        <xsl:value-of select="@name"/>
+                    </td>
+                    <td>
+                        <xsl:value-of select="@value"/>
+                    </td>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:apply-templates/>
@@ -53,19 +59,21 @@
     </xsl:template>
 
     <xsl:template match="head">
-        <th><xsl:value-of select="@value"/></th>
+        <th>
+            <xsl:value-of select="@value"/>
+        </th>
     </xsl:template>
 
     <xsl:template match="output">
         <td>
-        <xsl:if test="@type='text'">
-            <xsl:value-of select="@value"/>
-        </xsl:if>
-        <xsl:if test="@type='link'">
-            <a href="{@link}">
+            <xsl:if test="@type='text'">
                 <xsl:value-of select="@value"/>
-            </a>
-        </xsl:if>
+            </xsl:if>
+            <xsl:if test="@type='link'">
+                <a href="{@link}">
+                    <xsl:value-of select="@value"/>
+                </a>
+            </xsl:if>
         </td>
     </xsl:template>
 
@@ -87,93 +95,93 @@
                 </xsl:if>
             </xsl:if>
             <xsl:if test="@type!='select'">
-            <input type="{@type}" name="{@name}" value="{@value}"/>
+                <input type="{@type}" name="{@name}" value="{@value}"/>
             </xsl:if>
         </td>
     </xsl:template>
 
     <xsl:template match="input_row">
         <tr>
-        <td>
-            <xsl:value-of select="@name"/>
-        </td>
-        <td>
-            <xsl:choose>
-                <xsl:when test="@type='select'">
-                    <xsl:if test="@id='status'">
-                        <select name="status" value="{@value}">
-                            <option>active</option>
-                            <option>complete</option>
-                            <option>cancel</option>
-                        </select>
-                    </xsl:if>
-                    <xsl:if test="@id='speciality'">
-                        <select name="speciality">
-                            <option><xsl:value-of select="@value"/></option>
-                            <option>WSD</option>
-                            <option>SEP</option>
-                            <option>AppProg</option>
-                            <option>USP</option>
-                            <option>MobileApp</option>
-                        </select>
-                    </xsl:if>
-                    <xsl:if test="@id='searchType'">
-                        <select name="searchType">
-                            <option>Tutor name</option>
-                            <option>Subject</option>
-                            <option>Tutor status</option>
-                        </select>
-                    </xsl:if>
-                </xsl:when>
-                <xsl:otherwise>
-                    <input type="{@type}" name="{@id}" value="{@value}"/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </td>
+            <td>
+                <xsl:value-of select="@name"/>
+            </td>
+            <td>
+                <xsl:choose>
+                    <xsl:when test="@type='select'">
+                        <xsl:if test="@id='status'">
+                            <select name="status" value="{@value}">
+                                <option>active</option>
+                                <option>complete</option>
+                                <option>cancel</option>
+                            </select>
+                        </xsl:if>
+                        <xsl:if test="@id='speciality'">
+                            <select name="speciality">
+                                <option>
+                                    <xsl:value-of select="@value"/>
+                                </option>
+                                <option>WSD</option>
+                                <option>SEP</option>
+                                <option>AppProg</option>
+                                <option>USP</option>
+                                <option>MobileApp</option>
+                            </select>
+                        </xsl:if>
+                        <xsl:if test="@id='searchType'">
+                            <select name="searchType">
+                                <option>Tutor name</option>
+                                <option>Subject</option>
+                                <option>Tutor status</option>
+                            </select>
+                        </xsl:if>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <input type="{@type}" name="{@id}" value="{@value}"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </td>
         </tr>
     </xsl:template>
 
 
     <xsl:template match="result">
-        <div>
-        <xsl:if test="@type = 'error'">
-            <div class="error">
-                <p>
-                    <xsl:value-of select="content"/>
-                </p>
-                <p>Please try again</p>
-            </div>
-        </xsl:if>
-        <xsl:if test="@type = 'success'">
-            <div>
-                <p>
-                    Success, you now login as <b><xsl:value-of select="content"/></b>.
-                </p>
-                <p>Click <a href = "main.jsp">here</a> to the main page</p>
-            </div>
-        </xsl:if>
-        <xsl:if test="@type = 'simple' ">
-            <p><xsl:value-of select="content"/></p>
-        </xsl:if>
+        <div class="{@type}">
+            <xsl:choose>
+                <xsl:when test="@type = 'error'">
+                    <p>
+                        Error:
+                        <xsl:value-of select="content"/>
+                    </p>
+                </xsl:when>
+                <xsl:otherwise>
+                    <p>
+                        Success: <xsl:value-of select="content"/>.
+                    </p>
+                </xsl:otherwise>
+            </xsl:choose>
         </div>
+
     </xsl:template>
 
 
     <xsl:template match="navigation">
         <div class="menu">
-        <xsl:if test="status = 'login'">
-            <p>You now logged in as <xsl:value-of select="user_name"/>.</p>
-            <a href="main.jsp">Main</a>
-            <a href="account.jsp">Account</a>
-            <a href="booking.jsp">Booking</a>
-            <a href="index.jsp?logout">Logout</a>
-        </xsl:if>
-        <xsl:if test="status = 'logout'">
-            Register <a href="register.jsp?student">as student</a>
-            <a href="register.jsp?tutor">as tutor</a>
-            Login <a href="login.jsp?student"> as student</a>
-            <a href="login.jsp?tutor"> as tutor</a>
-        </xsl:if>
+            <xsl:if test="status = 'login'">
+                <p>You now logged in as <xsl:value-of select="user_name"/>.
+                </p>
+                <a href="main.jsp">Main</a>
+                <a href="account.jsp">Account</a>
+                <a href="booking.jsp">Booking</a>
+                <a href="index.jsp?logout">Logout</a>
+            </xsl:if>
+            <xsl:if test="status = 'logout'">
+                Register
+                <a href="register.jsp?student">as student</a>
+                <a href="register.jsp?tutor">as tutor</a>
+                Login
+                <a href="login.jsp?student">as student</a>
+                <a href="login.jsp?tutor">as tutor</a>
+            </xsl:if>
         </div>
     </xsl:template>
 
