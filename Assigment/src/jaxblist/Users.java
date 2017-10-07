@@ -118,6 +118,17 @@ public class Users extends BaseJAXBList<User>{
     }
 
     /**
+     * Find the users by the email address.
+     * @param email
+     * @return
+     */
+    public Users findUsersByEmail(String email){
+        Users results = new Users(new ArrayList<User>());
+        if(findByEmail(email) != null ) results.add(findByEmail(email));
+        return results;
+    }
+
+    /**
      * Return the user if there is a user stored in xml that matches the email and password.
      * @param email
      * @param password

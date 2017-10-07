@@ -4,7 +4,6 @@ import adapter.IDAdapter;
 import exception.DataValidationException;
 import jaxblist.BaseJAXBList;
 import model.BaseModel;
-import org.xml.sax.SAXException;
 
 import javax.xml.XMLConstants;
 import javax.xml.bind.*;
@@ -79,9 +78,6 @@ public abstract class BaseDAO_Impl<T extends BaseJAXBList<V>, V extends BaseMode
 
     /**
      * Update the xml file.
-     * @throws IOException
-     * @throws JAXBException
-     * @throws SAXException
      */
     @Override
     public void save() throws DataValidationException {
