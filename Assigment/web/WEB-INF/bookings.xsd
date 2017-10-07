@@ -3,6 +3,26 @@
     targetNamespace="http://www.uts.edu.au/31284/wsd"
     xmlns="http://www.uts.edu.au/31284/wsd"
     elementFormDefault="qualified">
+    <xs:simpleType name="name">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Z][a-z]+(\s[A-Z][a-z]+)*"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="email">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9\._]+@[a-zA-Z.-]+\.[a-zA-Z]{2,4}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="subject">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="WSD|AppProg|USP|SEP|MobileApp"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="status">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="active|cancelled|completed"/>
+        </xs:restriction>
+    </xs:simpleType>
     <xs:element name="bookings">
         <xs:complexType>
             <xs:sequence>
@@ -10,12 +30,12 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="id" type="xs:integer"/>
-                            <xs:element name="student_name" type="xs:string"/>
-                            <xs:element name="student_email" type="xs:string"/>
-                            <xs:element name="tutor_name" type="xs:string"/>
-                            <xs:element name="tutor_email" type="xs:string"/>
-                            <xs:element name="subject" type="xs:string"/>
-                            <xs:element name="status" type="xs:string"/>
+                            <xs:element name="student_name" type="name"/>
+                            <xs:element name="student_email" type="email"/>
+                            <xs:element name="tutor_name" type="name"/>
+                            <xs:element name="tutor_email" type="email"/>
+                            <xs:element name="subject" type="subject"/>
+                            <xs:element name="status" type="status"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>

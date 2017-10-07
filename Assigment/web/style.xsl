@@ -89,8 +89,8 @@
                 <xsl:if test="@name='status'">
                     <select name="status">
                         <option>active</option>
-                        <option>complete</option>
-                        <option>cancel</option>
+                        <option>completed</option>
+                        <option>cancelled</option>
                     </select>
                 </xsl:if>
             </xsl:if>

@@ -10,11 +10,16 @@
 <%@ page import="static dao.UserDAOImpl.WEB_INF_TUTORS_XML" %>
 <%@ page import="dao.UserDAO" %>
 <%@ page import="dao.UserDAOImpl" %>
+<%@ page import="static model.Booking.CANCELLED" %>
+<%@ page import="exception.DataValidationException" %>
+<%@ page import="static dao.UserDAOImpl.WEB_INF_USERS_XSD" %>
 <%
     String bookingFilePath = application.getRealPath(WEB_INF_BOOKINGS_XML);
+    String schemaPath = application.getRealPath(WEB_IF_BOOKINGS_XSD);
 %>
 <jsp:useBean id="bookingDAO" class="dao.BookingDAOImpl" scope="page">
     <jsp:setProperty name="bookingDAO" property="filePath" value="<%=bookingFilePath%>"/>
+    <jsp:setProperty name="bookingDAO" property="schemaPath" value="<%=schemaPath%>"/>
 </jsp:useBean>
 <page title="Booking">
     <%!
@@ -30,17 +35,48 @@
     </result>
     <%
     } else {
+        UserDAO tutorDao = new UserDAOImpl(application.getRealPath(WEB_INF_TUTORS_XML), application.getRealPath(
+                WEB_INF_USERS_XSD));
+        String action = request.getParameter("button");
+        String status = request.getParameter("status");
+        if (action != null) {
+            try {
+                Integer bookingId = Integer.parseInt(StringUtil.readQueryString(url, "bookingId"));
+                Booking booking = bookingDAO.searchById(bookingId);
+                boolean changeBooking = false;
+                if (action.equals("Cancel")) {
+                    booking.setStatus(CANCELLED);
+                    changeBooking = true;
+                }
+                else if (action.equals("Change") && status != null) {
+                    booking.setStatus(status);
+                    changeBooking = true;
+                };
+                if(changeBooking){
+                    tutorDao.searchByEmail(booking.getTutorEmail()).setAvailability(AVAILABLE);
+                    bookingDAO.save();
+                    tutorDao.save();
+                }
+            } catch (DataValidationException e) {
+    %>
+    <result type="error">
+        <content>You may entered wrong <%=StringUtil.readExceptionCause(e.getMessage())%>.</content>
+    </result>
+    <%
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
         if (user.isStudent()) {
-            UserDAO tutorDao = new UserDAOImpl(application.getRealPath(WEB_INF_TUTORS_XML));
     %>
     <display>
         <form link="booking.jsp">
             <%
-
                 try {
-                    String tutorEmail = StringUtil.readQueryString(url);
+                    String tutorEmail = StringUtil.readQueryString(url, "tutorEmail");
             %>
-            <input_row id="<%=TUTOR_EMAIL%>" type="text" name="Tutor email" value="<%=tutorEmail%>"/>
+            <input_row id="<%=TUTOR_EMAIL%>" type="search" name="Tutor email" value="<%=tutorEmail%>"/>
             <%
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -150,4 +186,3 @@
         }
     %>
 </page>
-

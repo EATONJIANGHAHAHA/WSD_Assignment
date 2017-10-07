@@ -22,7 +22,7 @@ public class IDAdapter extends XmlAdapter<Integer, Integer> {
      */
     @Override
     public Integer marshal(Integer v) throws Exception {
-        if(v != null) {
+        if(v != null && v > counter) {
             counter = v;
             return v;
         }

@@ -1,6 +1,5 @@
 <%@ page contentType="text/xml;charset=UTF-8" language="java" %><%--
---%>
-<?xml version="1.0" encoding="UTF-8"?>
+--%><?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 <%@ page import="dao.UserDAOImpl" %>
 <%@ page import="static dao.UserDAOImpl.WEB_INF_TUTORS_XML" %>
@@ -63,7 +62,7 @@
                 <%
                     if (tutor.isAvailable()) {
                 %>
-                <output type="link" value="<%=tutor.getName()%>" link="booking.jsp?tutorEmail<%=tutor.getEmail()%>"/>
+                <output type="link" value="<%=tutor.getName()%>" link="booking.jsp?tutorEmail=<%=tutor.getEmail()%>"/>
                 <%
                 } else {
                 %>

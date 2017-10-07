@@ -1,8 +1,5 @@
 package model;
 
-
-import util.DigestUtil;
-
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;

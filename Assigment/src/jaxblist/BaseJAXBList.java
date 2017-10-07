@@ -57,7 +57,7 @@ public abstract class BaseJAXBList<V extends BaseModel> implements Serializable{
     }
 
     public void update(V newItem){
-        list.set(newItem.getId()-1, newItem);
+        list.set(getPosition(newItem), newItem);
     }
 
     public void remove(V item){
@@ -79,8 +79,20 @@ public abstract class BaseJAXBList<V extends BaseModel> implements Serializable{
         if (oldItem == null)
             removeLast();
         else {
-            list.set(oldItem.getId()-1, oldItem);
+            list.set(getPosition(oldItem), oldItem);
             oldItem = null;
         }
+    }
+
+    /**
+     * Get the position of the item.
+     * @param item
+     * @return
+     */
+    public Integer getPosition(V item){
+        for(Integer i = 0; i < list.size(); i++){
+            if(list.get(i).getId() == item.getId()) return i;
+        }
+        return -1;
     }
 }

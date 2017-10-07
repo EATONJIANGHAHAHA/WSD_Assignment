@@ -122,6 +122,7 @@ public abstract class BaseDAO_Impl<T extends BaseJAXBList<V>, V extends BaseMode
             }
             fout.close();
             System.out.print("saved");
+            setFilePath(this.getFilePath());
         }
         catch (MarshalException e){
             throw new DataValidationException(e.getMessage());
