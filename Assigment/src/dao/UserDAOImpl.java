@@ -48,4 +48,9 @@ public class UserDAOImpl extends BaseDAO_Impl<Users, User> implements UserDAO {
         return read().findTutorByStatus(status);
     }
 
+    @Override
+    public User login(String email, String password) {
+        return read().login(email, password);
+    }
+
 }

@@ -43,20 +43,14 @@ public class BookingService {
      * @param id booking id
      * @param subject subject
      * @param email student's email
+     * @param status status of booking
      * @return
      */
     @Path("bookings")
     @GET
     @Produces(MediaType.APPLICATION_XML)
     public Bookings getBookings(@QueryParam("id") Integer id, @QueryParam("subject") String subject, @QueryParam("email")
-            String email){
-        if(id == null && subject == null && email == null) return getBookingDAO().read();
-        if(id != null && subject == null && email == null) return getBookingDAO().searchBookingsById(id);
-        if(id == null && subject != null && email == null) return getBookingDAO().searchBySubject(subject);
-        if(id == null && subject == null && email != null) return getBookingDAO().searchByEmail(email, true);
-        if(id != null && subject != null && email == null) return getBookingDAO().searchBookingsById(id).findBySubject(subject);
-        if(id != null && subject == null && email != null) return getBookingDAO().searchBookingsById(id).findByStudentEmail(email);
-        if(id == null && subject != null && email != null) return getBookingDAO().searchBySubject(subject).findByStudentEmail(email);
-        return getBookingDAO().searchBookingsById(id).findBySubject(subject).findByStudentEmail(email);
+            String email, @QueryParam("status") String status){
+        return getBookingDAO().getBookings(id, subject, email, status);
     }
 }

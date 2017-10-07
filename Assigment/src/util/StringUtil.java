@@ -24,4 +24,8 @@ public class StringUtil {
         }
         return "";
     }
+
+    public static boolean isEmpty(String s){
+        return s == null || s.equals("");
+    }
 }

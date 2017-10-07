@@ -78,6 +78,21 @@ public class User extends BaseModel {
     }
 
     /**
+     * Create a user from current user.
+     * @param user
+     */
+    public User(User user){
+        setId(user.getId());
+        email = user.getEmail();
+        name = user.getName();
+        password = user.getPassword();
+        speciality = user.getSpeciality();
+        dateOfBirth = user.getDateOfBirth();
+        availability = user.getAvailability();
+
+    }
+
+    /**
      * Used to generate a tutor without an id.
      * @param email
      * @param name

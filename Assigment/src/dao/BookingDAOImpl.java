@@ -36,13 +36,21 @@ public class BookingDAOImpl extends BaseDAO_Impl<Bookings, Booking> implements B
         return read().findByTutorEmail(email);
     }
 
+    /**
+     * Get the booking records according to different params.
+     * @param studentEmail
+     * @param id
+     * @param status
+     * @param subject
+     * @return
+     */
     @Override
-    public Bookings searchBookingsById(Integer id) {
-        return read().findBookingsById(id);
-    }
-
-    @Override
-    public Bookings searchBySubject(String subject) {
-        return read().findBySubject(subject);
+    public Bookings getBookings(Integer id, String subject, String studentEmail, String status ) {
+        Bookings results = read();
+        if(id != null) results = results.findBookingsById(id);
+        if(subject != null) results = results.findBySubject(subject);
+        if(studentEmail != null) results = results.findByStudentEmail(studentEmail);
+        if(status != null) results = results.findByStatus(status);
+        return results;
     }
 }
