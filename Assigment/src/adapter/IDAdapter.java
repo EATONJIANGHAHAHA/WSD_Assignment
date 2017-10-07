@@ -13,8 +13,19 @@ public class IDAdapter extends XmlAdapter<Integer, Integer> {
         return v;
     }
 
+    /**
+     * If the id is not null, return the id.
+     * Else return an auto-increment id.
+     * @param v
+     * @return
+     * @throws Exception
+     */
     @Override
     public Integer marshal(Integer v) throws Exception {
+        if(v != null) {
+            counter = v;
+            return v;
+        }
         return counter ++;
     }
 }
