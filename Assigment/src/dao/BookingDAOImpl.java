@@ -33,6 +33,16 @@ public class BookingDAOImpl extends BaseDAO_Impl<Bookings, Booking> implements B
     @Override
     public Bookings searchByEmail(String email, boolean isStudent) {
         if(isStudent) return getItems().findByStudentEmail(email);
-        return getItems().findByTutorEmail(email);
+        return read().findByTutorEmail(email);
+    }
+
+    @Override
+    public Bookings searchBookingsById(Integer id) {
+        return read().findBookingsById(id);
+    }
+
+    @Override
+    public Bookings searchBySubject(String subject) {
+        return read().findBySubject(subject);
     }
 }

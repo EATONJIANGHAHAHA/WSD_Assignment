@@ -1,5 +1,6 @@
 package service.rest;
 
+import dao.BookingDAO;
 import dao.BookingDAOImpl;
 import static dao.BookingDAOImpl.*;
 import jaxblist.Bookings;
@@ -22,73 +23,40 @@ public class BookingService {
     /**
      * Get booking dao.
      * @return
-     * @throws IOException
-     * @throws JAXBException
      */
-    private BookingDAOImpl getBookingApp() throws IOException, JAXBException{
+    private BookingDAO getBookingDAO(){
         synchronized (application){
-            BookingDAOImpl bookingApp = (BookingDAOImpl)
+            BookingDAO bookingDAO = (BookingDAOImpl)
                     application.getAttribute(BOOKING_SERVICE);
-            if(bookingApp == null){
-                bookingApp = new BookingDAOImpl(application.getRealPath(WEB_INF_BOOKINGS_XML));
-                application.setAttribute(BOOKING_SERVICE, bookingApp);
+            if(bookingDAO == null){
+                bookingDAO = new BookingDAOImpl(application.getRealPath(WEB_INF_BOOKINGS_XML));
+                application.setAttribute(BOOKING_SERVICE, bookingDAO);
             }
-            return bookingApp;
+            return bookingDAO;
         }
     }
 
+
+
     /**
-     * Returns all the booking records.
+     *  Return the booking records according to the query param
+     * @param id booking id
+     * @param subject subject
+     * @param email student's email
      * @return
-     * @throws JAXBException
-     * @throws IOException
      */
     @Path("bookings")
     @GET
     @Produces(MediaType.APPLICATION_XML)
-    public Bookings getAll() throws JAXBException, IOException{
-        return getBookingApp().getItems();
-    }
-
-    /**
-     * Return the booking records by the student's email.
-     * @param email
-     * @return
-     * @throws JAXBException
-     * @throws IOException
-     */
-    @Path("bookings/searchByEmail")
-    @GET
-    @Produces(MediaType.APPLICATION_XML)
-    public Bookings getByStuEmail(@QueryParam("email") String email) throws JAXBException, IOException {
-        return getAll().findByStudentEmail(email);
-    }
-
-    /**
-     * Return all the booking records by a specific subject.
-     * @param subject
-     * @return
-     * @throws JAXBException
-     * @throws IOException
-     */
-    @Path("/bookings/{subject}")
-    @GET
-    @Produces(MediaType.APPLICATION_XML)
-    public Bookings getBySubject(@PathParam("subject") String subject) throws JAXBException, IOException {
-        return getAll().findBySubject(subject);
-    }
-
-    /**
-     * Return a booking record by a booking id.
-     * @param id
-     * @return
-     * @throws JAXBException
-     * @throws IOException
-     */
-    @Path("bookings/searchById")
-    @GET
-    @Produces(MediaType.APPLICATION_XML)
-    public Booking findById(@QueryParam("id") Integer id) throws JAXBException, IOException {
-        return getAll().findById(id);
+    public Bookings getBookings(@QueryParam("id") Integer id, @QueryParam("subject") String subject, @QueryParam("email")
+            String email){
+        if(id == null && subject == null && email == null) return getBookingDAO().read();
+        if(id != null && subject == null && email == null) return getBookingDAO().searchBookingsById(id);
+        if(id == null && subject != null && email == null) return getBookingDAO().searchBySubject(subject);
+        if(id == null && subject == null && email != null) return getBookingDAO().searchByEmail(email, true);
+        if(id != null && subject != null && email == null) return getBookingDAO().searchBookingsById(id).findBySubject(subject);
+        if(id != null && subject == null && email != null) return getBookingDAO().searchBookingsById(id).findByStudentEmail(email);
+        if(id == null && subject != null && email != null) return getBookingDAO().searchBySubject(subject).findByStudentEmail(email);
+        return getBookingDAO().searchBookingsById(id).findBySubject(subject).findByStudentEmail(email);
     }
 }
