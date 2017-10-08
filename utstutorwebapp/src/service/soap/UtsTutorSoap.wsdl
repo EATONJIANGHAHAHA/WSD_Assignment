@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://soap.service" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://soap.service" xmlns:intf="http://soap.service" xmlns:tns1="http://model" xmlns:tns2="http://exception" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://soap.service" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://exception"/>
+   <import namespace="http://model"/>
+   <element name="tutorEmail" type="xsd:string"/>
+   <element name="user" type="tns1:User"/>
+   <element name="createBookingReturn" type="tns1:Booking"/>
+   <element name="id" type="xsd:int"/>
+   <element name="subject" type="xsd:string"/>
+   <element name="studentEmail" type="xsd:string"/>
+   <element name="status" type="xsd:string"/>
+   <complexType name="ArrayOf_xsd_anyType">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:anyType"/>
+    </sequence>
+   </complexType>
+   <element name="getBookingsReturn" type="impl:ArrayOf_xsd_anyType"/>
+   <element name="email" type="xsd:string"/>
+   <element name="password" type="xsd:string"/>
+   <element name="userType" type="xsd:string"/>
+   <element name="loginReturn" type="tns1:User"/>
+   <element name="user1" type="tns1:User"/>
+   <element name="cancelAccountReturn" type="xsd:boolean"/>
+   <element name="bookingId" type="xsd:int"/>
+   <element name="user2" type="tns1:User"/>
+   <element name="cancelBookingReturn" type="tns1:Booking"/>
+   <element name="name" type="xsd:string"/>
+   <element name="password1" type="xsd:string"/>
+   <element name="dateOfBirth" type="xsd:string"/>
+   <element name="speciality" type="xsd:string"/>
+   <element name="user3" type="tns1:User"/>
+   <element name="editAccountReturn" type="tns1:User"/>
+   <element name="fault" type="tns2:DataValidationException"/>
+   <element name="bookingId1" type="xsd:int"/>
+   <element name="user4" type="tns1:User"/>
+   <element name="completeBookingReturn" type="tns1:Booking"/>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://model" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://soap.service"/>
+   <import namespace="http://exception"/>
+   <complexType name="BaseModel">
+    <sequence>
+     <element name="id" nillable="true" type="xsd:int"/>
+    </sequence>
+   </complexType>
+   <complexType name="User">
+    <complexContent>
+     <extension base="tns1:BaseModel">
+      <sequence>
+       <element name="availability" nillable="true" type="xsd:string"/>
+       <element name="available" type="xsd:boolean"/>
+       <element name="dateOfBirth" nillable="true" type="xsd:string"/>
+       <element name="email" nillable="true" type="xsd:string"/>
+       <element name="name" nillable="true" type="xsd:string"/>
+       <element name="password" nillable="true" type="xsd:string"/>
+       <element name="speciality" nillable="true" type="xsd:string"/>
+       <element name="student" type="xsd:boolean"/>
+       <element name="type" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+   <complexType name="Booking">
+    <complexContent>
+     <extension base="tns1:BaseModel">
+      <sequence>
+       <element name="status" nillable="true" type="xsd:string"/>
+       <element name="studentEmail" nillable="true" type="xsd:string"/>
+       <element name="studentName" nillable="true" type="xsd:string"/>
+       <element name="subject" nillable="true" type="xsd:string"/>
+       <element name="tutorEmail" nillable="true" type="xsd:string"/>
+       <element name="tutorName" nillable="true" type="xsd:string"/>
+      </sequence>
+     </extension>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema elementFormDefault="qualified" targetNamespace="http://exception" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://soap.service"/>
+   <import namespace="http://model"/>
+   <complexType name="DataValidationException">
+    <sequence/>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="cancelAccountResponse">
+
+      <wsdl:part element="impl:cancelAccountReturn" name="cancelAccountReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="cancelBookingResponse">
+
+      <wsdl:part element="impl:cancelBookingReturn" name="cancelBookingReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="editAccountResponse">
+
+      <wsdl:part element="impl:editAccountReturn" name="editAccountReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getBookingsResponse">
+
+      <wsdl:part element="impl:getBookingsReturn" name="getBookingsReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="completeBookingResponse">
+
+      <wsdl:part element="impl:completeBookingReturn" name="completeBookingReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createBookingResponse">
+
+      <wsdl:part element="impl:createBookingReturn" name="createBookingReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="loginResponse">
+
+      <wsdl:part element="impl:loginReturn" name="loginReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="DataValidationException">
+
+      <wsdl:part element="impl:fault" name="fault"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="editAccountRequest">
+
+      <wsdl:part element="impl:name" name="name"/>
+
+      <wsdl:part element="impl:password1" name="password"/>
+
+      <wsdl:part element="impl:dateOfBirth" name="dateOfBirth"/>
+
+      <wsdl:part element="impl:speciality" name="speciality"/>
+
+      <wsdl:part element="impl:user3" name="user"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="loginRequest">
+
+      <wsdl:part element="impl:email" name="email"/>
+
+      <wsdl:part element="impl:password" name="password"/>
+
+      <wsdl:part element="impl:userType" name="userType"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="createBookingRequest">
+
+      <wsdl:part element="impl:tutorEmail" name="tutorEmail"/>
+
+      <wsdl:part element="impl:user" name="user"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="cancelAccountRequest">
+
+      <wsdl:part element="impl:user1" name="user"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getBookingsRequest">
+
+      <wsdl:part element="impl:id" name="id"/>
+
+      <wsdl:part element="impl:subject" name="subject"/>
+
+      <wsdl:part element="impl:studentEmail" name="studentEmail"/>
+
+      <wsdl:part element="impl:status" name="status"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="cancelBookingRequest">
+
+      <wsdl:part element="impl:bookingId" name="bookingId"/>
+
+      <wsdl:part element="impl:user2" name="user"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="completeBookingRequest">
+
+      <wsdl:part element="impl:bookingId1" name="bookingId"/>
+
+      <wsdl:part element="impl:user4" name="user"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="UtsTutorSoap">
+
+      <wsdl:operation name="createBooking" parameterOrder="tutorEmail user">
+
+         <wsdl:input message="impl:createBookingRequest" name="createBookingRequest"/>
+
+         <wsdl:output message="impl:createBookingResponse" name="createBookingResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBookings" parameterOrder="id subject studentEmail status">
+
+         <wsdl:input message="impl:getBookingsRequest" name="getBookingsRequest"/>
+
+         <wsdl:output message="impl:getBookingsResponse" name="getBookingsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="login" parameterOrder="email password userType">
+
+         <wsdl:input message="impl:loginRequest" name="loginRequest"/>
+
+         <wsdl:output message="impl:loginResponse" name="loginResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="cancelAccount" parameterOrder="user">
+
+         <wsdl:input message="impl:cancelAccountRequest" name="cancelAccountRequest"/>
+
+         <wsdl:output message="impl:cancelAccountResponse" name="cancelAccountResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="cancelBooking" parameterOrder="bookingId user">
+
+         <wsdl:input message="impl:cancelBookingRequest" name="cancelBookingRequest"/>
+
+         <wsdl:output message="impl:cancelBookingResponse" name="cancelBookingResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="editAccount" parameterOrder="name password dateOfBirth speciality user">
+
+         <wsdl:input message="impl:editAccountRequest" name="editAccountRequest"/>
+
+         <wsdl:output message="impl:editAccountResponse" name="editAccountResponse"/>
+
+         <wsdl:fault message="impl:DataValidationException" name="DataValidationException"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="completeBooking" parameterOrder="bookingId user">
+
+         <wsdl:input message="impl:completeBookingRequest" name="completeBookingRequest"/>
+
+         <wsdl:output message="impl:completeBookingResponse" name="completeBookingResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="UtsTutorSoapSoapBinding" type="impl:UtsTutorSoap">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="createBooking">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createBookingRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createBookingResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getBookings">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getBookingsRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getBookingsResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="login">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="loginRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="loginResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="cancelAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="cancelAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="cancelAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="cancelBooking">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="cancelBookingRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="cancelBookingResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="editAccount">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="editAccountRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="editAccountResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="DataValidationException">
+
+            <wsdlsoap:fault name="DataValidationException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="completeBooking">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="completeBookingRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="completeBookingResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="UtsTutorSoapService">
+
+      <wsdl:port binding="impl:UtsTutorSoapSoapBinding" name="UtsTutorSoap">
+
+         <wsdlsoap:address location="http://localhost:8080//services/service/soap/UtsTutorSoap"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
