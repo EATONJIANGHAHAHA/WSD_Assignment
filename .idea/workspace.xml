@@ -2,101 +2,153 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="utstutorwebapp:war exploded" />
+      <artifact name="utstutor:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="764c25b3-1921-4df9-8430-2e24bc6ad6d3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/utstutorwebapp_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/JAX_WS_Apache_Axis.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/adapter/IDAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/dao/BaseDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/dao/BaseDAO_Impl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/dao/BookingDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/dao/BookingDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/dao/UserDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/dao/UserDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/exception/DataValidationException.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/jaxblist/BaseJAXBList.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/jaxblist/Bookings.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/jaxblist/Users.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/jaxblist/package-info.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/model/BaseModel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/model/Booking.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/model/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/model/package-info.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/service/rest/BookingService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/service/rest/TutorService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/UtsTutorSoap.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorClient.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/util/DigestUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/src/util/StringUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/utstutorwebapp.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/bookings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/bookings.xsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/server-config.wsdd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/students.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/tutors.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/users.xsd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/web.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/account.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/booking.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/index.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/login.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/main.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/navigation.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/page.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/register.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutorwebapp/web/style.xsl" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/Assigment_war_exploded.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/Assigment.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/adapter/IDAdapter.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/dao/BaseDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/dao/BaseDAO_Impl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/dao/BookingDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/dao/BookingDAOImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/dao/UserDAO.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/dao/UserDAOImpl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/exception/AuthenticationException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/exception/DataValidationException.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/jaxblist/BaseJAXBList.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/jaxblist/Bookings.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/jaxblist/Users.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/jaxblist/package-info.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/model/BaseModel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/model/Booking.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/model/User.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/model/package-info.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/service/rest/BookingService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/service/rest/TutorService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/service/soap/UtsTutorSoap.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/util/DigestUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/src/util/StringUtil.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/WEB-INF/bookings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/WEB-INF/bookings.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/WEB-INF/classes/Assigment.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/WEB-INF/classes/web/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/WEB-INF/classes/web/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/WEB-INF/students.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/WEB-INF/tutors.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/WEB-INF/users.xsd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/account.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/booking.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/login.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/main.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/navigation.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/page.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/register.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assigment/web/style.xsl" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assigment_war_exploded/WEB-INF/classes/Assigment.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assigment_war_exploded/WEB-INF/classes/web/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assigment_war_exploded/WEB-INF/classes/web/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assigment_war_exploded/WEB-INF/web.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/artifacts/Assigment_war_exploded/index.jsp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="764c25b3-1921-4df9-8430-2e24bc6ad6d3" name="Default" comment="Finish almost all of the project">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/BaseModel.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/Booking.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CancelAccount.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CancelAccountResponse.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CancelBooking.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CancelBookingResponse.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CompleteBooking.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CompleteBookingResponse.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CreateBooking.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CreateBookingResponse.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/EditAccount.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/EditAccountResponse.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/GetBookings.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/GetBookingsResponse.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/Login.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/LoginResponse.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/ObjectFactory.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/User.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutorService.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutorSoap.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/package-info.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/utstutor_war_exploded.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/JAX_WS_Glassfish___JAX_WS_2_2_RI___Metro_1_X___JWSDP_2_2.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/adapter/IDAdapter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/dao/BaseDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/dao/BaseDAO_Impl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/dao/BookingDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/dao/BookingDAOImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/dao/UserDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/dao/UserDAOImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/exception/DataValidationException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/jaxblist/BaseJAXBList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/jaxblist/Bookings.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/jaxblist/Users.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/jaxblist/package-info.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/model/BaseModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/model/Booking.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/model/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/model/package-info.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/rest/BookingService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/rest/TutorService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/UtsTutorSoap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/BaseModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/Booking.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CancelAccount.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CancelAccountResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CancelBooking.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CancelBookingResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CompleteBooking.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CompleteBookingResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CreateBooking.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/CreateBookingResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/EditAccount.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/EditAccountResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/GetBookings.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/GetBookingsResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/Login.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/LoginResponse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/ObjectFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/User.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutor.wsdl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutorClient.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutorService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutorSoap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/service/soap/client/package-info.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/util/DigestUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/src/util/StringUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/utstutor.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/WEB-INF/bookings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/WEB-INF/bookings.xsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/WEB-INF/students.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/WEB-INF/sun-jaxws.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/WEB-INF/tutors.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/WEB-INF/users.xsd" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/WEB-INF/web.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/account.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/booking.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/login.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/main.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/navigation.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/page.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/register.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utstutor/web/style.xsl" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/artifacts/utstutorwebapp_war_exploded.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/lib/axis.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/lib/commons-discovery-0.2.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/lib/commons-logging-1.0.4.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/lib/jaxrpc.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/lib/log4j-1.2.8.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/lib/saaj.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/lib/wsdl4j-1.5.1.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/adapter/IDAdapter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/dao/BaseDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/dao/BaseDAO_Impl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/dao/BookingDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/dao/BookingDAOImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/dao/UserDAO.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/dao/UserDAOImpl.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/exception/DataValidationException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/jaxblist/BaseJAXBList.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/jaxblist/Bookings.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/jaxblist/Users.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/jaxblist/package-info.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/model/BaseModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/model/Booking.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/model/User.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/model/package-info.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/rest/BookingService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/rest/TutorService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/UtsTutorSoap.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/UtsTutorSoap.wsdl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/BaseModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/Booking.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/DataValidationException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/User.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorClient.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoap.wsdl" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoapService.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoapServiceLocator.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoapSoapBindingStub.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoap_PortType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/util/DigestUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/src/util/StringUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/utstutorwebapp.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/bookings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/bookings.xsd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/server-config.wsdd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/students.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/tutors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/users.xsd" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/web.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/account.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/booking.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/index.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/login.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/main.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/navigation.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/page.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/register.jsp" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/utstutorwebapp/web/style.xsl" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/JAX_WS_Apache_Axis.xml" afterPath="$PROJECT_DIR$/.idea/libraries/JAX_WS_Apache_Axis.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -112,63 +164,81 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UtsTutorClient.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorClient.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="139" column="24" lean-forward="false" selection-start-line="139" selection-start-column="24" selection-end-line="139" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server-config.wsdd" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/server-config.wsdd">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-288">
-              <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="tutors.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/tutors.xml">
+        <entry file="file://$PROJECT_DIR$/utstutor/web/WEB-INF/tutors.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-448">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/model/User.java">
+      <file leaf-file-name="DataValidationException.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utstutor/src/exception/DataValidationException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="201" column="17" lean-forward="false" selection-start-line="201" selection-start-column="17" selection-end-line="201" selection-end-column="17" />
+            <state relative-caret-position="54">
+              <caret line="3" column="94" lean-forward="false" selection-start-line="3" selection-start-column="94" selection-end-line="3" selection-end-column="94" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Booking.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/model/Booking.java">
+      <file leaf-file-name="sun-jaxws.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utstutor/web/WEB-INF/sun-jaxws.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="107" column="29" lean-forward="false" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="page.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utstutor/web/page.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bookings.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/utstutor/src/jaxblist/Bookings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UtsTutorClient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutorClient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IDAdapter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utstutor/src/adapter/IDAdapter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="UtsTutorSoap.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/UtsTutorSoap.java">
+        <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/UtsTutorSoap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="219" column="22" lean-forward="false" selection-start-line="219" selection-start-column="16" selection-end-line="219" selection-end-column="22" />
+            <state relative-caret-position="231">
+              <caret line="106" column="76" lean-forward="false" selection-start-line="106" selection-start-column="76" selection-end-line="106" selection-end-column="76" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,41 +246,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UtsTutorSoapSoapBindingStub.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoapSoapBindingStub.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="318" column="0" lean-forward="false" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseDAO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/dao/BaseDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="BaseDAO_Impl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/dao/BaseDAO_Impl.java">
+        <entry file="file://$PROJECT_DIR$/utstutor/src/dao/BaseDAO_Impl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="202" column="17" lean-forward="false" selection-start-line="202" selection-start-column="17" selection-end-line="202" selection-end-column="17" />
+            <state relative-caret-position="177">
+              <caret line="167" column="27" lean-forward="false" selection-start-line="167" selection-start-column="27" selection-end-line="167" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="BaseJAXBList.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/jaxblist/BaseJAXBList.java">
+        <entry file="file://$PROJECT_DIR$/utstutor/src/jaxblist/BaseJAXBList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="64" column="54" lean-forward="false" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
+            <state relative-caret-position="212">
+              <caret line="39" column="35" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -232,20 +282,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>result</find>
-      <find>simple</find>
-      <find>readq</find>
-      <find>try again</find>
-      <find>tr</find>
-      <find>error</find>
-      <find>Cancel</find>
-      <find>read</find>
-      <find>button</find>
-      <find>Change</find>
-      <find>select</find>
-      <find>status</find>
-      <find>active</find>
-      <find>search</find>
       <find>new</find>
       <find>id</find>
       <find>tutoremail</find>
@@ -253,15 +289,29 @@
       <find>example.</find>
       <find>example.test</find>
       <find>user</find>
-      <find>login</find>
-      <find>cancelbooking</find>
-      <find>editaccount</find>
       <find>create</find>
       <find>delete</find>
       <find>.save</find>
-      <find>completebooking</find>
       <find>editac</find>
       <find>deployment</find>
+      <find>utstutor</find>
+      <find>login</find>
+      <find>user.get</find>
+      <find>password</find>
+      <find>tostring</find>
+      <find>getbookings</find>
+      <find>invalid</find>
+      <find>edita</find>
+      <find>readuser</find>
+      <find>read</find>
+      <find>edit</find>
+      <find>byid</find>
+      <find>searchById</find>
+      <find>editaccount</find>
+      <find>searchby</find>
+      <find>completebooking</find>
+      <find>createboo</find>
+      <find>cancelbooking</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\might\IdeaProjects\WSD_Assignment\WSD_Assignment\Assigment</dir>
@@ -279,14 +329,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assigment/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/Assigment/web/logoutAction.jsp" />
-        <option value="$PROJECT_DIR$/Assigment/web/WEB-INF/students.xml" />
-        <option value="$PROJECT_DIR$/Assigment/web/WEB-INF/tutors.xml" />
-        <option value="$PROJECT_DIR$/Assigment/src/util/DigestUtil.java" />
-        <option value="$PROJECT_DIR$/Assigment/src/application/BaseApplication.java" />
-        <option value="$PROJECT_DIR$/Assigment/src/application/BookingApplication.java" />
-        <option value="$PROJECT_DIR$/Assigment/src/application/UserApplication.java" />
         <option value="$PROJECT_DIR$/Assigment/web/index.jsp" />
         <option value="$PROJECT_DIR$/Assigment/src/dao/BaseApplication.java" />
         <option value="$PROJECT_DIR$/Assigment/src/dao/BaseDAO.java" />
@@ -319,10 +361,7 @@
         <option value="$PROJECT_DIR$/Assigment/src/util/StringUtil.java" />
         <option value="$PROJECT_DIR$/Assigment/src/model/User.java" />
         <option value="$PROJECT_DIR$/Assigment/src/service/soap/UtsTutorSoap.java" />
-        <option value="$PROJECT_DIR$/utstutor/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/utstutor/src/service/rest/BookingService.java" />
-        <option value="$PROJECT_DIR$/utstutor/web/WEB-INF/sun-jaxws.xml" />
-        <option value="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/server-config.wsdd" />
         <option value="$PROJECT_DIR$/utstutorwebapp/src/model/Booking.java" />
         <option value="$PROJECT_DIR$/utstutorwebapp/src/model/User.java" />
@@ -330,6 +369,17 @@
         <option value="$PROJECT_DIR$/utstutorwebapp/src/jaxblist/BaseJAXBList.java" />
         <option value="$PROJECT_DIR$/utstutorwebapp/src/service/soap/UtsTutorSoap.java" />
         <option value="$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorClient.java" />
+        <option value="$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoap.wsdl" />
+        <option value="$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/utstutor/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/utstutor/web/account.jsp" />
+        <option value="$PROJECT_DIR$/utstutor/src/dao/BookingDAOImpl.java" />
+        <option value="$PROJECT_DIR$/utstutor/src/jaxblist/BaseJAXBList.java" />
+        <option value="$PROJECT_DIR$/utstutor/src/service/soap/UtsTutorSoap.java" />
+        <option value="$PROJECT_DIR$/utstutor/src/adapter/IDAdapter.java" />
+        <option value="$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutorClient.java" />
+        <option value="$PROJECT_DIR$/utstutor/src/exception/DataValidationException.java" />
+        <option value="$PROJECT_DIR$/utstutor/web/WEB-INF/sun-jaxws.xml" />
       </list>
     </option>
   </component>
@@ -347,8 +397,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="676" />
-    <option name="width" value="697" />
+    <option name="x" value="679" />
+    <option name="width" value="694" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -367,33 +417,88 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utstutorwebapp" type="462c0819:PsiDirectoryNode" />
+              <item name="utstutor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utstutorwebapp" type="462c0819:PsiDirectoryNode" />
+              <item name="utstutor" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utstutorwebapp" type="462c0819:PsiDirectoryNode" />
+              <item name="utstutor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="adapter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="utstutor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="utstutor" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="exception" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utstutorwebapp" type="462c0819:PsiDirectoryNode" />
+              <item name="utstutor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="jaxblist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="utstutor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="utstutor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="utstutor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="rest" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="utstutor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="soap" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="utstutor" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="soap" type="462c0819:PsiDirectoryNode" />
+              <item name="client" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
+              <item name="utstutor" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WSD_Assignment" type="b2602c69:ProjectViewProjectNode" />
-              <item name="utstutorwebapp" type="462c0819:PsiDirectoryNode" />
+              <item name="utstutor" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -405,9 +510,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,11 +517,11 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Problems" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.webservices" />
-    <property name="SearchEverywhereHistoryKey" value="basedao&#9;PSI&#9;JAVA://dao.BaseDAO_Impl&#10;tutors.xml&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutorwebapp/web/WEB-INF/tutors.xml&#10;user.java&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutorwebapp/src/model/User.java&#10;User&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutorwebapp/src/service/soap/client/User.java&#10;booking&#9;PSI&#9;JAVA://model.Booking&#10;uts&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutorwebapp/src/service/soap/UtsTutorSoap.java&#10;user&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/model/User.java&#10;bookingdaoim&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BookingDAOImpl.java&#10;bookingdao&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BookingDAO.java&#10;userdaoim&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/UserDAOImpl.java&#10;userdao&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/UserDAO.java&#10;id&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/adapter/IDAdapter.java&#10;booking.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/booking.jsp&#10;bookings.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/bookings.xml&#10;basemo&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/model/BaseModel.java&#10;searchbyid&#9;PSI&#9;JAVA://dao.BookingDAO#searchBookingsById&#10;string&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/util/StringUtil.java&#10;.xsl&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/style.xsl&#10;main.j&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/main.jsp&#10;USER&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/UserDAOImpl.java&#10;bookin&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BookingDAOImpl.java&#10;main.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/main.jsp&#10;login.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/login.jsp&#10;css&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/page.css&#10;account&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/account.jsp&#10;booking.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/booking.jsp&#10;userdaoi&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/UserDAOImpl.java&#10;userd&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/UserDAO.java&#10;String&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/util/StringUtil.java&#10;reg&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/register.jsp&#10;regi&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/register.jsp&#10;users.x&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/users.xsd&#10;tutors.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/tutors.xml&#10;bookings.x&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/bookings.xml&#10;.xs&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/style.xsl&#10;login&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/login.jsp&#10;base&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BaseDAO_Impl.java&#10;baseda&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BaseDAO_Impl.java&#10;based&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BaseDAO.java&#10;bookingd&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BookingDAO.java&#10;account.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/account.jsp&#10;navi&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/navigation.jsp&#10;xsd&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/users.xsd&#10;regis&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/register.jsp&#10;ind&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/index.jsp&#10;logout&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/logout.jsp&#10;tuto&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/tutors.xml&#10;student&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/students.xml&#10;removelast&#9;PSI&#9;JAVA://jaxblist.BaseJAXBList#removeLast&#10;jax&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/jaxblist/BaseJAXBList.java" />
+    <property name="SearchEverywhereHistoryKey" value="tutors&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutor/web/WEB-INF/tutors.xml&#10;id&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutor/src/adapter/IDAdapter.java&#10;boo&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutor/src/dao/BookingDAOImpl.java&#10;tutors.xml&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutor/web/WEB-INF/tutors.xml&#10;account.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutor/web/account.jsp&#10;login.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutor/web/login.jsp&#10;basedaoimp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutor/src/dao/BaseDAO_Impl.java&#10;ida&#9;PSI&#9;JAVA://adapter.IDAdapter&#10;booking&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutor/src/dao/BookingDAOImpl.java&#10;user.java&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutor/src/model/User.java&#10;userdao&#9;PSI&#9;JAVA://dao.UserDAOImpl&#10;student.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutor/web/WEB-INF/students.xml&#10;bookingdao&#9;PSI&#9;JAVA://dao.BookingDAOImpl&#10;web&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutorwebapp/web/WEB-INF/web.xml&#10;wsdd&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutorwebapp/web/WEB-INF/server-config.wsdd&#10;basedao&#9;PSI&#9;JAVA://dao.BaseDAO_Impl&#10;User&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutorwebapp/src/service/soap/client/User.java&#10;uts&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/utstutorwebapp/src/service/soap/UtsTutorSoap.java&#10;user&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/model/User.java&#10;bookingdaoim&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BookingDAOImpl.java&#10;userdaoim&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/UserDAOImpl.java&#10;booking.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/booking.jsp&#10;bookings.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/bookings.xml&#10;basemo&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/model/BaseModel.java&#10;searchbyid&#9;PSI&#9;JAVA://dao.BookingDAO#searchBookingsById&#10;string&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/util/StringUtil.java&#10;.xsl&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/style.xsl&#10;main.j&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/main.jsp&#10;USER&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/UserDAOImpl.java&#10;bookin&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BookingDAOImpl.java&#10;main.jsp&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/main.jsp&#10;css&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/page.css&#10;account&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/account.jsp&#10;booking.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/booking.jsp&#10;userdaoi&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/UserDAOImpl.java&#10;userd&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/UserDAO.java&#10;String&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/util/StringUtil.java&#10;reg&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/register.jsp&#10;regi&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/register.jsp&#10;users.x&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/users.xsd&#10;tutors.&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/tutors.xml&#10;bookings.x&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/bookings.xml&#10;.xs&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/style.xsl&#10;login&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/login.jsp&#10;base&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BaseDAO_Impl.java&#10;baseda&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BaseDAO_Impl.java&#10;based&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BaseDAO.java&#10;bookingd&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/src/dao/BookingDAO.java&#10;navi&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/navigation.jsp&#10;xsd&#9;FILE&#9;file://C:/Users/might/IdeaProjects/WSD_Assignment/WSD_Assignment/Assigment/web/WEB-INF/users.xsd" />
     <property name="last.edited.regexp" value="" />
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -431,8 +533,12 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="wsd_assignment" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\Assigment\web" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\WSD_Assignment\utstutor\web\WEB-INF" />
+      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\WSD_Assignment\utstutor\web" />
+      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\WSD_Assignment\utstutor\src" />
+      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\WSD_Assignment\utstutorwebapp\web" />
+      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\WSD_Assignment\utstutorwebapp\web\WEB-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="service.rest" />
@@ -441,12 +547,8 @@
       <recent name="jaxblist" />
       <recent name="model" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\WSD_Assignment\utstutorwebapp\web" />
-      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\WSD_Assignment\utstutorwebapp\web\WEB-INF" />
-      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\WSD_Assignment\utstutorwebapp\src" />
-      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\WSD_Assignment\utstutor\web" />
-      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\WSD_Assignment\utstutor\web\WEB-INF" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\might\IdeaProjects\WSD_Assignment\Assigment\web" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -461,8 +563,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.UtsTutorClient">
-    <configuration name="UtsTutorClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Tomcat Server.utstutor">
+    <configuration name="UtsTutorClient" type="Application" factoryName="Application" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="service.soap.client.*" />
@@ -470,15 +572,15 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="service.soap.client.UtsTutorClient" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="utstutorwebapp" />
+      <module name="utstutor" />
       <envs />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -604,9 +706,70 @@
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="utstutor:war exploded" />
-          <artifact name="utstutorwebapp:war exploded" />
         </option>
       </method>
+    </configuration>
+    <configuration default="true" type="GlassfishConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="DOMAIN" value="" />
+        <option name="PRESERVE" value="false" />
+        <option name="COMPATIBILITY" value="false" />
+        <option name="VIRTUAL_SERVER" />
+        <option name="USERNAME" value="admin" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <predefined_log_file id="GlassFish" enabled="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="9009" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
@@ -1516,72 +1679,10 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
     </configuration>
-    <configuration default="true" type="GlassfishConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment />
-      <server-settings>
-        <option name="DOMAIN" value="" />
-        <option name="PRESERVE" value="false" />
-        <option name="COMPATIBILITY" value="false" />
-        <option name="VIRTUAL_SERVER" />
-        <option name="USERNAME" value="admin" />
-        <option name="PASSWORD" value="" />
-      </server-settings>
-      <predefined_log_file id="GlassFish" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="9009" />
-      </RunnerSettings>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-    </configuration>
     <configuration name="utstutor" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0.27" ALTERNATIVE_JRE_ENABLED="false">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="utstutorwebapp:war exploded">
+        <artifact name="utstutor:war exploded">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
@@ -1646,14 +1747,9 @@
       </ConfigurationWrapper>
     </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.utstutor" />
-      <item index="1" class="java.lang.String" itemvalue="Application.UtsTutorClient" />
+      <item index="0" class="java.lang.String" itemvalue="Application.UtsTutorClient" />
+      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.utstutor" />
     </list>
-    <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Application.UtsTutorClient" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -1697,7 +1793,8 @@
       <workItem from="1507186635916" duration="7582000" />
       <workItem from="1507248411096" duration="14073000" />
       <workItem from="1507330929524" duration="20000000" />
-      <workItem from="1507411106065" duration="11639000" />
+      <workItem from="1507411106065" duration="12948000" />
+      <workItem from="1507425946396" duration="13333000" />
     </task>
     <task id="LOCAL-00001" summary="Created models">
       <created>1506325251894</created>
@@ -1990,7 +2087,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188882000" />
+    <option name="totallyTimeSpent" value="203524000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -2015,17 +2112,17 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6644737" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6694079" sideWeight="0.4969743" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6924342" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.75164473" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.50986844" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46153846" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35854766" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44572368" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2046,7 +2143,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created models" />
     <MESSAGE value="completed basic javacodes" />
     <MESSAGE value="correct wrong name" />
     <MESSAGE value="Finish the xmls" />
@@ -2071,321 +2167,23 @@
     <MESSAGE value="fix the id bugs" />
     <MESSAGE value="fix some bugs" />
     <MESSAGE value="Completing soap." />
-    <option name="LAST_COMMIT_MESSAGE" value="Completing soap." />
+    <MESSAGE value="Finish almost all of the project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finish almost all of the project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="39" />
+      <option name="time" value="55" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assigment/src/exception/AuthenticationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/service/rest/TutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="60" column="36" lean-forward="false" selection-start-line="57" selection-start-column="8" selection-end-line="60" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/dao/BookingDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="88" lean-forward="false" selection-start-line="7" selection-start-column="88" selection-end-line="7" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/dao/BookingDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="47" column="80" lean-forward="false" selection-start-line="47" selection-start-column="80" selection-end-line="47" selection-end-column="80" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/dao/BaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/util/StringUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/dao/BaseDAO_Impl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="91" column="27" lean-forward="false" selection-start-line="91" selection-start-column="27" selection-end-line="91" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/Assigment.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/utstutor.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/src/example/Test.wsdl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/src/example/TestPortType.wsdl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/src/example/TestPortType_schema1.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/src/example/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="22" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="24" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/service/soap/UtsTutorSoap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="229" column="26" lean-forward="false" selection-start-line="229" selection-start-column="26" selection-end-line="229" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="90" column="46" lean-forward="false" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assigment/src/service/rest/BookingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="53" column="71" lean-forward="false" selection-start-line="53" selection-start-column="71" selection-end-line="53" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/src/rest/BookingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="15" column="1" lean-forward="false" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/src/service/rest/BookingService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/web/WEB-INF/server-config.wsdd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/web/WEB-INF/sun-jaxws.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="43" lean-forward="false" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/UtsTutorSoapPortType_schema2.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/UtsTutorSoapPortType_schema1.xsd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutorSoap.wsdl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/UtsTutorSoap.wsdl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/example/HelloWorld.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="29" lean-forward="false" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/sun-jaxws.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutor/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="24" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="73" lean-forward="false" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa17076.42317/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="57" lean-forward="false" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoapBindingStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/AuthenticationException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoap.wsdl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoap_ServiceLocator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoap_Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="12" column="52" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/Bookings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/BaseModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/BaseJAXBList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-77">
-          <caret line="51" column="58" lean-forward="false" selection-start-line="51" selection-start-column="58" selection-end-line="51" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoapBindingStub.java" />
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/AuthenticationException.java" />
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoap_ServiceLocator.java" />
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoap_Service.java" />
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/Bookings.java" />
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/BaseModel.java" />
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/BaseJAXBList.java" />
     <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/model/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="524">
@@ -2394,14 +2192,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/User.java" />
     <entry file="file://$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/tutors.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2410,17 +2201,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoap_PortType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoap_PortType.java" />
     <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/model/Booking.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
+        <state relative-caret-position="1494">
           <caret line="107" column="29" lean-forward="false" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
           <folding />
         </state>
@@ -2436,7 +2220,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/dao/BaseDAO_Impl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
+        <state relative-caret-position="3204">
           <caret line="202" column="17" lean-forward="false" selection-start-line="202" selection-start-column="17" selection-end-line="202" selection-end-column="17" />
           <folding />
         </state>
@@ -2444,52 +2228,277 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/jaxblist/BaseJAXBList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
+        <state relative-caret-position="846">
           <caret line="64" column="54" lean-forward="false" selection-start-line="64" selection-start-column="54" selection-end-line="64" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/UtsTutorSoap.wsdl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="37" lean-forward="false" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/UtsTutorSoap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
+        <state relative-caret-position="3528">
           <caret line="219" column="22" lean-forward="false" selection-start-line="219" selection-start-column="16" selection-end-line="219" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoapSoapBindingStub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="318" column="0" lean-forward="false" selection-start-line="318" selection-start-column="0" selection-end-line="318" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoapSoapBindingStub.java" />
     <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorClient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
+        <state relative-caret-position="2412">
           <caret line="139" column="24" lean-forward="false" selection-start-line="139" selection-start-column="24" selection-end-line="139" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/client/UtsTutorSoap.wsdl" />
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/src/service/soap/UtsTutorSoap.wsdl" />
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/server-config.wsdd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="954">
+          <caret line="53" column="11" lean-forward="false" selection-start-line="53" selection-start-column="11" selection-end-line="53" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/sun-jaxws.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="488">
+          <caret line="38" column="22" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="38" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/example/HelloWorld.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="22" column="33" lean-forward="false" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutorSoap_Service.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutorService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutorSoap.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2613">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/dao/BookingDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/web/WEB-INF/users.xsd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/web/WEB-INF/students.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/dao/UserDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="52" column="24" lean-forward="false" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/jaxblist/Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/UtsTutorSoap.wsdl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="50" column="10" lean-forward="false" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/client/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/web/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="44" column="21" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/web/account.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="117" column="96" lean-forward="false" selection-start-line="117" selection-start-column="96" selection-end-line="117" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2734">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/dao/BookingDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="28" column="46" lean-forward="false" selection-start-line="28" selection-start-column="46" selection-end-line="28" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/dao/BaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="7" column="71" lean-forward="false" selection-start-line="7" selection-start-column="71" selection-end-line="7" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/dao/BaseDAO_Impl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="167" column="27" lean-forward="false" selection-start-line="167" selection-start-column="27" selection-end-line="167" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/jaxblist/BaseJAXBList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="212">
+          <caret line="39" column="35" lean-forward="false" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutorSoap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="84" column="19" lean-forward="false" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/UtsTutorSoap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="106" column="76" lean-forward="false" selection-start-line="106" selection-start-column="76" selection-end-line="106" selection-end-column="76" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utstutorwebapp/web/WEB-INF/server-config.wsdd">
+    <entry file="file://$PROJECT_DIR$/utstutor/src/adapter/IDAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-288">
-          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
+        <state relative-caret-position="450">
+          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/service/soap/client/UtsTutorClient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="9" column="20" lean-forward="false" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/web/WEB-INF/tutors.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-448">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/exception/DataValidationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="94" lean-forward="false" selection-start-line="3" selection-start-column="94" selection-end-line="3" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/web/WEB-INF/sun-jaxws.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/web/page.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="4" lean-forward="false" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utstutor/src/jaxblist/Bookings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2500,7 +2509,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>utstutorwebapp:war exploded</last-edited>
+          <last-edited>utstutor:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2548,7 +2557,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>utstutorwebapp</last-edited>
+          <last-edited>utstutor</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -2560,7 +2569,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>asm-3.3.1</last-edited>
+          <last-edited>JAX-WS-Apache Axis</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
