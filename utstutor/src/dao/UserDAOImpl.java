@@ -28,11 +28,21 @@ public class UserDAOImpl extends BaseDAO_Impl<Users, User> implements UserDAO {
         super(filePath, schemaPath, tutors);
     }
 
+    /**
+     * Return true if the email address is registered.
+     * @param email
+     * @return
+     */
     @Override
     public boolean isRegistered(String email) {
         return read().isRegistered(email);
     }
 
+    /**
+     * Return the user by a specific email.
+     * @param email
+     * @return
+     */
     @Override
     public User searchByEmail(String email) {
         return read().findByEmail(email);
@@ -43,11 +53,22 @@ public class UserDAOImpl extends BaseDAO_Impl<Users, User> implements UserDAO {
         return read().findUsersByEmail(email);
     }
 
+    /**
+     * Return the user jaxb list by status
+     * @param status
+     * @return
+     */
     @Override
     public Users searchByStatus(String status) {
         return read().findTutorByStatus(status);
     }
 
+    /**
+     * Return the user, if password and email matches.
+     * @param email
+     * @param password
+     * @return
+     */
     @Override
     public User login(String email, String password) {
         return read().login(email, password);

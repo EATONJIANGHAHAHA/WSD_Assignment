@@ -14,7 +14,8 @@ import java.lang.reflect.ParameterizedType;
 
 /**
  * Read the date stored in the xml, and restored the new data.
- * @param <T>
+ * @param <T> type of base jaxb list.
+ * @param <V> type of base model.
  */
 public abstract class BaseDAO_Impl<T extends BaseJAXBList<V>, V extends BaseModel> implements Serializable, BaseDAO<T, V >{
 
@@ -48,6 +49,10 @@ public abstract class BaseDAO_Impl<T extends BaseJAXBList<V>, V extends BaseMode
         setFilePath(filePath);
     }
 
+    /**
+     * Get the file path.
+     * @return
+     */
     public String getFilePath() {
         return filePath;
     }
@@ -77,7 +82,8 @@ public abstract class BaseDAO_Impl<T extends BaseJAXBList<V>, V extends BaseMode
     }
 
     /**
-     * Update the xml file.
+     * Update the xml by current items.
+     * @throws DataValidationException when validation of data fails.
      */
     @Override
     public void save() throws DataValidationException {
@@ -134,35 +140,64 @@ public abstract class BaseDAO_Impl<T extends BaseJAXBList<V>, V extends BaseMode
     }
 
 
-
+    /**
+     * Get the items.
+     * @return
+     */
     public T getItems() {
         return items;
     }
 
+    /**
+     * Set the items.
+     * @param items
+     */
     public void setItems(T items) {
         this.items = items;
     }
 
+    /**
+     * Get schemapath.
+     * @return
+     */
     public String getSchemaPath() {
         return schemaPath;
     }
 
+    /**
+     * Set the path of the schema.
+     * @param schemaPath
+     */
     public void setSchemaPath(String schemaPath) {
         this.schemaPath = schemaPath;
     }
 
+    /**
+     * Return all items.
+     * @return
+     */
     @Override
     public T read(){
         if(items == null) setFilePath(getFilePath());
         return getItems();
     }
 
+    /**
+     * Return all records by file path.
+     * @param filePath
+     * @return
+     */
     @Override
     public T read(String filePath){
         setFilePath(filePath);
         return getItems();
     }
 
+    /**
+     * Return the item by its id.
+     * @param id
+     * @return
+     */
     @Override
     public V searchById(Integer id) {
         return items.findById(id);

@@ -29,6 +29,12 @@ public class BookingDAOImpl extends BaseDAO_Impl<Bookings, Booking> implements B
         super(filePath, schemaPath, bookings);
     }
 
+    /**
+     * Return a jaxb list by the email of user.
+     * @param email
+     * @param isStudent whether the user is student.
+     * @return
+     */
     @Override
     public Bookings searchByEmail(String email, boolean isStudent) {
         if(isStudent) return getItems().findByStudentEmail(email);

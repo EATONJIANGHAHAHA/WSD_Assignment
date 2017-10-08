@@ -4,8 +4,12 @@ import exception.DataValidationException;
 import jaxblist.BaseJAXBList;
 import model.BaseModel;
 
-
-public interface BaseDAO<T extends BaseJAXBList, V extends BaseModel> {
+/**
+ * Defines most operations of a dao.
+ * @param <T> The class of jaxb list.
+ * @param <V> The java bean.
+ */
+public interface BaseDAO<T, V> {
 
     T read();
 

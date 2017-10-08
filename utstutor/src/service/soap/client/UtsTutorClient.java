@@ -5,10 +5,17 @@ import util.StringUtil;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * The client class, allowing some web methods.
+ */
 public class UtsTutorClient {
 
     public static final String AUTHENTICATION_ALERT = "Please log in first.";
 
+    /**
+     * The main method.
+     * @param args
+     */
     public static void main(String[] args){
         UtsTutorService service = new UtsTutorService();
         UtsTutorSoap utsTutorSoap = service.getUtsTutorSoapPort();
@@ -34,7 +41,7 @@ public class UtsTutorClient {
                         for (Booking booking : bookings) {
                             readBooking(booking);
                         }
-                    } else System.out.print("No such record. ");
+                    } else System.out.println("No such record. ");
                     break;
                 case 2: //Cancel a booking
                     if (user != null) {
@@ -73,7 +80,7 @@ public class UtsTutorClient {
                             String s = (String)result;
                             System.out.println(s);
                         }
-                    } else System.out.print(AUTHENTICATION_ALERT);
+                    } else System.out.println(AUTHENTICATION_ALERT);
                     break;
                 case 4://Cancel account
                     if (user != null) {
@@ -163,8 +170,8 @@ public class UtsTutorClient {
      */
     private static void readBooking(Booking booking){
         System.out.println("ID: " + booking.getId() + "; Student Name: " + booking.getStudentName()
-                + "; Student Email: " + booking.getStudentEmail() + "; Tutor Name: "
-                + booking.getTutorEmail() + "; Subject: " + booking.getSubject() + "; Status: "
+                + "; Student Email: " + booking.getStudentEmail() + "; Tutor Name: " + booking.getTutorName() +
+                "; Tutor Email: " + booking.getTutorEmail() + "; Subject: " + booking.getSubject() + "; Status: "
                 + booking.getStatus());
     }
 

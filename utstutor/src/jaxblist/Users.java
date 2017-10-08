@@ -111,6 +111,7 @@ public class Users extends BaseJAXBList<User>{
      * @return
      */
     public User findByEmail(String email){
+        if (email == null ) return null;
         for(User user: getList()){
             if(user.getEmail().equals(email)) return user;
         }

@@ -8,6 +8,13 @@ import javax.xml.bind.annotation.adapters.XmlAdapter;
 public class IDAdapter extends XmlAdapter<Integer, Integer> {
 
     private int counter = 1;
+
+    /**
+     * Be called when unmarshalling.
+     * @param v
+     * @return
+     * @throws Exception
+     */
     @Override
     public Integer unmarshal(Integer v) throws Exception {
         return v;

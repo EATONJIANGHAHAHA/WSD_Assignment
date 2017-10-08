@@ -129,71 +129,135 @@ public class User extends BaseModel {
     public User(){}
 
 
+    /**
+     * Get name.
+     * @return
+     */
     @XmlElement(name ="name")
     public String getName() {
         return name;
     }
 
+    /**
+     * Set name.
+     * @param name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Get email.
+     * @return
+     */
     @XmlElement(name = "email")
     public String getEmail() {
         return email;
     }
 
+    /**
+     * Set email.
+     * @param email
+     */
     public void setEmail(String email) {
         this.email = email;
     }
 
+    /**
+     * Get password.
+     * @return
+     */
     @XmlElement(name = "password")
     public String getPassword() {
         return password;
     }
 
+    /**
+     * Set password.
+     * @param password
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /**
+     * Get the date of birth.
+     * @return
+     */
     @XmlElement(name = "date_of_birth")
     public String getDateOfBirth() {
         return dateOfBirth;
     }
 
+    /**
+     * Set the date of birth.
+     * @param dateOfBirth
+     */
     public void setDateOfBirth(String dateOfBirth) {
         this.dateOfBirth = dateOfBirth;
     }
 
 
+    /**
+     * Return whether this user is student.
+     * @return
+     */
     public boolean isStudent(){ return speciality == null && availability == null; }
 
+    /**
+     * Return whether the tutor is available.
+     * @return
+     */
     public boolean isAvailable(){ return availability.equals(AVAILABLE); }
 
+    /**
+     * Get the speciality.
+     * @return
+     */
     @XmlElement(name = "speciality")
     public String getSpeciality() {
         return speciality;
     }
 
+    /**
+     * Set the speciality.
+     * @param speciality
+     */
     public void setSpeciality(String speciality) {
         this.speciality = speciality;
     }
 
+    /**
+     * Get the availability.
+     * @return
+     */
     @XmlElement(name = "status")
     public String getAvailability() {
         return availability;
     }
 
+    /**
+     * Set the availability of tutor.
+     * @param availability
+     */
     public void setAvailability(String availability) {
         this.availability = availability;
     }
 
+    /**
+     * Get the type of user.
+     * @return
+     */
     @XmlTransient
     public String getType(){
         if(isStudent()) return STUDENT;
         else return TUTOR;
     }
 
+    /**
+     * To string.
+     * @return
+     */
     @Override
     public String toString() {
         String s =  "id: " + getId() + " name :" + getName() + " email: " + getEmail() + " date of birth: " +
