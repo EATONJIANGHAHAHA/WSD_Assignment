@@ -1,6 +1,5 @@
 <%@ page contentType="text/xml;charset=UTF-8" language="java" %><%--
---%>
-<?xml version="1.0" encoding="UTF-8"?>
+--%><?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 <%@ page import="static dao.UserDAOImpl.WEB_INF_USERS_XSD" %>
 <%@ page import="static dao.UserDAOImpl.WEB_INF_TUTORS_XML" %>
