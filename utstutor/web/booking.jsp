@@ -93,7 +93,9 @@
                 User tutor = tutorDao.searchByEmail(tutorEmail);
                 if (tutor.isAvailable()) {
                     Booking booking = new Booking(user.getName(), user.getEmail(), tutor.getName(), tutorEmail, tutor.getSpeciality());
+                    tutor.setAvailability(UNAVAILABLE);
                     bookingDAO.create(booking);
+                    tutorDao.save();
     %>
     <result type="success">
         <content>You have created a new booking.</content>

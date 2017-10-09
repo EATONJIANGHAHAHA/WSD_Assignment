@@ -13,35 +13,38 @@
 <%@ page import="dao.BookingDAO" %>
 <%@ page import="exception.DataValidationException" %>
 <page title="Account">
-    <%@include file="navigation.jsp" %>
     <%
-        if (user == null) {
+        User currentUser = (User)session.getAttribute(USER);
+        if (currentUser == null) {
     %>
+    <%@include file="navigation.jsp" %>
     <result type="error">
         <content>Please log in first</content>
     </result>
     <%
     } else {
         UserDAO userDAO;
-        if (user.isStudent()) userDAO = new UserDAOImpl(application.getRealPath(WEB_INF_STUDENTS_XML),
+        if (currentUser.isStudent()) userDAO = new UserDAOImpl(application.getRealPath(WEB_INF_STUDENTS_XML),
                 application.getRealPath(WEB_INF_USERS_XSD));
         else userDAO = new UserDAOImpl(application.getRealPath(WEB_INF_TUTORS_XML), application.getRealPath(
                 WEB_INF_USERS_XSD));
         BookingDAO bookingDAO = new BookingDAOImpl(application.getRealPath(WEB_INF_BOOKINGS_XML),
                 application.getRealPath(WEB_IF_BOOKINGS_XSD));
-        Bookings bookings = bookingDAO.searchByEmail(user.getEmail(), user.isStudent());
+        Bookings bookings = bookingDAO.searchByEmail(currentUser.getEmail(), currentUser.isStudent());
         String action = request.getParameter("button");
         if (action == null || action.equals("") || action.equals("Cancel")) {
     %>
+
+    <%@include file="navigation.jsp" %>
     <display>
-        <output_row name="Name" value="<%=user.getName()%>"/>
-        <output_row name="Email" value="<%=user.getEmail()%>"/>
+        <output_row name="Name" value="<%=currentUser.getName()%>"/>
+        <output_row name="Email" value="<%=currentUser.getEmail()%>"/>
         <output_row name="Password" value="****************"/>
-        <output_row name="Date of birth" value="<%=user.getDateOfBirth()%>"/>
+        <output_row name="Date of birth" value="<%=currentUser.getDateOfBirth()%>"/>
         <%
-            if (!user.isStudent()) {
+            if (!currentUser.isStudent()) {
         %>
-        <output_row name="Speciality" value="<%=user.getSpeciality()%>"/>
+        <output_row name="Speciality" value="<%=currentUser.getSpeciality()%>"/>
         <%
             }
         %>
@@ -55,14 +58,16 @@
     <%
     } else if (action.equals("Edit account")) {
     %>
+
+    <%@include file="navigation.jsp" %>
     <display>
         <form link="account.jsp">
-            <output_row name="Email" value="<%=user.getEmail()%>"/>
-            <input_row id="<%=PASSWORD%>" name="Password" type="password" value="<%=user.getPassword()%>"/>
-            <input_row id="<%=NAME%>" name="Name" type="text" value="<%=user.getName()%>"/>
-            <input_row id="<%=DATE_OF_BIRTH%>" name="Date of birth" type="date" value="<%=user.getDateOfBirth()%>"/>
-            <% if (!user.isStudent()) {%>
-            <input_row id="<%=SPECIALITY%>" name="Speciality" type="select" value="<%=user.getSpeciality()%>"/>
+            <output_row name="Email" value="<%=currentUser.getEmail()%>"/>
+            <input_row id="<%=PASSWORD%>" name="Password" type="password" value="<%=currentUser.getPassword()%>"/>
+            <input_row id="<%=NAME%>" name="Name" type="text" value="<%=currentUser.getName()%>"/>
+            <input_row id="<%=DATE_OF_BIRTH%>" name="Date of birth" type="date" value="<%=currentUser.getDateOfBirth()%>"/>
+            <% if (!currentUser.isStudent()) {%>
+            <input_row id="<%=SPECIALITY%>" name="Speciality" type="select" value="<%=currentUser.getSpeciality()%>"/>
             <%
                 }
             %>
@@ -82,10 +87,11 @@
 //            bookingDAO.read().updateList(bookings);
         bookingDAO.save();
         //Cancel account.
-        userDAO.delete(userDAO.searchById(user.getId()));
+        userDAO.delete(userDAO.searchById(currentUser.getId()));
         session.invalidate();
 
     %>
+    <%@include file="navigation.jsp"%>
     <result type="success">
         <content>Your account has been successfully cancelled.</content>
     </result>
@@ -96,12 +102,14 @@
         String dateOfBirth = request.getParameter(DATE_OF_BIRTH);
         String speciality = request.getParameter(SPECIALITY);
         try {
-            if (!user.getPassword().equals(password)) password = DigestUtil.encryptPWD(password);
-            User changeUser = new User(user.getId(), user.getEmail(), name, password, dateOfBirth, user.isStudent(),
+            if (!currentUser.getPassword().equals(password)) password = DigestUtil.encryptPWD(password);
+            User changeUser = new User(currentUser.getId(), currentUser.getEmail(), name, password, dateOfBirth, currentUser.isStudent(),
                     speciality);
-            userDAO.update(user, changeUser);
+            userDAO.update(currentUser, changeUser);
             session.setAttribute("user", changeUser);
     %>
+
+    <%@include file="navigation.jsp" %>
     <result type="success">
         <content>New information is stored.</content>
     </result>
@@ -109,7 +117,7 @@
     } catch (DataValidationException e) {
         e.printStackTrace();
     %>
-
+    <%@include file="navigation.jsp" %>
     <result type="error">
         <content>you may have entered invalid <%=StringUtil.readExceptionCause(e.getMessage())%>%>.
             Please check your input and try again.
@@ -119,6 +127,7 @@
     } catch (NullPointerException e) {
         e.printStackTrace();
     %>
+    <%@include file="navigation.jsp" %>
     <result type="error">
         <content>there might be something wrong with the system. Please log out and try again.</content>
     </result>

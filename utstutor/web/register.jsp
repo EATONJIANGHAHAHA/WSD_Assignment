@@ -17,19 +17,18 @@
         if (progress == null || progress.equals("")) {
     %>
     <%@ include file="navigation.jsp" %>
+
     <display>
-        <form link="register.jsp?<%=url%>">
+        <form link="register.jsp">
             <input_row id="<%=EMAIL%>" name="Email" type="text"/>
             <input_row id="<%=PASSWORD%>" name="Password" type="password"/>
             <input_row id="<%=NAME%>" name="Name" type="text"/>
             <input_row id="<%=DATE_OF_BIRTH%>" name="Date of birth" type="date"/>
-            <%
-                if (url.equals(TUTOR)) {
-            %>
-            <input_row id="<%=SPECIALITY%>" name="Speciality" type="select"/>
-            <%
-                }
-            %>
+            <input_row id="<%=TYPE%>" name="Register as" type="select"/>
+            <type_tr>
+                <output type="text" value="Speciality"/>
+                <input  name="speciality" type="select"/>
+            </type_tr>
             <input_row id="progress" type="submit" value="Confirm"/>
         </form>
     </display>
@@ -41,10 +40,11 @@
             String name = request.getParameter(NAME);
             String dateOfBirth = request.getParameter(DATE_OF_BIRTH);
             String schemaPath = application.getRealPath(WEB_INF_USERS_XSD);
+            String type = request.getParameter(TYPE);
             String filePath;
             User newUser;
 
-            if (request.getQueryString().equals(TUTOR)) {
+            if (type.equals("0")) {
                 String speciality = request.getParameter(SPECIALITY);
                 filePath = application.getRealPath(WEB_INF_TUTORS_XML);
                 newUser = new User(email, name, DigestUtil.encryptPWD(password),
@@ -76,6 +76,8 @@
         <content>you now log in as <%=user.getName()%>.</content>
     </result>
     <%
+            //response.setHeader("Refresh","1;URL=main.jsp");
+            response.sendRedirect("main.jsp");
         }
     } catch (NullPointerException e) {
         e.printStackTrace();

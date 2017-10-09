@@ -4,6 +4,18 @@
     <xsl:template match="page">
         <html>
             <head>
+                <script language="JavaScript" type="text/JavaScript">
+                    function onSelect(selValue){
+                        if (document.getElementById){
+                            target=document.getElementById('usertype');
+                            if (selValue==0){
+                                target.style.display="none";
+                            } else {
+                                target.style.display="table-row";
+                            }
+                        }
+                    }
+                </script>
                 <link rel="stylesheet" type="text/css" href="page.css"/>
             </head>
             <title>
@@ -16,6 +28,7 @@
                         <xsl:value-of select="@title"/>
                     </p1>
                 </div>
+
                 <xsl:apply-templates/>
             </body>
         </html>
@@ -77,6 +90,11 @@
         </td>
     </xsl:template>
 
+    <xsl:template match="type_tr">
+        <tr id="usertype">
+            <xsl:apply-templates/>
+        </tr>
+    </xsl:template>
     <xsl:template match="form">
         <form method="POST" action="{@link}">
             <xsl:apply-templates/>
@@ -91,6 +109,15 @@
                         <option>active</option>
                         <option>completed</option>
                         <option>cancelled</option>
+                    </select>
+                </xsl:if>
+                <xsl:if test="@name='speciality'">
+                    <select name="speciality">
+                        <option>WSD</option>
+                        <option>SEP</option>
+                        <option>AppProg</option>
+                        <option>USP</option>
+                        <option>MobileApp</option>
                     </select>
                 </xsl:if>
             </xsl:if>
@@ -116,6 +143,7 @@
                             </select>
                         </xsl:if>
                         <xsl:if test="@id='speciality'">
+
                             <select name="speciality">
                                 <option>
                                     <xsl:value-of select="@value"/>
@@ -132,6 +160,12 @@
                                 <option>Tutor name</option>
                                 <option>Subject</option>
                                 <option>Tutor status</option>
+                            </select>
+                        </xsl:if>
+                        <xsl:if test="@id='type'">
+                            <select onChange="onSelect(this.value)" name="type">
+                                <option value="0">student</option>
+                                <option value="1">tutor</option>
                             </select>
                         </xsl:if>
                     </xsl:when>
@@ -175,13 +209,10 @@
                 <a href="index.jsp?logout">Logout</a>
             </xsl:if>
             <xsl:if test="status = 'logout'">
-                Register
-                <a href="register.jsp?student">as student</a>
-                <a href="register.jsp?tutor">as tutor</a>
-                Login
-                <a href="login.jsp?student">as student</a>
-                <a href="login.jsp?tutor">as tutor</a>
+                <a href="register.jsp">Register</a>
+                <a href="login.jsp">Login</a>
             </xsl:if>
+            <a href="javascript:history.back(-1);">Back</a>
         </div>
     </xsl:template>
 

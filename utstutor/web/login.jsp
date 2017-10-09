@@ -16,9 +16,10 @@
     %>
     <%@ include file="navigation.jsp"%>
     <display>
-        <form link="login.jsp?<%=url%>">
+        <form link="login.jsp">
             <input_row id="<%=EMAIL%>" name="Email" type="text"/>
             <input_row id="<%=PASSWORD%>" name="Password" type="password"/>
+            <input_row id="<%=TYPE%>" name="Log in as" type="select"/>
             <input_row id="progress" type="submit" value="Confirm"/>
         </form>
     </display>
@@ -27,9 +28,10 @@
     else {
         String password = request.getParameter(PASSWORD);
         String email = request.getParameter(EMAIL);
+        String type = request.getParameter(TYPE);
         String filePath;
         try {
-            if (request.getQueryString().equals(STUDENT)) {
+            if (type.equals("0")) {
                 filePath = application.getRealPath(WEB_INF_STUDENTS_XML);
             }
             else {
@@ -45,6 +47,7 @@
         <content>You now login as <%=user.getName() %>.</content>
     </result>
     <%
+        response.sendRedirect("main.jsp");
     }
     else{
     %>

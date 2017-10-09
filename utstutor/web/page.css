@@ -86,3 +86,9 @@ table td {
     font-weight: bold;
     color: #2F4F4F;
 }
+
+
+
+#usertype{
+    display: none;
+}

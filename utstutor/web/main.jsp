@@ -40,11 +40,13 @@
                 }
                 if (tutors == null || tutors.getList() == null || tutors.getList().size() == 0) {
 
+
     %>
     <result type="error">
         <content>No such result, please change your keyword.</content>
     </result>
     <%
+        response.sendError(HttpServletResponse.SC_NOT_FOUND, "No such result, please change your keyword.");
     } else {
     %>
     <display>
