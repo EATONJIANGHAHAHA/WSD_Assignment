@@ -66,6 +66,10 @@ public class UtsTutorSoap {
         }
     }
 
+    /**
+     * Return the booking dao.
+     * @return
+     */
     private BookingDAO getBookingDAO() {
         ServletContext application = (ServletContext) context.getMessageContext().get(MessageContext.SERVLET_CONTEXT);
 
