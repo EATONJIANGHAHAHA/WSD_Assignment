@@ -29,9 +29,12 @@ public class UtsTutorClient {
                 case -1:
                     break;
                 case 0: // login.
-                    user = utsTutorSoap.login(getNextString("Email: "), getNextString("Password: ")
+                    if(user != null) System.out.println("You have already logged in.");
+                    else {
+                        user = utsTutorSoap.login(getNextString("Email: "), getNextString("Password: ")
                             , getNextString("User type (tutor/student): "));
-                    if (user == null) System.out.println("Incorrect email or password");
+                        if (user == null) System.out.println("Incorrect email or password");
+                    }
                     break;
                 case 1: //View bookings
                     List<Booking> bookings = utsTutorSoap.getBookings(getNextInteger("Booking id: "),
@@ -122,7 +125,11 @@ public class UtsTutorClient {
                     } else System.out.println(AUTHENTICATION_ALERT);
                     break;
                 case 6:
-                    user = null;
+                    if(user == null) System.out.println("Please log in before log out.");
+                    else {
+                        user = null;
+                        System.out.println("You log out successfully.");
+                    }
                     break;
 
             }
