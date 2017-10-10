@@ -19,6 +19,7 @@ import javax.xml.ws.WebServiceContext;
 import javax.xml.ws.handler.MessageContext;
 import java.util.List;
 
+import static dao.BookingDAOImpl.WEB_IF_BOOKINGS_XSD;
 import static dao.BookingDAOImpl.WEB_INF_BOOKINGS_XML;
 import static dao.UserDAOImpl.*;
 import static model.Booking.*;
@@ -72,7 +73,8 @@ public class UtsTutorSoap {
             BookingDAO bookingDAO = (BookingDAOImpl) application
                     .getAttribute(BOOKING_DAO);
             if (bookingDAO == null) {
-                bookingDAO = new BookingDAOImpl(application.getRealPath(WEB_INF_BOOKINGS_XML), application.getRealPath(WEB_INF_BOOKINGS_XML));
+                bookingDAO = new BookingDAOImpl(application.getRealPath(WEB_INF_BOOKINGS_XML), application.getRealPath(
+                        WEB_IF_BOOKINGS_XSD));
                 application.setAttribute(BOOKING_DAO, bookingDAO);
             }
             return bookingDAO;
@@ -115,7 +117,7 @@ public class UtsTutorSoap {
             } catch (DataValidationException e) {
                 e.printStackTrace();
             }
-            return booking;
+            return getBookingDAO().read().getLast();
         }
         return "This tutor is currently unavailable.";
 

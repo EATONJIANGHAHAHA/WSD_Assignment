@@ -19,7 +19,7 @@
         <!--111-->
         <date_of_birth>2017-10-05</date_of_birth>
         <speciality>USP</speciality>
-        <status>available</status>
+        <status>unavailable</status>
     </user>
     <user>
         <id>3</id>
@@ -37,7 +37,7 @@
         <password>776370680E3B2E04701503401D330545</password>
         <date_of_birth>2017-10-11</date_of_birth>
         <speciality>MobileApp</speciality>
-        <status>available</status>
+        <status>unavailable</status>
     </user>
     <user>
         <id>5</id>

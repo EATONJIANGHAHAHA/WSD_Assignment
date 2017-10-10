@@ -34,6 +34,14 @@ public class Bookings extends BaseJAXBList<Booking>{
     }
 
     /**
+     * Get latest booking.
+     * @return
+     */
+    public Booking getLast(){
+        return super.getList().get(super.getList().size() -1);
+    }
+
+    /**
      * To ensure the correct unmarshall.
      * @param list
      */
