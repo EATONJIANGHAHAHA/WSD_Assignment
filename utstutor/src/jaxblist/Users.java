@@ -112,6 +112,7 @@ public class Users extends BaseJAXBList<User>{
      */
     public User findByEmail(String email){
         if (email == null ) return null;
+        if(getList() == null || getList().size() == 0) return null;
         for(User user: getList()){
             if(user.getEmail().equals(email)) return user;
         }
@@ -136,6 +137,8 @@ public class Users extends BaseJAXBList<User>{
      * @return
      */
     public User login(String email, String password) {
+        if(email == null || password == null) return null;
+        if(getList() == null || getList().size() == 0) return null;
         for(User user: getList()){
             if(user.getEmail().equals(email) && user.getPassword().equals(DigestUtil
                     .encryptPWD(password))) return user;

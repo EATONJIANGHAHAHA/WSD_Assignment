@@ -173,6 +173,9 @@
                         <input type="{@type}" name="{@id}" value="{@value}"/>
                     </xsl:otherwise>
                 </xsl:choose>
+                <xsl:if test="@error !=''">
+                    <p><xsl:value-of select="@error"/></p>
+                </xsl:if>
             </td>
         </tr>
     </xsl:template>
