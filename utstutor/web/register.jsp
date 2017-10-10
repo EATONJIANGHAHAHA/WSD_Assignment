@@ -3,7 +3,7 @@
 <?xml-stylesheet type="text/xsl" href="style.xsl"?>
 <%@ page import="static dao.UserDAOImpl.WEB_INF_USERS_XSD" %>
 <%@ page import="static dao.UserDAOImpl.WEB_INF_TUTORS_XML" %>
-<%@ page import="util.DigestUtil" %>
+<%@ page import="util.EncryptUtil" %>
 <%@ page import="dao.UserDAOImpl" %>
 <%@ page import="static dao.UserDAOImpl.WEB_INF_STUDENTS_XML" %>
 <%@ page import="util.StringUtil" %>
@@ -35,12 +35,12 @@
                 type = TUTOR;
                 String speciality = request.getParameter(SPECIALITY);
                 filePath = application.getRealPath(WEB_INF_TUTORS_XML);
-                newUser = new User(email, name, DigestUtil.encryptPWD(password),
+                newUser = new User(email, name, EncryptUtil.encryptPWD(password),
                         dateOfBirth, speciality, AVAILABLE);
             } else {
                 type = STUDENT;
                 filePath = application.getRealPath(WEB_INF_STUDENTS_XML);
-                newUser = new User(email, name, DigestUtil.encryptPWD(password),
+                newUser = new User(email, name, EncryptUtil.encryptPWD(password),
                         dateOfBirth);
             }
             UserDAO userDao = new UserDAOImpl(filePath, schemaPath);

@@ -8,7 +8,7 @@ import exception.DataValidationException;
 import jaxblist.Bookings;
 import model.Booking;
 import model.User;
-import util.DigestUtil;
+import util.EncryptUtil;
 import util.StringUtil;
 
 import javax.annotation.Resource;
@@ -233,7 +233,7 @@ public class UtsTutorSoap {
         User oldUser = new User(user);
         try{
             if (!isEmpty(name)) user.setName(name);
-            if (!isEmpty(password)) user.setPassword(DigestUtil.encryptPWD(password));
+            if (!isEmpty(password)) user.setPassword(EncryptUtil.encryptPWD(password));
             if (!isEmpty(dateOfBirth)) user.setDateOfBirth(dateOfBirth);
             if (!isEmpty(speciality)) user.setSpeciality(speciality);
             UserDAO userDAO = getUserDAO(user.getType());

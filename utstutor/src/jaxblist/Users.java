@@ -1,7 +1,7 @@
 package jaxblist;
 
 import model.User;
-import util.DigestUtil;
+import util.EncryptUtil;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -140,7 +140,7 @@ public class Users extends BaseJAXBList<User>{
         if(email == null || password == null) return null;
         if(getList() == null || getList().size() == 0) return null;
         for(User user: getList()){
-            if(user.getEmail().equals(email) && user.getPassword().equals(DigestUtil
+            if(user.getEmail().equals(email) && user.getPassword().equals(EncryptUtil
                     .encryptPWD(password))) return user;
         }
         return null;

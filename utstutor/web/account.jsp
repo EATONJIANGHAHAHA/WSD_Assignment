@@ -7,7 +7,7 @@
 <%@ page import="static dao.BookingDAOImpl.*" %>
 <%@ page import="dao.UserDAOImpl" %>
 <%@ page import="static dao.UserDAOImpl.*" %>
-<%@ page import="util.DigestUtil" %>
+<%@ page import="util.EncryptUtil" %>
 <%@ page import="util.StringUtil" %>
 <%@ page import="dao.UserDAO" %>
 <%@ page import="dao.BookingDAO" %>
@@ -102,7 +102,7 @@
         String dateOfBirth = request.getParameter(DATE_OF_BIRTH);
         String speciality = request.getParameter(SPECIALITY);
         try {
-            if (!currentUser.getPassword().equals(password)) password = DigestUtil.encryptPWD(password);
+            if (!currentUser.getPassword().equals(password)) password = EncryptUtil.encryptPWD(password);
             User changeUser = new User(currentUser.getId(), currentUser.getEmail(), name, password, dateOfBirth, currentUser.isStudent(),
                     speciality);
             userDAO.update(currentUser, changeUser);

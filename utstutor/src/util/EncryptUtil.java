@@ -3,7 +3,7 @@ package util;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class DigestUtil {
+public class EncryptUtil {
 
     /**
      * Encrypt the password via MD5, with salt
