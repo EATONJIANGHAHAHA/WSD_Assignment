@@ -121,7 +121,7 @@
         }
 
         Bookings bookings = bookingDAO.searchByEmail(user.getEmail(), user.isStudent());
-
+        if(action != null && action.equals("Active")) bookings = bookings.findByStatus(ACTIVE);
         if (bookings != null && bookings.getList() != null && bookings.getList().size() != 0) {
     %>
     <display>
@@ -137,6 +137,7 @@
         </header>
         <body>
             <%
+
                 for (Booking booking : bookings.getList()) {
 
             %>
@@ -185,6 +186,16 @@
     </result>
     <%
             }
+    %>
+    <display>
+        <output_row>
+            <form link="booking.jsp">
+                <input type="submit" name="button" value="All" />
+                <input type="submit" name="button" value="Active" />
+            </form>
+        </output_row>
+    </display>
+    <%
         }
     %>
 </page>
